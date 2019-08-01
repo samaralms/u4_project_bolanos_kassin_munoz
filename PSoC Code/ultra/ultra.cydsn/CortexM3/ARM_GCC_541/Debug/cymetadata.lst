@@ -1,0 +1,3047 @@
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.align	2
+  26              		.type	cy_meta_configecc, %object
+  27              		.size	cy_meta_configecc, 2420
+  28              	cy_meta_configecc:
+  29 0000 02       		.byte	2
+  30 0001 4F       		.byte	79
+  31 0002 00       		.byte	0
+  32 0003 40       		.byte	64
+  33 0004 05       		.byte	5
+  34 0005 52       		.byte	82
+  35 0006 00       		.byte	0
+  36 0007 40       		.byte	64
+  37 0008 05       		.byte	5
+  38 0009 64       		.byte	100
+  39 000a 00       		.byte	0
+  40 000b 40       		.byte	64
+  41 000c 04       		.byte	4
+  42 000d 65       		.byte	101
+  43 000e 00       		.byte	0
+  44 000f 40       		.byte	64
+  45 0010 53       		.byte	83
+  46 0011 02       		.byte	2
+  47 0012 01       		.byte	1
+  48 0013 40       		.byte	64
+  49 0014 37       		.byte	55
+  50 0015 03       		.byte	3
+  51 0016 01       		.byte	1
+  52 0017 40       		.byte	64
+  53 0018 0C       		.byte	12
+  54 0019 05       		.byte	5
+  55 001a 01       		.byte	1
+  56 001b 40       		.byte	64
+  57 001c 04       		.byte	4
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 2
+
+
+  58 001d 07       		.byte	7
+  59 001e 01       		.byte	1
+  60 001f 40       		.byte	64
+  61 0020 5E       		.byte	94
+  62 0021 08       		.byte	8
+  63 0022 01       		.byte	1
+  64 0023 40       		.byte	64
+  65 0024 46       		.byte	70
+  66 0025 09       		.byte	9
+  67 0026 01       		.byte	1
+  68 0027 40       		.byte	64
+  69 0028 4B       		.byte	75
+  70 0029 0A       		.byte	10
+  71 002a 01       		.byte	1
+  72 002b 40       		.byte	64
+  73 002c 45       		.byte	69
+  74 002d 0B       		.byte	11
+  75 002e 01       		.byte	1
+  76 002f 40       		.byte	64
+  77 0030 4E       		.byte	78
+  78 0031 0C       		.byte	12
+  79 0032 01       		.byte	1
+  80 0033 40       		.byte	64
+  81 0034 39       		.byte	57
+  82 0035 0D       		.byte	13
+  83 0036 01       		.byte	1
+  84 0037 40       		.byte	64
+  85 0038 5F       		.byte	95
+  86 0039 14       		.byte	20
+  87 003a 01       		.byte	1
+  88 003b 40       		.byte	64
+  89 003c 3E       		.byte	62
+  90 003d 15       		.byte	21
+  91 003e 01       		.byte	1
+  92 003f 40       		.byte	64
+  93 0040 02       		.byte	2
+  94 0041 17       		.byte	23
+  95 0042 01       		.byte	1
+  96 0043 40       		.byte	64
+  97 0044 5F       		.byte	95
+  98 0045 18       		.byte	24
+  99 0046 01       		.byte	1
+ 100 0047 40       		.byte	64
+ 101 0048 44       		.byte	68
+ 102 0049 19       		.byte	25
+ 103 004a 01       		.byte	1
+ 104 004b 40       		.byte	64
+ 105 004c 41       		.byte	65
+ 106 004d 1A       		.byte	26
+ 107 004e 01       		.byte	1
+ 108 004f 40       		.byte	64
+ 109 0050 3F       		.byte	63
+ 110 0051 1B       		.byte	27
+ 111 0052 01       		.byte	1
+ 112 0053 40       		.byte	64
+ 113 0054 0A       		.byte	10
+ 114 0055 41       		.byte	65
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 3
+
+
+ 115 0056 01       		.byte	1
+ 116 0057 40       		.byte	64
+ 117 0058 03       		.byte	3
+ 118 0059 42       		.byte	66
+ 119 005a 01       		.byte	1
+ 120 005b 40       		.byte	64
+ 121 005c 02       		.byte	2
+ 122 005d 43       		.byte	67
+ 123 005e 01       		.byte	1
+ 124 005f 40       		.byte	64
+ 125 0060 07       		.byte	7
+ 126 0061 45       		.byte	69
+ 127 0062 01       		.byte	1
+ 128 0063 40       		.byte	64
+ 129 0064 03       		.byte	3
+ 130 0065 48       		.byte	72
+ 131 0066 01       		.byte	1
+ 132 0067 40       		.byte	64
+ 133 0068 0E       		.byte	14
+ 134 0069 49       		.byte	73
+ 135 006a 01       		.byte	1
+ 136 006b 40       		.byte	64
+ 137 006c 04       		.byte	4
+ 138 006d 4C       		.byte	76
+ 139 006e 01       		.byte	1
+ 140 006f 40       		.byte	64
+ 141 0070 09       		.byte	9
+ 142 0071 4D       		.byte	77
+ 143 0072 01       		.byte	1
+ 144 0073 40       		.byte	64
+ 145 0074 07       		.byte	7
+ 146 0075 50       		.byte	80
+ 147 0076 01       		.byte	1
+ 148 0077 40       		.byte	64
+ 149 0078 01       		.byte	1
+ 150 0079 10       		.byte	16
+ 151 007a 0A       		.byte	10
+ 152 007b B1       		.byte	-79
+ 153 007c 00       		.byte	0
+ 154 007d 05       		.byte	5
+ 155 007e 01       		.byte	1
+ 156 007f 0C       		.byte	12
+ 157 0080 09       		.byte	9
+ 158 0081 40       		.byte	64
+ 159 0082 18       		.byte	24
+ 160 0083 0A       		.byte	10
+ 161 0084 19       		.byte	25
+ 162 0085 0C       		.byte	12
+ 163 0086 82       		.byte	-126
+ 164 0087 0F       		.byte	15
+ 165 0088 89       		.byte	-119
+ 166 0089 0F       		.byte	15
+ 167 008a 8A       		.byte	-118
+ 168 008b 0F       		.byte	15
+ 169 008c 8B       		.byte	-117
+ 170 008d 0F       		.byte	15
+ 171 008e 8D       		.byte	-115
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 4
+
+
+ 172 008f 6F       		.byte	111
+ 173 0090 84       		.byte	-124
+ 174 0091 0F       		.byte	15
+ 175 0092 85       		.byte	-123
+ 176 0093 0F       		.byte	15
+ 177 0094 88       		.byte	-120
+ 178 0095 38       		.byte	56
+ 179 0096 8B       		.byte	-117
+ 180 0097 72       		.byte	114
+ 181 0098 03       		.byte	3
+ 182 0099 0E       		.byte	14
+ 183 009a 07       		.byte	7
+ 184 009b 01       		.byte	1
+ 185 009c 11       		.byte	17
+ 186 009d 01       		.byte	1
+ 187 009e 12       		.byte	18
+ 188 009f 05       		.byte	5
+ 189 00a0 15       		.byte	21
+ 190 00a1 08       		.byte	8
+ 191 00a2 16       		.byte	22
+ 192 00a3 04       		.byte	4
+ 193 00a4 26       		.byte	38
+ 194 00a5 02       		.byte	2
+ 195 00a6 2A       		.byte	42
+ 196 00a7 09       		.byte	9
+ 197 00a8 2F       		.byte	47
+ 198 00a9 02       		.byte	2
+ 199 00aa 30       		.byte	48
+ 200 00ab 02       		.byte	2
+ 201 00ac 31       		.byte	49
+ 202 00ad 08       		.byte	8
+ 203 00ae 32       		.byte	50
+ 204 00af 04       		.byte	4
+ 205 00b0 33       		.byte	51
+ 206 00b1 02       		.byte	2
+ 207 00b2 34       		.byte	52
+ 208 00b3 01       		.byte	1
+ 209 00b4 35       		.byte	53
+ 210 00b5 04       		.byte	4
+ 211 00b6 36       		.byte	54
+ 212 00b7 08       		.byte	8
+ 213 00b8 37       		.byte	55
+ 214 00b9 01       		.byte	1
+ 215 00ba 3E       		.byte	62
+ 216 00bb 04       		.byte	4
+ 217 00bc 40       		.byte	64
+ 218 00bd 40       		.byte	64
+ 219 00be 41       		.byte	65
+ 220 00bf 06       		.byte	6
+ 221 00c0 45       		.byte	69
+ 222 00c1 D0       		.byte	-48
+ 223 00c2 46       		.byte	70
+ 224 00c3 20       		.byte	32
+ 225 00c4 47       		.byte	71
+ 226 00c5 15       		.byte	21
+ 227 00c6 48       		.byte	72
+ 228 00c7 3A       		.byte	58
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 5
+
+
+ 229 00c8 49       		.byte	73
+ 230 00c9 FF       		.byte	-1
+ 231 00ca 4A       		.byte	74
+ 232 00cb FF       		.byte	-1
+ 233 00cc 4B       		.byte	75
+ 234 00cd FF       		.byte	-1
+ 235 00ce 4D       		.byte	77
+ 236 00cf A0       		.byte	-96
+ 237 00d0 4F       		.byte	79
+ 238 00d1 04       		.byte	4
+ 239 00d2 50       		.byte	80
+ 240 00d3 18       		.byte	24
+ 241 00d4 54       		.byte	84
+ 242 00d5 07       		.byte	7
+ 243 00d6 58       		.byte	88
+ 244 00d7 04       		.byte	4
+ 245 00d8 59       		.byte	89
+ 246 00d9 04       		.byte	4
+ 247 00da 5A       		.byte	90
+ 248 00db 04       		.byte	4
+ 249 00dc 5B       		.byte	91
+ 250 00dd 04       		.byte	4
+ 251 00de 5C       		.byte	92
+ 252 00df 33       		.byte	51
+ 253 00e0 5D       		.byte	93
+ 254 00e1 33       		.byte	51
+ 255 00e2 5F       		.byte	95
+ 256 00e3 01       		.byte	1
+ 257 00e4 60       		.byte	96
+ 258 00e5 40       		.byte	64
+ 259 00e6 62       		.byte	98
+ 260 00e7 C0       		.byte	-64
+ 261 00e8 64       		.byte	100
+ 262 00e9 40       		.byte	64
+ 263 00ea 65       		.byte	101
+ 264 00eb 40       		.byte	64
+ 265 00ec 66       		.byte	102
+ 266 00ed C0       		.byte	-64
+ 267 00ee 68       		.byte	104
+ 268 00ef C0       		.byte	-64
+ 269 00f0 6A       		.byte	106
+ 270 00f1 C0       		.byte	-64
+ 271 00f2 6C       		.byte	108
+ 272 00f3 C0       		.byte	-64
+ 273 00f4 6E       		.byte	110
+ 274 00f5 C0       		.byte	-64
+ 275 00f6 80       		.byte	-128
+ 276 00f7 10       		.byte	16
+ 277 00f8 82       		.byte	-126
+ 278 00f9 20       		.byte	32
+ 279 00fa 84       		.byte	-124
+ 280 00fb 03       		.byte	3
+ 281 00fc 85       		.byte	-123
+ 282 00fd 0E       		.byte	14
+ 283 00fe 8C       		.byte	-116
+ 284 00ff 20       		.byte	32
+ 285 0100 8D       		.byte	-115
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 6
+
+
+ 286 0101 16       		.byte	22
+ 287 0102 8E       		.byte	-114
+ 288 0103 10       		.byte	16
+ 289 0104 8F       		.byte	-113
+ 290 0105 08       		.byte	8
+ 291 0106 90       		.byte	-112
+ 292 0107 06       		.byte	6
+ 293 0108 91       		.byte	-111
+ 294 0109 18       		.byte	24
+ 295 010a 93       		.byte	-109
+ 296 010b 02       		.byte	2
+ 297 010c 94       		.byte	-108
+ 298 010d 10       		.byte	16
+ 299 010e 95       		.byte	-107
+ 300 010f 18       		.byte	24
+ 301 0110 96       		.byte	-106
+ 302 0111 20       		.byte	32
+ 303 0112 97       		.byte	-105
+ 304 0113 04       		.byte	4
+ 305 0114 9B       		.byte	-101
+ 306 0115 01       		.byte	1
+ 307 0116 9D       		.byte	-99
+ 308 0117 10       		.byte	16
+ 309 0118 9F       		.byte	-97
+ 310 0119 02       		.byte	2
+ 311 011a A0       		.byte	-96
+ 312 011b 05       		.byte	5
+ 313 011c A8       		.byte	-88
+ 314 011d 06       		.byte	6
+ 315 011e AC       		.byte	-84
+ 316 011f 10       		.byte	16
+ 317 0120 AE       		.byte	-82
+ 318 0121 28       		.byte	40
+ 319 0122 AF       		.byte	-81
+ 320 0123 1E       		.byte	30
+ 321 0124 B0       		.byte	-80
+ 322 0125 08       		.byte	8
+ 323 0126 B1       		.byte	-79
+ 324 0127 01       		.byte	1
+ 325 0128 B3       		.byte	-77
+ 326 0129 1E       		.byte	30
+ 327 012a B4       		.byte	-76
+ 328 012b 07       		.byte	7
+ 329 012c B6       		.byte	-74
+ 330 012d 30       		.byte	48
+ 331 012e B8       		.byte	-72
+ 332 012f 20       		.byte	32
+ 333 0130 BA       		.byte	-70
+ 334 0131 80       		.byte	-128
+ 335 0132 D2       		.byte	-46
+ 336 0133 80       		.byte	-128
+ 337 0134 D8       		.byte	-40
+ 338 0135 04       		.byte	4
+ 339 0136 D9       		.byte	-39
+ 340 0137 04       		.byte	4
+ 341 0138 DB       		.byte	-37
+ 342 0139 04       		.byte	4
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 7
+
+
+ 343 013a DD       		.byte	-35
+ 344 013b 50       		.byte	80
+ 345 013c DF       		.byte	-33
+ 346 013d 01       		.byte	1
+ 347 013e 00       		.byte	0
+ 348 013f 04       		.byte	4
+ 349 0140 01       		.byte	1
+ 350 0141 82       		.byte	-126
+ 351 0142 08       		.byte	8
+ 352 0143 02       		.byte	2
+ 353 0144 09       		.byte	9
+ 354 0145 08       		.byte	8
+ 355 0146 0D       		.byte	13
+ 356 0147 02       		.byte	2
+ 357 0148 0F       		.byte	15
+ 358 0149 20       		.byte	32
+ 359 014a 12       		.byte	18
+ 360 014b 4A       		.byte	74
+ 361 014c 16       		.byte	22
+ 362 014d 08       		.byte	8
+ 363 014e 17       		.byte	23
+ 364 014f 08       		.byte	8
+ 365 0150 18       		.byte	24
+ 366 0151 04       		.byte	4
+ 367 0152 19       		.byte	25
+ 368 0153 82       		.byte	-126
+ 369 0154 1D       		.byte	29
+ 370 0155 06       		.byte	6
+ 371 0156 1E       		.byte	30
+ 372 0157 42       		.byte	66
+ 373 0158 1F       		.byte	31
+ 374 0159 10       		.byte	16
+ 375 015a 20       		.byte	32
+ 376 015b 20       		.byte	32
+ 377 015c 22       		.byte	34
+ 378 015d 0A       		.byte	10
+ 379 015e 24       		.byte	36
+ 380 015f 41       		.byte	65
+ 381 0160 27       		.byte	39
+ 382 0161 14       		.byte	20
+ 383 0162 29       		.byte	41
+ 384 0163 80       		.byte	-128
+ 385 0164 2E       		.byte	46
+ 386 0165 40       		.byte	64
+ 387 0166 30       		.byte	48
+ 388 0167 20       		.byte	32
+ 389 0168 32       		.byte	50
+ 390 0169 89       		.byte	-119
+ 391 016a 36       		.byte	54
+ 392 016b 01       		.byte	1
+ 393 016c 37       		.byte	55
+ 394 016d 04       		.byte	4
+ 395 016e 38       		.byte	56
+ 396 016f 04       		.byte	4
+ 397 0170 39       		.byte	57
+ 398 0171 80       		.byte	-128
+ 399 0172 3A       		.byte	58
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 8
+
+
+ 400 0173 40       		.byte	64
+ 401 0174 3C       		.byte	60
+ 402 0175 02       		.byte	2
+ 403 0176 3E       		.byte	62
+ 404 0177 08       		.byte	8
+ 405 0178 45       		.byte	69
+ 406 0179 02       		.byte	2
+ 407 017a 4F       		.byte	79
+ 408 017b 21       		.byte	33
+ 409 017c 54       		.byte	84
+ 410 017d 01       		.byte	1
+ 411 017e 56       		.byte	86
+ 412 017f 08       		.byte	8
+ 413 0180 57       		.byte	87
+ 414 0181 10       		.byte	16
+ 415 0182 5C       		.byte	92
+ 416 0183 40       		.byte	64
+ 417 0184 5D       		.byte	93
+ 418 0185 08       		.byte	8
+ 419 0186 5E       		.byte	94
+ 420 0187 10       		.byte	16
+ 421 0188 5F       		.byte	95
+ 422 0189 01       		.byte	1
+ 423 018a 65       		.byte	101
+ 424 018b 0C       		.byte	12
+ 425 018c 73       		.byte	115
+ 426 018d 40       		.byte	64
+ 427 018e 84       		.byte	-124
+ 428 018f 10       		.byte	16
+ 429 0190 87       		.byte	-121
+ 430 0191 10       		.byte	16
+ 431 0192 8B       		.byte	-117
+ 432 0193 40       		.byte	64
+ 433 0194 8F       		.byte	-113
+ 434 0195 10       		.byte	16
+ 435 0196 C0       		.byte	-64
+ 436 0197 0D       		.byte	13
+ 437 0198 C2       		.byte	-62
+ 438 0199 3C       		.byte	60
+ 439 019a C4       		.byte	-60
+ 440 019b 6B       		.byte	107
+ 441 019c CA       		.byte	-54
+ 442 019d 18       		.byte	24
+ 443 019e CC       		.byte	-52
+ 444 019f CF       		.byte	-49
+ 445 01a0 CE       		.byte	-50
+ 446 01a1 CA       		.byte	-54
+ 447 01a2 D0       		.byte	-48
+ 448 01a3 80       		.byte	-128
+ 449 01a4 D2       		.byte	-46
+ 450 01a5 20       		.byte	32
+ 451 01a6 D6       		.byte	-42
+ 452 01a7 F0       		.byte	-16
+ 453 01a8 E0       		.byte	-32
+ 454 01a9 08       		.byte	8
+ 455 01aa E6       		.byte	-26
+ 456 01ab 48       		.byte	72
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 9
+
+
+ 457 01ac 95       		.byte	-107
+ 458 01ad 80       		.byte	-128
+ 459 01ae 9F       		.byte	-97
+ 460 01af 08       		.byte	8
+ 461 01b0 A8       		.byte	-88
+ 462 01b1 05       		.byte	5
+ 463 01b2 AA       		.byte	-86
+ 464 01b3 90       		.byte	-112
+ 465 01b4 AC       		.byte	-84
+ 466 01b5 22       		.byte	34
+ 467 01b6 AD       		.byte	-83
+ 468 01b7 08       		.byte	8
+ 469 01b8 AE       		.byte	-82
+ 470 01b9 01       		.byte	1
+ 471 01ba B1       		.byte	-79
+ 472 01bb 80       		.byte	-128
+ 473 01bc E6       		.byte	-26
+ 474 01bd 01       		.byte	1
+ 475 01be E8       		.byte	-24
+ 476 01bf 04       		.byte	4
+ 477 01c0 EA       		.byte	-22
+ 478 01c1 02       		.byte	2
+ 479 01c2 EE       		.byte	-18
+ 480 01c3 06       		.byte	6
+ 481 01c4 87       		.byte	-121
+ 482 01c5 08       		.byte	8
+ 483 01c6 95       		.byte	-107
+ 484 01c7 80       		.byte	-128
+ 485 01c8 9F       		.byte	-97
+ 486 01c9 08       		.byte	8
+ 487 01ca E2       		.byte	-30
+ 488 01cb 08       		.byte	8
+ 489 01cc 04       		.byte	4
+ 490 01cd FD       		.byte	-3
+ 491 01ce 05       		.byte	5
+ 492 01cf 05       		.byte	5
+ 493 01d0 06       		.byte	6
+ 494 01d1 02       		.byte	2
+ 495 01d2 07       		.byte	7
+ 496 01d3 0A       		.byte	10
+ 497 01d4 08       		.byte	8
+ 498 01d5 73       		.byte	115
+ 499 01d6 09       		.byte	9
+ 500 01d7 03       		.byte	3
+ 501 01d8 0B       		.byte	11
+ 502 01d9 0C       		.byte	12
+ 503 01da 0D       		.byte	13
+ 504 01db 0A       		.byte	10
+ 505 01dc 0F       		.byte	15
+ 506 01dd 05       		.byte	5
+ 507 01de 10       		.byte	16
+ 508 01df 9E       		.byte	-98
+ 509 01e0 12       		.byte	18
+ 510 01e1 60       		.byte	96
+ 511 01e2 14       		.byte	20
+ 512 01e3 94       		.byte	-108
+ 513 01e4 16       		.byte	22
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 10
+
+
+ 514 01e5 60       		.byte	96
+ 515 01e6 18       		.byte	24
+ 516 01e7 30       		.byte	48
+ 517 01e8 19       		.byte	25
+ 518 01e9 0F       		.byte	15
+ 519 01ea 1A       		.byte	26
+ 520 01eb C9       		.byte	-55
+ 521 01ec 20       		.byte	32
+ 522 01ed CF       		.byte	-49
+ 523 01ee 21       		.byte	33
+ 524 01ef 0C       		.byte	12
+ 525 01f0 22       		.byte	34
+ 526 01f1 30       		.byte	48
+ 527 01f2 23       		.byte	35
+ 528 01f3 03       		.byte	3
+ 529 01f4 26       		.byte	38
+ 530 01f5 0F       		.byte	15
+ 531 01f6 27       		.byte	39
+ 532 01f7 10       		.byte	16
+ 533 01f8 29       		.byte	41
+ 534 01f9 07       		.byte	7
+ 535 01fa 2F       		.byte	47
+ 536 01fb 10       		.byte	16
+ 537 01fc 33       		.byte	51
+ 538 01fd 0F       		.byte	15
+ 539 01fe 35       		.byte	53
+ 540 01ff 10       		.byte	16
+ 541 0200 36       		.byte	54
+ 542 0201 FF       		.byte	-1
+ 543 0202 3E       		.byte	62
+ 544 0203 40       		.byte	64
+ 545 0204 3F       		.byte	63
+ 546 0205 10       		.byte	16
+ 547 0206 52       		.byte	82
+ 548 0207 80       		.byte	-128
+ 549 0208 58       		.byte	88
+ 550 0209 04       		.byte	4
+ 551 020a 59       		.byte	89
+ 552 020b 04       		.byte	4
+ 553 020c 5B       		.byte	91
+ 554 020d 04       		.byte	4
+ 555 020e 5D       		.byte	93
+ 556 020f 30       		.byte	48
+ 557 0210 5F       		.byte	95
+ 558 0211 01       		.byte	1
+ 559 0212 84       		.byte	-124
+ 560 0213 31       		.byte	49
+ 561 0214 85       		.byte	-123
+ 562 0215 80       		.byte	-128
+ 563 0216 86       		.byte	-122
+ 564 0217 0E       		.byte	14
+ 565 0218 89       		.byte	-119
+ 566 0219 80       		.byte	-128
+ 567 021a 90       		.byte	-112
+ 568 021b 2C       		.byte	44
+ 569 021c 92       		.byte	-110
+ 570 021d 03       		.byte	3
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 11
+
+
+ 571 021e 94       		.byte	-108
+ 572 021f 31       		.byte	49
+ 573 0220 95       		.byte	-107
+ 574 0221 53       		.byte	83
+ 575 0222 96       		.byte	-106
+ 576 0223 06       		.byte	6
+ 577 0224 97       		.byte	-105
+ 578 0225 0C       		.byte	12
+ 579 0226 9A       		.byte	-102
+ 580 0227 0C       		.byte	12
+ 581 0228 9B       		.byte	-101
+ 582 0229 08       		.byte	8
+ 583 022a 9C       		.byte	-100
+ 584 022b 40       		.byte	64
+ 585 022c 9D       		.byte	-99
+ 586 022d 80       		.byte	-128
+ 587 022e A1       		.byte	-95
+ 588 022f 03       		.byte	3
+ 589 0230 A2       		.byte	-94
+ 590 0231 08       		.byte	8
+ 591 0232 A3       		.byte	-93
+ 592 0233 44       		.byte	68
+ 593 0234 A5       		.byte	-91
+ 594 0235 20       		.byte	32
+ 595 0236 A7       		.byte	-89
+ 596 0237 45       		.byte	69
+ 597 0238 A9       		.byte	-87
+ 598 0239 53       		.byte	83
+ 599 023a AA       		.byte	-86
+ 600 023b 13       		.byte	19
+ 601 023c AB       		.byte	-85
+ 602 023d 04       		.byte	4
+ 603 023e AD       		.byte	-83
+ 604 023f 0A       		.byte	10
+ 605 0240 AF       		.byte	-81
+ 606 0241 54       		.byte	84
+ 607 0242 B0       		.byte	-80
+ 608 0243 0F       		.byte	15
+ 609 0244 B1       		.byte	-79
+ 610 0245 40       		.byte	64
+ 611 0246 B2       		.byte	-78
+ 612 0247 40       		.byte	64
+ 613 0248 B3       		.byte	-77
+ 614 0249 0F       		.byte	15
+ 615 024a B4       		.byte	-76
+ 616 024b 30       		.byte	48
+ 617 024c B5       		.byte	-75
+ 618 024d 30       		.byte	48
+ 619 024e B7       		.byte	-73
+ 620 024f 80       		.byte	-128
+ 621 0250 B8       		.byte	-72
+ 622 0251 20       		.byte	32
+ 623 0252 B9       		.byte	-71
+ 624 0253 A0       		.byte	-96
+ 625 0254 BA       		.byte	-70
+ 626 0255 02       		.byte	2
+ 627 0256 BB       		.byte	-69
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 12
+
+
+ 628 0257 08       		.byte	8
+ 629 0258 BE       		.byte	-66
+ 630 0259 14       		.byte	20
+ 631 025a BF       		.byte	-65
+ 632 025b 41       		.byte	65
+ 633 025c C0       		.byte	-64
+ 634 025d 02       		.byte	2
+ 635 025e C5       		.byte	-59
+ 636 025f 40       		.byte	64
+ 637 0260 C9       		.byte	-55
+ 638 0261 FF       		.byte	-1
+ 639 0262 CA       		.byte	-54
+ 640 0263 07       		.byte	7
+ 641 0264 CB       		.byte	-53
+ 642 0265 FF       		.byte	-1
+ 643 0266 CC       		.byte	-52
+ 644 0267 40       		.byte	64
+ 645 0268 CD       		.byte	-51
+ 646 0269 20       		.byte	32
+ 647 026a CE       		.byte	-50
+ 648 026b F0       		.byte	-16
+ 649 026c CF       		.byte	-49
+ 650 026d 05       		.byte	5
+ 651 026e D0       		.byte	-48
+ 652 026f 08       		.byte	8
+ 653 0270 D4       		.byte	-44
+ 654 0271 01       		.byte	1
+ 655 0272 D8       		.byte	-40
+ 656 0273 04       		.byte	4
+ 657 0274 D9       		.byte	-39
+ 658 0275 04       		.byte	4
+ 659 0276 DA       		.byte	-38
+ 660 0277 04       		.byte	4
+ 661 0278 DB       		.byte	-37
+ 662 0279 04       		.byte	4
+ 663 027a DC       		.byte	-36
+ 664 027b 22       		.byte	34
+ 665 027c DD       		.byte	-35
+ 666 027d 22       		.byte	34
+ 667 027e DF       		.byte	-33
+ 668 027f 01       		.byte	1
+ 669 0280 E0       		.byte	-32
+ 670 0281 40       		.byte	64
+ 671 0282 E1       		.byte	-31
+ 672 0283 A8       		.byte	-88
+ 673 0284 E2       		.byte	-30
+ 674 0285 40       		.byte	64
+ 675 0286 E3       		.byte	-29
+ 676 0287 20       		.byte	32
+ 677 0288 00       		.byte	0
+ 678 0289 08       		.byte	8
+ 679 028a 02       		.byte	2
+ 680 028b 10       		.byte	16
+ 681 028c 04       		.byte	4
+ 682 028d 20       		.byte	32
+ 683 028e 07       		.byte	7
+ 684 028f 20       		.byte	32
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 13
+
+
+ 685 0290 08       		.byte	8
+ 686 0291 10       		.byte	16
+ 687 0292 09       		.byte	9
+ 688 0293 08       		.byte	8
+ 689 0294 0A       		.byte	10
+ 690 0295 81       		.byte	-127
+ 691 0296 0B       		.byte	11
+ 692 0297 02       		.byte	2
+ 693 0298 0E       		.byte	14
+ 694 0299 40       		.byte	64
+ 695 029a 0F       		.byte	15
+ 696 029b 18       		.byte	24
+ 697 029c 10       		.byte	16
+ 698 029d 08       		.byte	8
+ 699 029e 12       		.byte	18
+ 700 029f 80       		.byte	-128
+ 701 02a0 13       		.byte	19
+ 702 02a1 0C       		.byte	12
+ 703 02a2 15       		.byte	21
+ 704 02a3 09       		.byte	9
+ 705 02a4 18       		.byte	24
+ 706 02a5 04       		.byte	4
+ 707 02a6 19       		.byte	25
+ 708 02a7 04       		.byte	4
+ 709 02a8 1A       		.byte	26
+ 710 02a9 80       		.byte	-128
+ 711 02aa 1B       		.byte	27
+ 712 02ab 01       		.byte	1
+ 713 02ac 1F       		.byte	31
+ 714 02ad 40       		.byte	64
+ 715 02ae 20       		.byte	32
+ 716 02af 02       		.byte	2
+ 717 02b0 21       		.byte	33
+ 718 02b1 18       		.byte	24
+ 719 02b2 22       		.byte	34
+ 720 02b3 10       		.byte	16
+ 721 02b4 23       		.byte	35
+ 722 02b5 80       		.byte	-128
+ 723 02b6 27       		.byte	39
+ 724 02b7 38       		.byte	56
+ 725 02b8 2A       		.byte	42
+ 726 02b9 14       		.byte	20
+ 727 02ba 2B       		.byte	43
+ 728 02bb 81       		.byte	-127
+ 729 02bc 2D       		.byte	45
+ 730 02bd 81       		.byte	-127
+ 731 02be 2E       		.byte	46
+ 732 02bf 20       		.byte	32
+ 733 02c0 2F       		.byte	47
+ 734 02c1 20       		.byte	32
+ 735 02c2 30       		.byte	48
+ 736 02c3 90       		.byte	-112
+ 737 02c4 31       		.byte	49
+ 738 02c5 08       		.byte	8
+ 739 02c6 32       		.byte	50
+ 740 02c7 10       		.byte	16
+ 741 02c8 37       		.byte	55
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 14
+
+
+ 742 02c9 20       		.byte	32
+ 743 02ca 38       		.byte	56
+ 744 02cb 20       		.byte	32
+ 745 02cc 3A       		.byte	58
+ 746 02cd 20       		.byte	32
+ 747 02ce 3B       		.byte	59
+ 748 02cf 08       		.byte	8
+ 749 02d0 3E       		.byte	62
+ 750 02d1 40       		.byte	64
+ 751 02d2 3F       		.byte	63
+ 752 02d3 18       		.byte	24
+ 753 02d4 40       		.byte	64
+ 754 02d5 04       		.byte	4
+ 755 02d6 4A       		.byte	74
+ 756 02d7 80       		.byte	-128
+ 757 02d8 50       		.byte	80
+ 758 02d9 08       		.byte	8
+ 759 02da 52       		.byte	82
+ 760 02db 04       		.byte	4
+ 761 02dc 58       		.byte	88
+ 762 02dd 20       		.byte	32
+ 763 02de 59       		.byte	89
+ 764 02df 04       		.byte	4
+ 765 02e0 5A       		.byte	90
+ 766 02e1 01       		.byte	1
+ 767 02e2 5B       		.byte	91
+ 768 02e3 80       		.byte	-128
+ 769 02e4 76       		.byte	118
+ 770 02e5 40       		.byte	64
+ 771 02e6 86       		.byte	-122
+ 772 02e7 40       		.byte	64
+ 773 02e8 88       		.byte	-120
+ 774 02e9 40       		.byte	64
+ 775 02ea 8B       		.byte	-117
+ 776 02eb 20       		.byte	32
+ 777 02ec 90       		.byte	-112
+ 778 02ed 20       		.byte	32
+ 779 02ee 91       		.byte	-111
+ 780 02ef 09       		.byte	9
+ 781 02f0 92       		.byte	-110
+ 782 02f1 40       		.byte	64
+ 783 02f2 93       		.byte	-109
+ 784 02f3 18       		.byte	24
+ 785 02f4 96       		.byte	-106
+ 786 02f5 1A       		.byte	26
+ 787 02f6 97       		.byte	-105
+ 788 02f7 80       		.byte	-128
+ 789 02f8 9D       		.byte	-99
+ 790 02f9 02       		.byte	2
+ 791 02fa 9F       		.byte	-97
+ 792 02fb 10       		.byte	16
+ 793 02fc A0       		.byte	-96
+ 794 02fd 80       		.byte	-128
+ 795 02fe A2       		.byte	-94
+ 796 02ff 20       		.byte	32
+ 797 0300 A3       		.byte	-93
+ 798 0301 04       		.byte	4
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 15
+
+
+ 799 0302 A4       		.byte	-92
+ 800 0303 41       		.byte	65
+ 801 0304 C0       		.byte	-64
+ 802 0305 64       		.byte	100
+ 803 0306 C2       		.byte	-62
+ 804 0307 7F       		.byte	127
+ 805 0308 C4       		.byte	-60
+ 806 0309 3A       		.byte	58
+ 807 030a CA       		.byte	-54
+ 808 030b FF       		.byte	-1
+ 809 030c CC       		.byte	-52
+ 810 030d 2E       		.byte	46
+ 811 030e CE       		.byte	-50
+ 812 030f 76       		.byte	118
+ 813 0310 D0       		.byte	-48
+ 814 0311 04       		.byte	4
+ 815 0312 D6       		.byte	-42
+ 816 0313 0F       		.byte	15
+ 817 0314 01       		.byte	1
+ 818 0315 01       		.byte	1
+ 819 0316 03       		.byte	3
+ 820 0317 02       		.byte	2
+ 821 0318 07       		.byte	7
+ 822 0319 07       		.byte	7
+ 823 031a 09       		.byte	9
+ 824 031b 01       		.byte	1
+ 825 031c 0A       		.byte	10
+ 826 031d 03       		.byte	3
+ 827 031e 0B       		.byte	11
+ 828 031f 02       		.byte	2
+ 829 0320 0C       		.byte	12
+ 830 0321 03       		.byte	3
+ 831 0322 0F       		.byte	15
+ 832 0323 08       		.byte	8
+ 833 0324 19       		.byte	25
+ 834 0325 07       		.byte	7
+ 835 0326 1F       		.byte	31
+ 836 0327 10       		.byte	16
+ 837 0328 20       		.byte	32
+ 838 0329 04       		.byte	4
+ 839 032a 21       		.byte	33
+ 840 032b 07       		.byte	7
+ 841 032c 24       		.byte	36
+ 842 032d 04       		.byte	4
+ 843 032e 28       		.byte	40
+ 844 032f 01       		.byte	1
+ 845 0330 29       		.byte	41
+ 846 0331 04       		.byte	4
+ 847 0332 2A       		.byte	42
+ 848 0333 02       		.byte	2
+ 849 0334 2F       		.byte	47
+ 850 0335 04       		.byte	4
+ 851 0336 31       		.byte	49
+ 852 0337 10       		.byte	16
+ 853 0338 32       		.byte	50
+ 854 0339 04       		.byte	4
+ 855 033a 33       		.byte	51
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 16
+
+
+ 856 033b 0F       		.byte	15
+ 857 033c 34       		.byte	52
+ 858 033d 01       		.byte	1
+ 859 033e 36       		.byte	54
+ 860 033f 02       		.byte	2
+ 861 0340 38       		.byte	56
+ 862 0341 08       		.byte	8
+ 863 0342 3E       		.byte	62
+ 864 0343 50       		.byte	80
+ 865 0344 54       		.byte	84
+ 866 0345 0F       		.byte	15
+ 867 0346 58       		.byte	88
+ 868 0347 04       		.byte	4
+ 869 0348 59       		.byte	89
+ 870 0349 04       		.byte	4
+ 871 034a 5B       		.byte	91
+ 872 034b 04       		.byte	4
+ 873 034c 5F       		.byte	95
+ 874 034d 01       		.byte	1
+ 875 034e 87       		.byte	-121
+ 876 034f 06       		.byte	6
+ 877 0350 8A       		.byte	-118
+ 878 0351 02       		.byte	2
+ 879 0352 91       		.byte	-111
+ 880 0353 01       		.byte	1
+ 881 0354 96       		.byte	-106
+ 882 0355 04       		.byte	4
+ 883 0356 97       		.byte	-105
+ 884 0357 02       		.byte	2
+ 885 0358 9D       		.byte	-99
+ 886 0359 04       		.byte	4
+ 887 035a A6       		.byte	-90
+ 888 035b 05       		.byte	5
+ 889 035c AE       		.byte	-82
+ 890 035d 09       		.byte	9
+ 891 035e AF       		.byte	-81
+ 892 035f 01       		.byte	1
+ 893 0360 B0       		.byte	-80
+ 894 0361 08       		.byte	8
+ 895 0362 B2       		.byte	-78
+ 896 0363 04       		.byte	4
+ 897 0364 B3       		.byte	-77
+ 898 0365 04       		.byte	4
+ 899 0366 B4       		.byte	-76
+ 900 0367 01       		.byte	1
+ 901 0368 B5       		.byte	-75
+ 902 0369 02       		.byte	2
+ 903 036a B6       		.byte	-74
+ 904 036b 02       		.byte	2
+ 905 036c B7       		.byte	-73
+ 906 036d 01       		.byte	1
+ 907 036e BE       		.byte	-66
+ 908 036f 04       		.byte	4
+ 909 0370 C0       		.byte	-64
+ 910 0371 30       		.byte	48
+ 911 0372 C1       		.byte	-63
+ 912 0373 06       		.byte	6
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 17
+
+
+ 913 0374 C5       		.byte	-59
+ 914 0375 D0       		.byte	-48
+ 915 0376 C6       		.byte	-58
+ 916 0377 20       		.byte	32
+ 917 0378 C7       		.byte	-57
+ 918 0379 15       		.byte	21
+ 919 037a C8       		.byte	-56
+ 920 037b 3A       		.byte	58
+ 921 037c C9       		.byte	-55
+ 922 037d FF       		.byte	-1
+ 923 037e CA       		.byte	-54
+ 924 037f FF       		.byte	-1
+ 925 0380 CB       		.byte	-53
+ 926 0381 FF       		.byte	-1
+ 927 0382 CD       		.byte	-51
+ 928 0383 A0       		.byte	-96
+ 929 0384 CF       		.byte	-49
+ 930 0385 04       		.byte	4
+ 931 0386 D0       		.byte	-48
+ 932 0387 18       		.byte	24
+ 933 0388 D4       		.byte	-44
+ 934 0389 07       		.byte	7
+ 935 038a D8       		.byte	-40
+ 936 038b 04       		.byte	4
+ 937 038c D9       		.byte	-39
+ 938 038d 04       		.byte	4
+ 939 038e DA       		.byte	-38
+ 940 038f 04       		.byte	4
+ 941 0390 DB       		.byte	-37
+ 942 0391 04       		.byte	4
+ 943 0392 DC       		.byte	-36
+ 944 0393 55       		.byte	85
+ 945 0394 DD       		.byte	-35
+ 946 0395 55       		.byte	85
+ 947 0396 DF       		.byte	-33
+ 948 0397 01       		.byte	1
+ 949 0398 E0       		.byte	-32
+ 950 0399 40       		.byte	64
+ 951 039a E2       		.byte	-30
+ 952 039b C0       		.byte	-64
+ 953 039c E4       		.byte	-28
+ 954 039d 40       		.byte	64
+ 955 039e E5       		.byte	-27
+ 956 039f 40       		.byte	64
+ 957 03a0 E6       		.byte	-26
+ 958 03a1 C0       		.byte	-64
+ 959 03a2 E8       		.byte	-24
+ 960 03a3 C0       		.byte	-64
+ 961 03a4 EA       		.byte	-22
+ 962 03a5 C0       		.byte	-64
+ 963 03a6 EC       		.byte	-20
+ 964 03a7 C0       		.byte	-64
+ 965 03a8 EE       		.byte	-18
+ 966 03a9 C0       		.byte	-64
+ 967 03aa 00       		.byte	0
+ 968 03ab 10       		.byte	16
+ 969 03ac 02       		.byte	2
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 18
+
+
+ 970 03ad 02       		.byte	2
+ 971 03ae 06       		.byte	6
+ 972 03af 08       		.byte	8
+ 973 03b0 0F       		.byte	15
+ 974 03b1 20       		.byte	32
+ 975 03b2 10       		.byte	16
+ 976 03b3 A0       		.byte	-96
+ 977 03b4 12       		.byte	18
+ 978 03b5 08       		.byte	8
+ 979 03b6 16       		.byte	22
+ 980 03b7 01       		.byte	1
+ 981 03b8 17       		.byte	23
+ 982 03b9 08       		.byte	8
+ 983 03ba 18       		.byte	24
+ 984 03bb 10       		.byte	16
+ 985 03bc 19       		.byte	25
+ 986 03bd 90       		.byte	-112
+ 987 03be 1D       		.byte	29
+ 988 03bf 45       		.byte	69
+ 989 03c0 1F       		.byte	31
+ 990 03c1 20       		.byte	32
+ 991 03c2 21       		.byte	33
+ 992 03c3 04       		.byte	4
+ 993 03c4 22       		.byte	34
+ 994 03c5 0A       		.byte	10
+ 995 03c6 24       		.byte	36
+ 996 03c7 08       		.byte	8
+ 997 03c8 26       		.byte	38
+ 998 03c9 40       		.byte	64
+ 999 03ca 27       		.byte	39
+ 1000 03cb 20       		.byte	32
+ 1001 03cc 2A       		.byte	42
+ 1002 03cd 40       		.byte	64
+ 1003 03ce 2B       		.byte	43
+ 1004 03cf 44       		.byte	68
+ 1005 03d0 2F       		.byte	47
+ 1006 03d1 02       		.byte	2
+ 1007 03d2 31       		.byte	49
+ 1008 03d3 80       		.byte	-128
+ 1009 03d4 33       		.byte	51
+ 1010 03d5 10       		.byte	16
+ 1011 03d6 35       		.byte	53
+ 1012 03d7 41       		.byte	65
+ 1013 03d8 37       		.byte	55
+ 1014 03d9 08       		.byte	8
+ 1015 03da 39       		.byte	57
+ 1016 03db 08       		.byte	8
+ 1017 03dc 3B       		.byte	59
+ 1018 03dd 92       		.byte	-110
+ 1019 03de 3E       		.byte	62
+ 1020 03df 08       		.byte	8
+ 1021 03e0 47       		.byte	71
+ 1022 03e1 08       		.byte	8
+ 1023 03e2 4F       		.byte	79
+ 1024 03e3 21       		.byte	33
+ 1025 03e4 56       		.byte	86
+ 1026 03e5 09       		.byte	9
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 19
+
+
+ 1027 03e6 57       		.byte	87
+ 1028 03e7 12       		.byte	18
+ 1029 03e8 59       		.byte	89
+ 1030 03e9 90       		.byte	-112
+ 1031 03ea 5B       		.byte	91
+ 1032 03eb 05       		.byte	5
+ 1033 03ec 5D       		.byte	93
+ 1034 03ed 08       		.byte	8
+ 1035 03ee 5E       		.byte	94
+ 1036 03ef 80       		.byte	-128
+ 1037 03f0 5F       		.byte	95
+ 1038 03f1 21       		.byte	33
+ 1039 03f2 65       		.byte	101
+ 1040 03f3 0C       		.byte	12
+ 1041 03f4 80       		.byte	-128
+ 1042 03f5 04       		.byte	4
+ 1043 03f6 90       		.byte	-112
+ 1044 03f7 20       		.byte	32
+ 1045 03f8 91       		.byte	-111
+ 1046 03f9 01       		.byte	1
+ 1047 03fa 92       		.byte	-110
+ 1048 03fb 40       		.byte	64
+ 1049 03fc 93       		.byte	-109
+ 1050 03fd 1A       		.byte	26
+ 1051 03fe 95       		.byte	-107
+ 1052 03ff 08       		.byte	8
+ 1053 0400 96       		.byte	-106
+ 1054 0401 1A       		.byte	26
+ 1055 0402 9A       		.byte	-102
+ 1056 0403 40       		.byte	64
+ 1057 0404 9B       		.byte	-101
+ 1058 0405 0D       		.byte	13
+ 1059 0406 9D       		.byte	-99
+ 1060 0407 02       		.byte	2
+ 1061 0408 A0       		.byte	-96
+ 1062 0409 A0       		.byte	-96
+ 1063 040a A1       		.byte	-95
+ 1064 040b 80       		.byte	-128
+ 1065 040c A2       		.byte	-94
+ 1066 040d 20       		.byte	32
+ 1067 040e A3       		.byte	-93
+ 1068 040f 44       		.byte	68
+ 1069 0410 A4       		.byte	-92
+ 1070 0411 41       		.byte	65
+ 1071 0412 A6       		.byte	-90
+ 1072 0413 02       		.byte	2
+ 1073 0414 A7       		.byte	-89
+ 1074 0415 20       		.byte	32
+ 1075 0416 A8       		.byte	-88
+ 1076 0417 10       		.byte	16
+ 1077 0418 A9       		.byte	-87
+ 1078 0419 04       		.byte	4
+ 1079 041a AB       		.byte	-85
+ 1080 041b 44       		.byte	68
+ 1081 041c AE       		.byte	-82
+ 1082 041d 44       		.byte	68
+ 1083 041e B3       		.byte	-77
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 20
+
+
+ 1084 041f 10       		.byte	16
+ 1085 0420 C0       		.byte	-64
+ 1086 0421 43       		.byte	67
+ 1087 0422 C2       		.byte	-62
+ 1088 0423 20       		.byte	32
+ 1089 0424 C4       		.byte	-60
+ 1090 0425 AE       		.byte	-82
+ 1091 0426 CA       		.byte	-54
+ 1092 0427 1D       		.byte	29
+ 1093 0428 CC       		.byte	-52
+ 1094 0429 DC       		.byte	-36
+ 1095 042a CE       		.byte	-50
+ 1096 042b 4F       		.byte	79
+ 1097 042c D0       		.byte	-48
+ 1098 042d 40       		.byte	64
+ 1099 042e D2       		.byte	-46
+ 1100 042f 20       		.byte	32
+ 1101 0430 D6       		.byte	-42
+ 1102 0431 FF       		.byte	-1
+ 1103 0432 EC       		.byte	-20
+ 1104 0433 80       		.byte	-128
+ 1105 0434 08       		.byte	8
+ 1106 0435 07       		.byte	7
+ 1107 0436 0C       		.byte	12
+ 1108 0437 0B       		.byte	11
+ 1109 0438 0E       		.byte	14
+ 1110 0439 04       		.byte	4
+ 1111 043a 10       		.byte	16
+ 1112 043b 0C       		.byte	12
+ 1113 043c 12       		.byte	18
+ 1114 043d 02       		.byte	2
+ 1115 043e 14       		.byte	20
+ 1116 043f 08       		.byte	8
+ 1117 0440 16       		.byte	22
+ 1118 0441 01       		.byte	1
+ 1119 0442 1A       		.byte	26
+ 1120 0443 0F       		.byte	15
+ 1121 0444 20       		.byte	32
+ 1122 0445 0C       		.byte	12
+ 1123 0446 22       		.byte	34
+ 1124 0447 01       		.byte	1
+ 1125 0448 27       		.byte	39
+ 1126 0449 01       		.byte	1
+ 1127 044a 2E       		.byte	46
+ 1128 044b 10       		.byte	16
+ 1129 044c 30       		.byte	48
+ 1130 044d 0F       		.byte	15
+ 1131 044e 34       		.byte	52
+ 1132 044f 10       		.byte	16
+ 1133 0450 35       		.byte	53
+ 1134 0451 01       		.byte	1
+ 1135 0452 58       		.byte	88
+ 1136 0453 04       		.byte	4
+ 1137 0454 59       		.byte	89
+ 1138 0455 04       		.byte	4
+ 1139 0456 5C       		.byte	92
+ 1140 0457 50       		.byte	80
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 21
+
+
+ 1141 0458 5F       		.byte	95
+ 1142 0459 01       		.byte	1
+ 1143 045a 86       		.byte	-122
+ 1144 045b 01       		.byte	1
+ 1145 045c 88       		.byte	-120
+ 1146 045d 12       		.byte	18
+ 1147 045e 8A       		.byte	-118
+ 1148 045f 0C       		.byte	12
+ 1149 0460 8B       		.byte	-117
+ 1150 0461 08       		.byte	8
+ 1151 0462 8C       		.byte	-116
+ 1152 0463 06       		.byte	6
+ 1153 0464 8D       		.byte	-115
+ 1154 0465 04       		.byte	4
+ 1155 0466 8E       		.byte	-114
+ 1156 0467 01       		.byte	1
+ 1157 0468 90       		.byte	-112
+ 1158 0469 05       		.byte	5
+ 1159 046a 91       		.byte	-111
+ 1160 046b 02       		.byte	2
+ 1161 046c 92       		.byte	-110
+ 1162 046d 02       		.byte	2
+ 1163 046e 94       		.byte	-108
+ 1164 046f 08       		.byte	8
+ 1165 0470 96       		.byte	-106
+ 1166 0471 10       		.byte	16
+ 1167 0472 98       		.byte	-104
+ 1168 0473 08       		.byte	8
+ 1169 0474 9A       		.byte	-102
+ 1170 0475 10       		.byte	16
+ 1171 0476 9C       		.byte	-100
+ 1172 0477 08       		.byte	8
+ 1173 0478 9E       		.byte	-98
+ 1174 0479 10       		.byte	16
+ 1175 047a 9F       		.byte	-97
+ 1176 047b 02       		.byte	2
+ 1177 047c A0       		.byte	-96
+ 1178 047d 07       		.byte	7
+ 1179 047e A3       		.byte	-93
+ 1180 047f 04       		.byte	4
+ 1181 0480 A4       		.byte	-92
+ 1182 0481 03       		.byte	3
+ 1183 0482 A8       		.byte	-88
+ 1184 0483 06       		.byte	6
+ 1185 0484 AB       		.byte	-85
+ 1186 0485 05       		.byte	5
+ 1187 0486 B1       		.byte	-79
+ 1188 0487 01       		.byte	1
+ 1189 0488 B2       		.byte	-78
+ 1190 0489 18       		.byte	24
+ 1191 048a B3       		.byte	-77
+ 1192 048b 04       		.byte	4
+ 1193 048c B4       		.byte	-76
+ 1194 048d 07       		.byte	7
+ 1195 048e B5       		.byte	-75
+ 1196 048f 08       		.byte	8
+ 1197 0490 B7       		.byte	-73
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 22
+
+
+ 1198 0491 02       		.byte	2
+ 1199 0492 BA       		.byte	-70
+ 1200 0493 08       		.byte	8
+ 1201 0494 BF       		.byte	-65
+ 1202 0495 44       		.byte	68
+ 1203 0496 C0       		.byte	-64
+ 1204 0497 65       		.byte	101
+ 1205 0498 C1       		.byte	-63
+ 1206 0499 03       		.byte	3
+ 1207 049a C5       		.byte	-59
+ 1208 049b 23       		.byte	35
+ 1209 049c C6       		.byte	-58
+ 1210 049d C4       		.byte	-60
+ 1211 049e C7       		.byte	-57
+ 1212 049f 0E       		.byte	14
+ 1213 04a0 C8       		.byte	-56
+ 1214 04a1 1F       		.byte	31
+ 1215 04a2 C9       		.byte	-55
+ 1216 04a3 FF       		.byte	-1
+ 1217 04a4 CA       		.byte	-54
+ 1218 04a5 FF       		.byte	-1
+ 1219 04a6 CB       		.byte	-53
+ 1220 04a7 FF       		.byte	-1
+ 1221 04a8 CD       		.byte	-51
+ 1222 04a9 A0       		.byte	-96
+ 1223 04aa CF       		.byte	-49
+ 1224 04ab 01       		.byte	1
+ 1225 04ac D0       		.byte	-48
+ 1226 04ad 18       		.byte	24
+ 1227 04ae D2       		.byte	-46
+ 1228 04af 80       		.byte	-128
+ 1229 04b0 D4       		.byte	-44
+ 1230 04b1 0F       		.byte	15
+ 1231 04b2 D8       		.byte	-40
+ 1232 04b3 04       		.byte	4
+ 1233 04b4 D9       		.byte	-39
+ 1234 04b5 04       		.byte	4
+ 1235 04b6 DA       		.byte	-38
+ 1236 04b7 04       		.byte	4
+ 1237 04b8 DB       		.byte	-37
+ 1238 04b9 04       		.byte	4
+ 1239 04ba DF       		.byte	-33
+ 1240 04bb 05       		.byte	5
+ 1241 04bc E0       		.byte	-32
+ 1242 04bd 40       		.byte	64
+ 1243 04be E2       		.byte	-30
+ 1244 04bf 80       		.byte	-128
+ 1245 04c0 E4       		.byte	-28
+ 1246 04c1 40       		.byte	64
+ 1247 04c2 E5       		.byte	-27
+ 1248 04c3 40       		.byte	64
+ 1249 04c4 E6       		.byte	-26
+ 1250 04c5 80       		.byte	-128
+ 1251 04c6 E8       		.byte	-24
+ 1252 04c7 40       		.byte	64
+ 1253 04c8 EA       		.byte	-22
+ 1254 04c9 80       		.byte	-128
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 23
+
+
+ 1255 04ca EC       		.byte	-20
+ 1256 04cb 40       		.byte	64
+ 1257 04cc ED       		.byte	-19
+ 1258 04cd 20       		.byte	32
+ 1259 04ce EE       		.byte	-18
+ 1260 04cf 80       		.byte	-128
+ 1261 04d0 00       		.byte	0
+ 1262 04d1 84       		.byte	-124
+ 1263 04d2 03       		.byte	3
+ 1264 04d3 09       		.byte	9
+ 1265 04d4 04       		.byte	4
+ 1266 04d5 20       		.byte	32
+ 1267 04d6 07       		.byte	7
+ 1268 04d7 05       		.byte	5
+ 1269 04d8 0A       		.byte	10
+ 1270 04d9 52       		.byte	82
+ 1271 04da 0B       		.byte	11
+ 1272 04db 04       		.byte	4
+ 1273 04dc 0E       		.byte	14
+ 1274 04dd 80       		.byte	-128
+ 1275 04de 0F       		.byte	15
+ 1276 04df 18       		.byte	24
+ 1277 04e0 11       		.byte	17
+ 1278 04e1 09       		.byte	9
+ 1279 04e2 13       		.byte	19
+ 1280 04e3 10       		.byte	16
+ 1281 04e4 16       		.byte	22
+ 1282 04e5 42       		.byte	66
+ 1283 04e6 18       		.byte	24
+ 1284 04e7 04       		.byte	4
+ 1285 04e8 19       		.byte	25
+ 1286 04e9 20       		.byte	32
+ 1287 04ea 1B       		.byte	27
+ 1288 04eb 0C       		.byte	12
+ 1289 04ec 1E       		.byte	30
+ 1290 04ed C4       		.byte	-60
+ 1291 04ee 1F       		.byte	31
+ 1292 04ef 01       		.byte	1
+ 1293 04f0 22       		.byte	34
+ 1294 04f1 68       		.byte	104
+ 1295 04f2 23       		.byte	35
+ 1296 04f3 44       		.byte	68
+ 1297 04f4 27       		.byte	39
+ 1298 04f5 08       		.byte	8
+ 1299 04f6 29       		.byte	41
+ 1300 04f7 21       		.byte	33
+ 1301 04f8 2F       		.byte	47
+ 1302 04f9 10       		.byte	16
+ 1303 04fa 31       		.byte	49
+ 1304 04fb 80       		.byte	-128
+ 1305 04fc 32       		.byte	50
+ 1306 04fd 02       		.byte	2
+ 1307 04fe 3A       		.byte	58
+ 1308 04ff 20       		.byte	32
+ 1309 0500 3B       		.byte	59
+ 1310 0501 40       		.byte	64
+ 1311 0502 41       		.byte	65
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 24
+
+
+ 1312 0503 04       		.byte	4
+ 1313 0504 48       		.byte	72
+ 1314 0505 A1       		.byte	-95
+ 1315 0506 4A       		.byte	74
+ 1316 0507 08       		.byte	8
+ 1317 0508 4B       		.byte	75
+ 1318 0509 08       		.byte	8
+ 1319 050a 51       		.byte	81
+ 1320 050b 88       		.byte	-120
+ 1321 050c 52       		.byte	82
+ 1322 050d 10       		.byte	16
+ 1323 050e 59       		.byte	89
+ 1324 050f 02       		.byte	2
+ 1325 0510 5A       		.byte	90
+ 1326 0511 88       		.byte	-120
+ 1327 0512 5B       		.byte	91
+ 1328 0513 10       		.byte	16
+ 1329 0514 61       		.byte	97
+ 1330 0515 08       		.byte	8
+ 1331 0516 62       		.byte	98
+ 1332 0517 10       		.byte	16
+ 1333 0518 71       		.byte	113
+ 1334 0519 01       		.byte	1
+ 1335 051a 7B       		.byte	123
+ 1336 051b 40       		.byte	64
+ 1337 051c 80       		.byte	-128
+ 1338 051d 80       		.byte	-128
+ 1339 051e 83       		.byte	-125
+ 1340 051f 10       		.byte	16
+ 1341 0520 85       		.byte	-123
+ 1342 0521 01       		.byte	1
+ 1343 0522 86       		.byte	-122
+ 1344 0523 40       		.byte	64
+ 1345 0524 87       		.byte	-121
+ 1346 0525 20       		.byte	32
+ 1347 0526 8B       		.byte	-117
+ 1348 0527 10       		.byte	16
+ 1349 0528 8E       		.byte	-114
+ 1350 0529 22       		.byte	34
+ 1351 052a C0       		.byte	-64
+ 1352 052b C7       		.byte	-57
+ 1353 052c C2       		.byte	-62
+ 1354 052d 7F       		.byte	127
+ 1355 052e C4       		.byte	-60
+ 1356 052f 9E       		.byte	-98
+ 1357 0530 CA       		.byte	-54
+ 1358 0531 45       		.byte	69
+ 1359 0532 CC       		.byte	-52
+ 1360 0533 09       		.byte	9
+ 1361 0534 CE       		.byte	-50
+ 1362 0535 0C       		.byte	12
+ 1363 0536 D0       		.byte	-48
+ 1364 0537 02       		.byte	2
+ 1365 0538 D2       		.byte	-46
+ 1366 0539 0C       		.byte	12
+ 1367 053a D6       		.byte	-42
+ 1368 053b 0F       		.byte	15
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 25
+
+
+ 1369 053c D8       		.byte	-40
+ 1370 053d 06       		.byte	6
+ 1371 053e DE       		.byte	-34
+ 1372 053f 01       		.byte	1
+ 1373 0540 E0       		.byte	-32
+ 1374 0541 20       		.byte	32
+ 1375 0542 02       		.byte	2
+ 1376 0543 04       		.byte	4
+ 1377 0544 04       		.byte	4
+ 1378 0545 01       		.byte	1
+ 1379 0546 0B       		.byte	11
+ 1380 0547 01       		.byte	1
+ 1381 0548 0F       		.byte	15
+ 1382 0549 0E       		.byte	14
+ 1383 054a 12       		.byte	18
+ 1384 054b 08       		.byte	8
+ 1385 054c 19       		.byte	25
+ 1386 054d 08       		.byte	8
+ 1387 054e 2A       		.byte	42
+ 1388 054f 07       		.byte	7
+ 1389 0550 2F       		.byte	47
+ 1390 0551 03       		.byte	3
+ 1391 0552 30       		.byte	48
+ 1392 0553 04       		.byte	4
+ 1393 0554 31       		.byte	49
+ 1394 0555 02       		.byte	2
+ 1395 0556 32       		.byte	50
+ 1396 0557 02       		.byte	2
+ 1397 0558 33       		.byte	51
+ 1398 0559 01       		.byte	1
+ 1399 055a 34       		.byte	52
+ 1400 055b 01       		.byte	1
+ 1401 055c 35       		.byte	53
+ 1402 055d 04       		.byte	4
+ 1403 055e 36       		.byte	54
+ 1404 055f 08       		.byte	8
+ 1405 0560 37       		.byte	55
+ 1406 0561 08       		.byte	8
+ 1407 0562 3F       		.byte	63
+ 1408 0563 04       		.byte	4
+ 1409 0564 40       		.byte	64
+ 1410 0565 50       		.byte	80
+ 1411 0566 41       		.byte	65
+ 1412 0567 06       		.byte	6
+ 1413 0568 45       		.byte	69
+ 1414 0569 D0       		.byte	-48
+ 1415 056a 46       		.byte	70
+ 1416 056b 21       		.byte	33
+ 1417 056c 47       		.byte	71
+ 1418 056d 05       		.byte	5
+ 1419 056e 48       		.byte	72
+ 1420 056f 1E       		.byte	30
+ 1421 0570 49       		.byte	73
+ 1422 0571 FF       		.byte	-1
+ 1423 0572 4A       		.byte	74
+ 1424 0573 FF       		.byte	-1
+ 1425 0574 4B       		.byte	75
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 26
+
+
+ 1426 0575 FF       		.byte	-1
+ 1427 0576 4D       		.byte	77
+ 1428 0577 A0       		.byte	-96
+ 1429 0578 4F       		.byte	79
+ 1430 0579 04       		.byte	4
+ 1431 057a 50       		.byte	80
+ 1432 057b 18       		.byte	24
+ 1433 057c 52       		.byte	82
+ 1434 057d 80       		.byte	-128
+ 1435 057e 54       		.byte	84
+ 1436 057f 07       		.byte	7
+ 1437 0580 58       		.byte	88
+ 1438 0581 04       		.byte	4
+ 1439 0582 59       		.byte	89
+ 1440 0583 04       		.byte	4
+ 1441 0584 5A       		.byte	90
+ 1442 0585 04       		.byte	4
+ 1443 0586 5B       		.byte	91
+ 1444 0587 04       		.byte	4
+ 1445 0588 5C       		.byte	92
+ 1446 0589 44       		.byte	68
+ 1447 058a 5D       		.byte	93
+ 1448 058b 44       		.byte	68
+ 1449 058c 5F       		.byte	95
+ 1450 058d 01       		.byte	1
+ 1451 058e 60       		.byte	96
+ 1452 058f 40       		.byte	64
+ 1453 0590 62       		.byte	98
+ 1454 0591 C0       		.byte	-64
+ 1455 0592 64       		.byte	100
+ 1456 0593 40       		.byte	64
+ 1457 0594 65       		.byte	101
+ 1458 0595 40       		.byte	64
+ 1459 0596 66       		.byte	102
+ 1460 0597 C0       		.byte	-64
+ 1461 0598 68       		.byte	104
+ 1462 0599 C0       		.byte	-64
+ 1463 059a 6A       		.byte	106
+ 1464 059b C0       		.byte	-64
+ 1465 059c 6C       		.byte	108
+ 1466 059d C0       		.byte	-64
+ 1467 059e 6E       		.byte	110
+ 1468 059f C0       		.byte	-64
+ 1469 05a0 82       		.byte	-126
+ 1470 05a1 02       		.byte	2
+ 1471 05a2 83       		.byte	-125
+ 1472 05a3 01       		.byte	1
+ 1473 05a4 86       		.byte	-122
+ 1474 05a5 05       		.byte	5
+ 1475 05a6 96       		.byte	-106
+ 1476 05a7 04       		.byte	4
+ 1477 05a8 97       		.byte	-105
+ 1478 05a9 02       		.byte	2
+ 1479 05aa 99       		.byte	-103
+ 1480 05ab 08       		.byte	8
+ 1481 05ac AB       		.byte	-85
+ 1482 05ad 0E       		.byte	14
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 27
+
+
+ 1483 05ae AD       		.byte	-83
+ 1484 05af 01       		.byte	1
+ 1485 05b0 AE       		.byte	-82
+ 1486 05b1 09       		.byte	9
+ 1487 05b2 B0       		.byte	-80
+ 1488 05b3 08       		.byte	8
+ 1489 05b4 B1       		.byte	-79
+ 1490 05b5 08       		.byte	8
+ 1491 05b6 B2       		.byte	-78
+ 1492 05b7 02       		.byte	2
+ 1493 05b8 B3       		.byte	-77
+ 1494 05b9 02       		.byte	2
+ 1495 05ba B4       		.byte	-76
+ 1496 05bb 04       		.byte	4
+ 1497 05bc B5       		.byte	-75
+ 1498 05bd 04       		.byte	4
+ 1499 05be B6       		.byte	-74
+ 1500 05bf 01       		.byte	1
+ 1501 05c0 B7       		.byte	-73
+ 1502 05c1 01       		.byte	1
+ 1503 05c2 BE       		.byte	-66
+ 1504 05c3 10       		.byte	16
+ 1505 05c4 C0       		.byte	-64
+ 1506 05c5 30       		.byte	48
+ 1507 05c6 C1       		.byte	-63
+ 1508 05c7 06       		.byte	6
+ 1509 05c8 C5       		.byte	-59
+ 1510 05c9 D0       		.byte	-48
+ 1511 05ca C6       		.byte	-58
+ 1512 05cb 20       		.byte	32
+ 1513 05cc C7       		.byte	-57
+ 1514 05cd 51       		.byte	81
+ 1515 05ce C8       		.byte	-56
+ 1516 05cf 3A       		.byte	58
+ 1517 05d0 C9       		.byte	-55
+ 1518 05d1 FF       		.byte	-1
+ 1519 05d2 CA       		.byte	-54
+ 1520 05d3 FF       		.byte	-1
+ 1521 05d4 CB       		.byte	-53
+ 1522 05d5 FF       		.byte	-1
+ 1523 05d6 CD       		.byte	-51
+ 1524 05d7 A0       		.byte	-96
+ 1525 05d8 CF       		.byte	-49
+ 1526 05d9 04       		.byte	4
+ 1527 05da D0       		.byte	-48
+ 1528 05db 18       		.byte	24
+ 1529 05dc D2       		.byte	-46
+ 1530 05dd 80       		.byte	-128
+ 1531 05de D4       		.byte	-44
+ 1532 05df 07       		.byte	7
+ 1533 05e0 D8       		.byte	-40
+ 1534 05e1 04       		.byte	4
+ 1535 05e2 D9       		.byte	-39
+ 1536 05e3 04       		.byte	4
+ 1537 05e4 DA       		.byte	-38
+ 1538 05e5 04       		.byte	4
+ 1539 05e6 DB       		.byte	-37
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 28
+
+
+ 1540 05e7 04       		.byte	4
+ 1541 05e8 DC       		.byte	-36
+ 1542 05e9 66       		.byte	102
+ 1543 05ea DD       		.byte	-35
+ 1544 05eb 66       		.byte	102
+ 1545 05ec DF       		.byte	-33
+ 1546 05ed 01       		.byte	1
+ 1547 05ee E0       		.byte	-32
+ 1548 05ef 40       		.byte	64
+ 1549 05f0 E2       		.byte	-30
+ 1550 05f1 C0       		.byte	-64
+ 1551 05f2 E4       		.byte	-28
+ 1552 05f3 40       		.byte	64
+ 1553 05f4 E5       		.byte	-27
+ 1554 05f5 40       		.byte	64
+ 1555 05f6 E6       		.byte	-26
+ 1556 05f7 C0       		.byte	-64
+ 1557 05f8 E8       		.byte	-24
+ 1558 05f9 C0       		.byte	-64
+ 1559 05fa EA       		.byte	-22
+ 1560 05fb C0       		.byte	-64
+ 1561 05fc EC       		.byte	-20
+ 1562 05fd C0       		.byte	-64
+ 1563 05fe EE       		.byte	-18
+ 1564 05ff C0       		.byte	-64
+ 1565 0600 00       		.byte	0
+ 1566 0601 01       		.byte	1
+ 1567 0602 01       		.byte	1
+ 1568 0603 08       		.byte	8
+ 1569 0604 05       		.byte	5
+ 1570 0605 04       		.byte	4
+ 1571 0606 06       		.byte	6
+ 1572 0607 80       		.byte	-128
+ 1573 0608 0B       		.byte	11
+ 1574 0609 40       		.byte	64
+ 1575 060a 0F       		.byte	15
+ 1576 060b 20       		.byte	32
+ 1577 060c 12       		.byte	18
+ 1578 060d 08       		.byte	8
+ 1579 060e 16       		.byte	22
+ 1580 060f 01       		.byte	1
+ 1581 0610 18       		.byte	24
+ 1582 0611 01       		.byte	1
+ 1583 0612 19       		.byte	25
+ 1584 0613 5A       		.byte	90
+ 1585 0614 1C       		.byte	28
+ 1586 0615 02       		.byte	2
+ 1587 0616 1D       		.byte	29
+ 1588 0617 0C       		.byte	12
+ 1589 0618 1E       		.byte	30
+ 1590 0619 48       		.byte	72
+ 1591 061a 21       		.byte	33
+ 1592 061b 20       		.byte	32
+ 1593 061c 22       		.byte	34
+ 1594 061d 45       		.byte	69
+ 1595 061e 24       		.byte	36
+ 1596 061f 60       		.byte	96
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 29
+
+
+ 1597 0620 26       		.byte	38
+ 1598 0621 10       		.byte	16
+ 1599 0622 27       		.byte	39
+ 1600 0623 02       		.byte	2
+ 1601 0624 29       		.byte	41
+ 1602 0625 40       		.byte	64
+ 1603 0626 2E       		.byte	46
+ 1604 0627 40       		.byte	64
+ 1605 0628 2F       		.byte	47
+ 1606 0629 08       		.byte	8
+ 1607 062a 31       		.byte	49
+ 1608 062b 20       		.byte	32
+ 1609 062c 35       		.byte	53
+ 1610 062d 04       		.byte	4
+ 1611 062e 36       		.byte	54
+ 1612 062f 10       		.byte	16
+ 1613 0630 38       		.byte	56
+ 1614 0631 80       		.byte	-128
+ 1615 0632 3B       		.byte	59
+ 1616 0633 20       		.byte	32
+ 1617 0634 3F       		.byte	63
+ 1618 0635 02       		.byte	2
+ 1619 0636 45       		.byte	69
+ 1620 0637 08       		.byte	8
+ 1621 0638 49       		.byte	73
+ 1622 0639 41       		.byte	65
+ 1623 063a 4B       		.byte	75
+ 1624 063b 20       		.byte	32
+ 1625 063c 4F       		.byte	79
+ 1626 063d 21       		.byte	33
+ 1627 063e 50       		.byte	80
+ 1628 063f 40       		.byte	64
+ 1629 0640 52       		.byte	82
+ 1630 0641 08       		.byte	8
+ 1631 0642 53       		.byte	83
+ 1632 0643 10       		.byte	16
+ 1633 0644 56       		.byte	86
+ 1634 0645 01       		.byte	1
+ 1635 0646 57       		.byte	87
+ 1636 0647 19       		.byte	25
+ 1637 0648 59       		.byte	89
+ 1638 0649 11       		.byte	17
+ 1639 064a 5A       		.byte	90
+ 1640 064b 88       		.byte	-120
+ 1641 064c 5C       		.byte	92
+ 1642 064d 40       		.byte	64
+ 1643 064e 5D       		.byte	93
+ 1644 064f 20       		.byte	32
+ 1645 0650 5E       		.byte	94
+ 1646 0651 08       		.byte	8
+ 1647 0652 5F       		.byte	95
+ 1648 0653 01       		.byte	1
+ 1649 0654 73       		.byte	115
+ 1650 0655 40       		.byte	64
+ 1651 0656 76       		.byte	118
+ 1652 0657 80       		.byte	-128
+ 1653 0658 80       		.byte	-128
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 30
+
+
+ 1654 0659 10       		.byte	16
+ 1655 065a 84       		.byte	-124
+ 1656 065b 01       		.byte	1
+ 1657 065c 85       		.byte	-123
+ 1658 065d 20       		.byte	32
+ 1659 065e 87       		.byte	-121
+ 1660 065f 02       		.byte	2
+ 1661 0660 8A       		.byte	-118
+ 1662 0661 01       		.byte	1
+ 1663 0662 8D       		.byte	-115
+ 1664 0663 02       		.byte	2
+ 1665 0664 C0       		.byte	-64
+ 1666 0665 3C       		.byte	60
+ 1667 0666 C2       		.byte	-62
+ 1668 0667 28       		.byte	40
+ 1669 0668 C4       		.byte	-60
+ 1670 0669 82       		.byte	-126
+ 1671 066a CA       		.byte	-54
+ 1672 066b 38       		.byte	56
+ 1673 066c CC       		.byte	-52
+ 1674 066d 64       		.byte	100
+ 1675 066e CE       		.byte	-50
+ 1676 066f 8C       		.byte	-116
+ 1677 0670 D0       		.byte	-48
+ 1678 0671 40       		.byte	64
+ 1679 0672 D2       		.byte	-46
+ 1680 0673 2C       		.byte	44
+ 1681 0674 D6       		.byte	-42
+ 1682 0675 FF       		.byte	-1
+ 1683 0676 E2       		.byte	-30
+ 1684 0677 60       		.byte	96
+ 1685 0678 EA       		.byte	-22
+ 1686 0679 04       		.byte	4
+ 1687 067a EE       		.byte	-18
+ 1688 067b 04       		.byte	4
+ 1689 067c A9       		.byte	-87
+ 1690 067d 40       		.byte	64
+ 1691 067e EA       		.byte	-22
+ 1692 067f 01       		.byte	1
+ 1693 0680 04       		.byte	4
+ 1694 0681 42       		.byte	66
+ 1695 0682 06       		.byte	6
+ 1696 0683 91       		.byte	-111
+ 1697 0684 08       		.byte	8
+ 1698 0685 E7       		.byte	-25
+ 1699 0686 0F       		.byte	15
+ 1700 0687 01       		.byte	1
+ 1701 0688 14       		.byte	20
+ 1702 0689 84       		.byte	-124
+ 1703 068a 16       		.byte	22
+ 1704 068b 51       		.byte	81
+ 1705 068c 17       		.byte	23
+ 1706 068d 01       		.byte	1
+ 1707 068e 18       		.byte	24
+ 1708 068f 01       		.byte	1
+ 1709 0690 1A       		.byte	26
+ 1710 0691 0E       		.byte	14
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 31
+
+
+ 1711 0692 28       		.byte	40
+ 1712 0693 E7       		.byte	-25
+ 1713 0694 2C       		.byte	44
+ 1714 0695 20       		.byte	32
+ 1715 0696 30       		.byte	48
+ 1716 0697 20       		.byte	32
+ 1717 0698 31       		.byte	49
+ 1718 0699 01       		.byte	1
+ 1719 069a 32       		.byte	50
+ 1720 069b C0       		.byte	-64
+ 1721 069c 34       		.byte	52
+ 1722 069d 07       		.byte	7
+ 1723 069e 36       		.byte	54
+ 1724 069f 18       		.byte	24
+ 1725 06a0 3B       		.byte	59
+ 1726 06a1 08       		.byte	8
+ 1727 06a2 3E       		.byte	62
+ 1728 06a3 40       		.byte	64
+ 1729 06a4 3F       		.byte	63
+ 1730 06a5 01       		.byte	1
+ 1731 06a6 40       		.byte	64
+ 1732 06a7 64       		.byte	100
+ 1733 06a8 41       		.byte	65
+ 1734 06a9 02       		.byte	2
+ 1735 06aa 42       		.byte	66
+ 1736 06ab 03       		.byte	3
+ 1737 06ac 44       		.byte	68
+ 1738 06ad 01       		.byte	1
+ 1739 06ae 46       		.byte	70
+ 1740 06af EC       		.byte	-20
+ 1741 06b0 48       		.byte	72
+ 1742 06b1 0C       		.byte	12
+ 1743 06b2 49       		.byte	73
+ 1744 06b3 FF       		.byte	-1
+ 1745 06b4 4A       		.byte	74
+ 1746 06b5 FF       		.byte	-1
+ 1747 06b6 4B       		.byte	75
+ 1748 06b7 FF       		.byte	-1
+ 1749 06b8 4C       		.byte	76
+ 1750 06b9 62       		.byte	98
+ 1751 06ba 4D       		.byte	77
+ 1752 06bb A0       		.byte	-96
+ 1753 06bc 4E       		.byte	78
+ 1754 06bd F0       		.byte	-16
+ 1755 06be 4F       		.byte	79
+ 1756 06bf 41       		.byte	65
+ 1757 06c0 50       		.byte	80
+ 1758 06c1 0C       		.byte	12
+ 1759 06c2 54       		.byte	84
+ 1760 06c3 18       		.byte	24
+ 1761 06c4 58       		.byte	88
+ 1762 06c5 04       		.byte	4
+ 1763 06c6 59       		.byte	89
+ 1764 06c7 04       		.byte	4
+ 1765 06c8 5A       		.byte	90
+ 1766 06c9 04       		.byte	4
+ 1767 06ca 5B       		.byte	91
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 32
+
+
+ 1768 06cb 04       		.byte	4
+ 1769 06cc 5C       		.byte	92
+ 1770 06cd 22       		.byte	34
+ 1771 06ce 5D       		.byte	93
+ 1772 06cf 22       		.byte	34
+ 1773 06d0 5F       		.byte	95
+ 1774 06d1 01       		.byte	1
+ 1775 06d2 66       		.byte	102
+ 1776 06d3 40       		.byte	64
+ 1777 06d4 67       		.byte	103
+ 1778 06d5 02       		.byte	2
+ 1779 06d6 69       		.byte	105
+ 1780 06d7 10       		.byte	16
+ 1781 06d8 6A       		.byte	106
+ 1782 06d9 30       		.byte	48
+ 1783 06da 6B       		.byte	107
+ 1784 06db 10       		.byte	16
+ 1785 06dc 6D       		.byte	109
+ 1786 06dd 10       		.byte	16
+ 1787 06de 6E       		.byte	110
+ 1788 06df 10       		.byte	16
+ 1789 06e0 6F       		.byte	111
+ 1790 06e1 12       		.byte	18
+ 1791 06e2 84       		.byte	-124
+ 1792 06e3 02       		.byte	2
+ 1793 06e4 87       		.byte	-121
+ 1794 06e5 20       		.byte	32
+ 1795 06e6 89       		.byte	-119
+ 1796 06e7 09       		.byte	9
+ 1797 06e8 8B       		.byte	-117
+ 1798 06e9 D0       		.byte	-48
+ 1799 06ea 93       		.byte	-109
+ 1800 06eb 03       		.byte	3
+ 1801 06ec 95       		.byte	-107
+ 1802 06ed 10       		.byte	16
+ 1803 06ee 96       		.byte	-106
+ 1804 06ef 08       		.byte	8
+ 1805 06f0 97       		.byte	-105
+ 1806 06f1 AC       		.byte	-84
+ 1807 06f2 99       		.byte	-103
+ 1808 06f3 0C       		.byte	12
+ 1809 06f4 9B       		.byte	-101
+ 1810 06f5 71       		.byte	113
+ 1811 06f6 9D       		.byte	-99
+ 1812 06f7 10       		.byte	16
+ 1813 06f8 9F       		.byte	-97
+ 1814 06f9 40       		.byte	64
+ 1815 06fa A2       		.byte	-94
+ 1816 06fb 06       		.byte	6
+ 1817 06fc A5       		.byte	-91
+ 1818 06fd 14       		.byte	20
+ 1819 06fe A6       		.byte	-90
+ 1820 06ff 01       		.byte	1
+ 1821 0700 AD       		.byte	-83
+ 1822 0701 DC       		.byte	-36
+ 1823 0702 AF       		.byte	-81
+ 1824 0703 22       		.byte	34
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 33
+
+
+ 1825 0704 B0       		.byte	-80
+ 1826 0705 02       		.byte	2
+ 1827 0706 B1       		.byte	-79
+ 1828 0707 1F       		.byte	31
+ 1829 0708 B2       		.byte	-78
+ 1830 0709 01       		.byte	1
+ 1831 070a B4       		.byte	-76
+ 1832 070b 04       		.byte	4
+ 1833 070c B5       		.byte	-75
+ 1834 070d E0       		.byte	-32
+ 1835 070e B6       		.byte	-74
+ 1836 070f 08       		.byte	8
+ 1837 0710 BB       		.byte	-69
+ 1838 0711 20       		.byte	32
+ 1839 0712 BE       		.byte	-66
+ 1840 0713 01       		.byte	1
+ 1841 0714 C0       		.byte	-64
+ 1842 0715 36       		.byte	54
+ 1843 0716 C1       		.byte	-63
+ 1844 0717 02       		.byte	2
+ 1845 0718 C5       		.byte	-59
+ 1846 0719 EB       		.byte	-21
+ 1847 071a C6       		.byte	-58
+ 1848 071b 0C       		.byte	12
+ 1849 071c C8       		.byte	-56
+ 1850 071d 07       		.byte	7
+ 1851 071e C9       		.byte	-55
+ 1852 071f FF       		.byte	-1
+ 1853 0720 CA       		.byte	-54
+ 1854 0721 FF       		.byte	-1
+ 1855 0722 CB       		.byte	-53
+ 1856 0723 FF       		.byte	-1
+ 1857 0724 CE       		.byte	-50
+ 1858 0725 F0       		.byte	-16
+ 1859 0726 CF       		.byte	-49
+ 1860 0727 44       		.byte	68
+ 1861 0728 D0       		.byte	-48
+ 1862 0729 0C       		.byte	12
+ 1863 072a D8       		.byte	-40
+ 1864 072b 04       		.byte	4
+ 1865 072c D9       		.byte	-39
+ 1866 072d 04       		.byte	4
+ 1867 072e DA       		.byte	-38
+ 1868 072f 04       		.byte	4
+ 1869 0730 DB       		.byte	-37
+ 1870 0731 04       		.byte	4
+ 1871 0732 DC       		.byte	-36
+ 1872 0733 20       		.byte	32
+ 1873 0734 DD       		.byte	-35
+ 1874 0735 02       		.byte	2
+ 1875 0736 DF       		.byte	-33
+ 1876 0737 01       		.byte	1
+ 1877 0738 E6       		.byte	-26
+ 1878 0739 C0       		.byte	-64
+ 1879 073a EA       		.byte	-22
+ 1880 073b 40       		.byte	64
+ 1881 073c EB       		.byte	-21
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 34
+
+
+ 1882 073d 02       		.byte	2
+ 1883 073e 00       		.byte	0
+ 1884 073f 04       		.byte	4
+ 1885 0740 04       		.byte	4
+ 1886 0741 20       		.byte	32
+ 1887 0742 05       		.byte	5
+ 1888 0743 08       		.byte	8
+ 1889 0744 0A       		.byte	10
+ 1890 0745 10       		.byte	16
+ 1891 0746 0E       		.byte	14
+ 1892 0747 24       		.byte	36
+ 1893 0748 10       		.byte	16
+ 1894 0749 80       		.byte	-128
+ 1895 074a 12       		.byte	18
+ 1896 074b 20       		.byte	32
+ 1897 074c 15       		.byte	21
+ 1898 074d 50       		.byte	80
+ 1899 074e 18       		.byte	24
+ 1900 074f 04       		.byte	4
+ 1901 0750 19       		.byte	25
+ 1902 0751 02       		.byte	2
+ 1903 0752 1A       		.byte	26
+ 1904 0753 12       		.byte	18
+ 1905 0754 1C       		.byte	28
+ 1906 0755 20       		.byte	32
+ 1907 0756 1D       		.byte	29
+ 1908 0757 82       		.byte	-126
+ 1909 0758 1E       		.byte	30
+ 1910 0759 24       		.byte	36
+ 1911 075a 20       		.byte	32
+ 1912 075b 08       		.byte	8
+ 1913 075c 21       		.byte	33
+ 1914 075d 20       		.byte	32
+ 1915 075e 22       		.byte	34
+ 1916 075f 02       		.byte	2
+ 1917 0760 23       		.byte	35
+ 1918 0761 40       		.byte	64
+ 1919 0762 24       		.byte	36
+ 1920 0763 80       		.byte	-128
+ 1921 0764 27       		.byte	39
+ 1922 0765 10       		.byte	16
+ 1923 0766 29       		.byte	41
+ 1924 0767 04       		.byte	4
+ 1925 0768 2B       		.byte	43
+ 1926 0769 01       		.byte	1
+ 1927 076a 31       		.byte	49
+ 1928 076b 28       		.byte	40
+ 1929 076c 32       		.byte	50
+ 1930 076d 82       		.byte	-126
+ 1931 076e 36       		.byte	54
+ 1932 076f 08       		.byte	8
+ 1933 0770 37       		.byte	55
+ 1934 0771 08       		.byte	8
+ 1935 0772 38       		.byte	56
+ 1936 0773 80       		.byte	-128
+ 1937 0774 39       		.byte	57
+ 1938 0775 20       		.byte	32
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 35
+
+
+ 1939 0776 3A       		.byte	58
+ 1940 0777 44       		.byte	68
+ 1941 0778 3F       		.byte	63
+ 1942 0779 80       		.byte	-128
+ 1943 077a 41       		.byte	65
+ 1944 077b 28       		.byte	40
+ 1945 077c 45       		.byte	69
+ 1946 077d 82       		.byte	-126
+ 1947 077e 46       		.byte	70
+ 1948 077f 80       		.byte	-128
+ 1949 0780 47       		.byte	71
+ 1950 0781 18       		.byte	24
+ 1951 0782 48       		.byte	72
+ 1952 0783 08       		.byte	8
+ 1953 0784 49       		.byte	73
+ 1954 0785 04       		.byte	4
+ 1955 0786 4B       		.byte	75
+ 1956 0787 02       		.byte	2
+ 1957 0788 4F       		.byte	79
+ 1958 0789 20       		.byte	32
+ 1959 078a 53       		.byte	83
+ 1960 078b 80       		.byte	-128
+ 1961 078c 57       		.byte	87
+ 1962 078d 60       		.byte	96
+ 1963 078e 5E       		.byte	94
+ 1964 078f 02       		.byte	2
+ 1965 0790 66       		.byte	102
+ 1966 0791 40       		.byte	64
+ 1967 0792 67       		.byte	103
+ 1968 0793 04       		.byte	4
+ 1969 0794 6A       		.byte	106
+ 1970 0795 40       		.byte	64
+ 1971 0796 91       		.byte	-111
+ 1972 0797 20       		.byte	32
+ 1973 0798 93       		.byte	-109
+ 1974 0799 0C       		.byte	12
+ 1975 079a 96       		.byte	-106
+ 1976 079b 1A       		.byte	26
+ 1977 079c 97       		.byte	-105
+ 1978 079d 02       		.byte	2
+ 1979 079e 9A       		.byte	-102
+ 1980 079f 04       		.byte	4
+ 1981 07a0 9D       		.byte	-99
+ 1982 07a1 82       		.byte	-126
+ 1983 07a2 A0       		.byte	-96
+ 1984 07a3 88       		.byte	-120
+ 1985 07a4 A1       		.byte	-95
+ 1986 07a5 08       		.byte	8
+ 1987 07a6 A2       		.byte	-94
+ 1988 07a7 A0       		.byte	-96
+ 1989 07a8 A3       		.byte	-93
+ 1990 07a9 01       		.byte	1
+ 1991 07aa A4       		.byte	-92
+ 1992 07ab 04       		.byte	4
+ 1993 07ac A7       		.byte	-89
+ 1994 07ad A0       		.byte	-96
+ 1995 07ae A8       		.byte	-88
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 36
+
+
+ 1996 07af 20       		.byte	32
+ 1997 07b0 AB       		.byte	-85
+ 1998 07b1 A0       		.byte	-96
+ 1999 07b2 C0       		.byte	-64
+ 2000 07b3 64       		.byte	100
+ 2001 07b4 C2       		.byte	-62
+ 2002 07b5 64       		.byte	100
+ 2003 07b6 C4       		.byte	-60
+ 2004 07b7 CC       		.byte	-52
+ 2005 07b8 CA       		.byte	-54
+ 2006 07b9 0A       		.byte	10
+ 2007 07ba CC       		.byte	-52
+ 2008 07bb 4F       		.byte	79
+ 2009 07bc CE       		.byte	-50
+ 2010 07bd 16       		.byte	22
+ 2011 07be D0       		.byte	-48
+ 2012 07bf F6       		.byte	-10
+ 2013 07c0 D2       		.byte	-46
+ 2014 07c1 24       		.byte	36
+ 2015 07c2 D6       		.byte	-42
+ 2016 07c3 80       		.byte	-128
+ 2017 07c4 D8       		.byte	-40
+ 2018 07c5 30       		.byte	48
+ 2019 07c6 02       		.byte	2
+ 2020 07c7 01       		.byte	1
+ 2021 07c8 04       		.byte	4
+ 2022 07c9 01       		.byte	1
+ 2023 07ca 07       		.byte	7
+ 2024 07cb 03       		.byte	3
+ 2025 07cc 0D       		.byte	13
+ 2026 07cd 04       		.byte	4
+ 2027 07ce 0E       		.byte	14
+ 2028 07cf 01       		.byte	1
+ 2029 07d0 11       		.byte	17
+ 2030 07d1 02       		.byte	2
+ 2031 07d2 14       		.byte	20
+ 2032 07d3 01       		.byte	1
+ 2033 07d4 31       		.byte	49
+ 2034 07d5 01       		.byte	1
+ 2035 07d6 33       		.byte	51
+ 2036 07d7 02       		.byte	2
+ 2037 07d8 35       		.byte	53
+ 2038 07d9 04       		.byte	4
+ 2039 07da 36       		.byte	54
+ 2040 07db 01       		.byte	1
+ 2041 07dc 38       		.byte	56
+ 2042 07dd 80       		.byte	-128
+ 2043 07de 3F       		.byte	63
+ 2044 07df 14       		.byte	20
+ 2045 07e0 58       		.byte	88
+ 2046 07e1 04       		.byte	4
+ 2047 07e2 59       		.byte	89
+ 2048 07e3 04       		.byte	4
+ 2049 07e4 5C       		.byte	92
+ 2050 07e5 02       		.byte	2
+ 2051 07e6 5F       		.byte	95
+ 2052 07e7 01       		.byte	1
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 37
+
+
+ 2053 07e8 80       		.byte	-128
+ 2054 07e9 1C       		.byte	28
+ 2055 07ea 81       		.byte	-127
+ 2056 07eb 44       		.byte	68
+ 2057 07ec 82       		.byte	-126
+ 2058 07ed 23       		.byte	35
+ 2059 07ee 84       		.byte	-124
+ 2060 07ef 0C       		.byte	12
+ 2061 07f0 85       		.byte	-123
+ 2062 07f1 08       		.byte	8
+ 2063 07f2 88       		.byte	-120
+ 2064 07f3 04       		.byte	4
+ 2065 07f4 89       		.byte	-119
+ 2066 07f5 80       		.byte	-128
+ 2067 07f6 8C       		.byte	-116
+ 2068 07f7 1F       		.byte	31
+ 2069 07f8 8D       		.byte	-115
+ 2070 07f9 1C       		.byte	28
+ 2071 07fa 8E       		.byte	-114
+ 2072 07fb 20       		.byte	32
+ 2073 07fc 8F       		.byte	-113
+ 2074 07fd E1       		.byte	-31
+ 2075 07fe 91       		.byte	-111
+ 2076 07ff 10       		.byte	16
+ 2077 0800 94       		.byte	-108
+ 2078 0801 33       		.byte	51
+ 2079 0802 95       		.byte	-107
+ 2080 0803 C0       		.byte	-64
+ 2081 0804 96       		.byte	-106
+ 2082 0805 0C       		.byte	12
+ 2083 0806 98       		.byte	-104
+ 2084 0807 03       		.byte	3
+ 2085 0808 99       		.byte	-103
+ 2086 0809 18       		.byte	24
+ 2087 080a 9C       		.byte	-100
+ 2088 080b 08       		.byte	8
+ 2089 080c 9F       		.byte	-97
+ 2090 080d 04       		.byte	4
+ 2091 080e A1       		.byte	-95
+ 2092 080f 3C       		.byte	60
+ 2093 0810 A2       		.byte	-94
+ 2094 0811 23       		.byte	35
+ 2095 0812 A3       		.byte	-93
+ 2096 0813 C2       		.byte	-62
+ 2097 0814 A4       		.byte	-92
+ 2098 0815 02       		.byte	2
+ 2099 0816 A5       		.byte	-91
+ 2100 0817 FF       		.byte	-1
+ 2101 0818 A8       		.byte	-88
+ 2102 0819 3F       		.byte	63
+ 2103 081a A9       		.byte	-87
+ 2104 081b E7       		.byte	-25
+ 2105 081c AB       		.byte	-85
+ 2106 081d 18       		.byte	24
+ 2107 081e AC       		.byte	-84
+ 2108 081f 01       		.byte	1
+ 2109 0820 AE       		.byte	-82
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 38
+
+
+ 2110 0821 40       		.byte	64
+ 2111 0822 AF       		.byte	-81
+ 2112 0823 E3       		.byte	-29
+ 2113 0824 B0       		.byte	-80
+ 2114 0825 2C       		.byte	44
+ 2115 0826 B1       		.byte	-79
+ 2116 0827 C0       		.byte	-64
+ 2117 0828 B2       		.byte	-78
+ 2118 0829 0F       		.byte	15
+ 2119 082a B3       		.byte	-77
+ 2120 082b 38       		.byte	56
+ 2121 082c B4       		.byte	-76
+ 2122 082d 10       		.byte	16
+ 2123 082e B6       		.byte	-74
+ 2124 082f 40       		.byte	64
+ 2125 0830 B7       		.byte	-73
+ 2126 0831 1F       		.byte	31
+ 2127 0832 BA       		.byte	-70
+ 2128 0833 0A       		.byte	10
+ 2129 0834 BB       		.byte	-69
+ 2130 0835 80       		.byte	-128
+ 2131 0836 BE       		.byte	-66
+ 2132 0837 10       		.byte	16
+ 2133 0838 D6       		.byte	-42
+ 2134 0839 02       		.byte	2
+ 2135 083a D7       		.byte	-41
+ 2136 083b 12       		.byte	18
+ 2137 083c D8       		.byte	-40
+ 2138 083d 04       		.byte	4
+ 2139 083e D9       		.byte	-39
+ 2140 083f 04       		.byte	4
+ 2141 0840 DB       		.byte	-37
+ 2142 0841 04       		.byte	4
+ 2143 0842 DC       		.byte	-36
+ 2144 0843 22       		.byte	34
+ 2145 0844 DD       		.byte	-35
+ 2146 0845 20       		.byte	32
+ 2147 0846 DF       		.byte	-33
+ 2148 0847 01       		.byte	1
+ 2149 0848 00       		.byte	0
+ 2150 0849 40       		.byte	64
+ 2151 084a 01       		.byte	1
+ 2152 084b 02       		.byte	2
+ 2153 084c 03       		.byte	3
+ 2154 084d 10       		.byte	16
+ 2155 084e 04       		.byte	4
+ 2156 084f 42       		.byte	66
+ 2157 0850 05       		.byte	5
+ 2158 0851 02       		.byte	2
+ 2159 0852 07       		.byte	7
+ 2160 0853 28       		.byte	40
+ 2161 0854 09       		.byte	9
+ 2162 0855 08       		.byte	8
+ 2163 0856 0C       		.byte	12
+ 2164 0857 80       		.byte	-128
+ 2165 0858 0E       		.byte	14
+ 2166 0859 2C       		.byte	44
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 39
+
+
+ 2167 085a 0F       		.byte	15
+ 2168 085b 20       		.byte	32
+ 2169 085c 16       		.byte	22
+ 2170 085d A2       		.byte	-94
+ 2171 085e 17       		.byte	23
+ 2172 085f 10       		.byte	16
+ 2173 0860 19       		.byte	25
+ 2174 0861 80       		.byte	-128
+ 2175 0862 1C       		.byte	28
+ 2176 0863 44       		.byte	68
+ 2177 0864 1D       		.byte	29
+ 2178 0865 48       		.byte	72
+ 2179 0866 1E       		.byte	30
+ 2180 0867 20       		.byte	32
+ 2181 0868 1F       		.byte	31
+ 2182 0869 08       		.byte	8
+ 2183 086a 21       		.byte	33
+ 2184 086b 02       		.byte	2
+ 2185 086c 22       		.byte	34
+ 2186 086d 24       		.byte	36
+ 2187 086e 24       		.byte	36
+ 2188 086f 02       		.byte	2
+ 2189 0870 26       		.byte	38
+ 2190 0871 09       		.byte	9
+ 2191 0872 2D       		.byte	45
+ 2192 0873 02       		.byte	2
+ 2193 0874 2E       		.byte	46
+ 2194 0875 80       		.byte	-128
+ 2195 0876 2F       		.byte	47
+ 2196 0877 28       		.byte	40
+ 2197 0878 31       		.byte	49
+ 2198 0879 02       		.byte	2
+ 2199 087a 33       		.byte	51
+ 2200 087b 30       		.byte	48
+ 2201 087c 35       		.byte	53
+ 2202 087d 40       		.byte	64
+ 2203 087e 36       		.byte	54
+ 2204 087f 04       		.byte	4
+ 2205 0880 37       		.byte	55
+ 2206 0881 21       		.byte	33
+ 2207 0882 3B       		.byte	59
+ 2208 0883 48       		.byte	72
+ 2209 0884 3C       		.byte	60
+ 2210 0885 60       		.byte	96
+ 2211 0886 3E       		.byte	62
+ 2212 0887 2A       		.byte	42
+ 2213 0888 5C       		.byte	92
+ 2214 0889 04       		.byte	4
+ 2215 088a 6C       		.byte	108
+ 2216 088b 10       		.byte	16
+ 2217 088c 6D       		.byte	109
+ 2218 088d 50       		.byte	80
+ 2219 088e 74       		.byte	116
+ 2220 088f 80       		.byte	-128
+ 2221 0890 76       		.byte	118
+ 2222 0891 08       		.byte	8
+ 2223 0892 77       		.byte	119
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 40
+
+
+ 2224 0893 29       		.byte	41
+ 2225 0894 86       		.byte	-122
+ 2226 0895 20       		.byte	32
+ 2227 0896 89       		.byte	-119
+ 2228 0897 08       		.byte	8
+ 2229 0898 8A       		.byte	-118
+ 2230 0899 02       		.byte	2
+ 2231 089a 92       		.byte	-110
+ 2232 089b 04       		.byte	4
+ 2233 089c 93       		.byte	-109
+ 2234 089d 48       		.byte	72
+ 2235 089e 94       		.byte	-108
+ 2236 089f 20       		.byte	32
+ 2237 08a0 95       		.byte	-107
+ 2238 08a1 50       		.byte	80
+ 2239 08a2 96       		.byte	-106
+ 2240 08a3 08       		.byte	8
+ 2241 08a4 9A       		.byte	-102
+ 2242 08a5 80       		.byte	-128
+ 2243 08a6 9B       		.byte	-101
+ 2244 08a7 10       		.byte	16
+ 2245 08a8 9D       		.byte	-99
+ 2246 08a9 88       		.byte	-120
+ 2247 08aa A0       		.byte	-96
+ 2248 08ab 10       		.byte	16
+ 2249 08ac A6       		.byte	-90
+ 2250 08ad 09       		.byte	9
+ 2251 08ae A7       		.byte	-89
+ 2252 08af 10       		.byte	16
+ 2253 08b0 AA       		.byte	-86
+ 2254 08b1 40       		.byte	64
+ 2255 08b2 C0       		.byte	-64
+ 2256 08b3 FD       		.byte	-3
+ 2257 08b4 C2       		.byte	-62
+ 2258 08b5 E4       		.byte	-28
+ 2259 08b6 C4       		.byte	-60
+ 2260 08b7 F0       		.byte	-16
+ 2261 08b8 CA       		.byte	-54
+ 2262 08b9 F0       		.byte	-16
+ 2263 08ba CC       		.byte	-52
+ 2264 08bb F1       		.byte	-15
+ 2265 08bc CE       		.byte	-50
+ 2266 08bd FA       		.byte	-6
+ 2267 08be D6       		.byte	-42
+ 2268 08bf 40       		.byte	64
+ 2269 08c0 E4       		.byte	-28
+ 2270 08c1 02       		.byte	2
+ 2271 08c2 E8       		.byte	-24
+ 2272 08c3 04       		.byte	4
+ 2273 08c4 EE       		.byte	-18
+ 2274 08c5 04       		.byte	4
+ 2275 08c6 50       		.byte	80
+ 2276 08c7 04       		.byte	4
+ 2277 08c8 54       		.byte	84
+ 2278 08c9 02       		.byte	2
+ 2279 08ca 57       		.byte	87
+ 2280 08cb 20       		.byte	32
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 41
+
+
+ 2281 08cc 58       		.byte	88
+ 2282 08cd 10       		.byte	16
+ 2283 08ce 84       		.byte	-124
+ 2284 08cf 10       		.byte	16
+ 2285 08d0 87       		.byte	-121
+ 2286 08d1 20       		.byte	32
+ 2287 08d2 8C       		.byte	-116
+ 2288 08d3 02       		.byte	2
+ 2289 08d4 D4       		.byte	-44
+ 2290 08d5 E0       		.byte	-32
+ 2291 08d6 D6       		.byte	-42
+ 2292 08d7 20       		.byte	32
+ 2293 08d8 E6       		.byte	-26
+ 2294 08d9 50       		.byte	80
+ 2295 08da 80       		.byte	-128
+ 2296 08db 04       		.byte	4
+ 2297 08dc 94       		.byte	-108
+ 2298 08dd 08       		.byte	8
+ 2299 08de E6       		.byte	-26
+ 2300 08df 80       		.byte	-128
+ 2301 08e0 68       		.byte	104
+ 2302 08e1 80       		.byte	-128
+ 2303 08e2 DC       		.byte	-36
+ 2304 08e3 20       		.byte	32
+ 2305 08e4 03       		.byte	3
+ 2306 08e5 02       		.byte	2
+ 2307 08e6 04       		.byte	4
+ 2308 08e7 40       		.byte	64
+ 2309 08e8 8C       		.byte	-116
+ 2310 08e9 40       		.byte	64
+ 2311 08ea 8F       		.byte	-113
+ 2312 08eb 02       		.byte	2
+ 2313 08ec C0       		.byte	-64
+ 2314 08ed 03       		.byte	3
+ 2315 08ee E2       		.byte	-30
+ 2316 08ef 02       		.byte	2
+ 2317 08f0 E6       		.byte	-26
+ 2318 08f1 02       		.byte	2
+ 2319 08f2 64       		.byte	100
+ 2320 08f3 08       		.byte	8
+ 2321 08f4 A4       		.byte	-92
+ 2322 08f5 80       		.byte	-128
+ 2323 08f6 D8       		.byte	-40
+ 2324 08f7 80       		.byte	-128
+ 2325 08f8 53       		.byte	83
+ 2326 08f9 10       		.byte	16
+ 2327 08fa 57       		.byte	87
+ 2328 08fb 81       		.byte	-127
+ 2329 08fc 5A       		.byte	90
+ 2330 08fd 40       		.byte	64
+ 2331 08fe 82       		.byte	-126
+ 2332 08ff 40       		.byte	64
+ 2333 0900 87       		.byte	-121
+ 2334 0901 01       		.byte	1
+ 2335 0902 8B       		.byte	-117
+ 2336 0903 10       		.byte	16
+ 2337 0904 8F       		.byte	-113
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 42
+
+
+ 2338 0905 80       		.byte	-128
+ 2339 0906 A8       		.byte	-88
+ 2340 0907 88       		.byte	-120
+ 2341 0908 D4       		.byte	-44
+ 2342 0909 E0       		.byte	-32
+ 2343 090a D6       		.byte	-42
+ 2344 090b 20       		.byte	32
+ 2345 090c E2       		.byte	-30
+ 2346 090d 20       		.byte	32
+ 2347 090e E6       		.byte	-26
+ 2348 090f 10       		.byte	16
+ 2349 0910 EA       		.byte	-22
+ 2350 0911 20       		.byte	32
+ 2351 0912 EE       		.byte	-18
+ 2352 0913 20       		.byte	32
+ 2353 0914 0F       		.byte	15
+ 2354 0915 08       		.byte	8
+ 2355 0916 62       		.byte	98
+ 2356 0917 01       		.byte	1
+ 2357 0918 C2       		.byte	-62
+ 2358 0919 01       		.byte	1
+ 2359 091a D8       		.byte	-40
+ 2360 091b 02       		.byte	2
+ 2361 091c 10       		.byte	16
+ 2362 091d 40       		.byte	64
+ 2363 091e 74       		.byte	116
+ 2364 091f 04       		.byte	4
+ 2365 0920 84       		.byte	-124
+ 2366 0921 04       		.byte	4
+ 2367 0922 88       		.byte	-120
+ 2368 0923 40       		.byte	64
+ 2369 0924 AA       		.byte	-86
+ 2370 0925 01       		.byte	1
+ 2371 0926 AB       		.byte	-85
+ 2372 0927 04       		.byte	4
+ 2373 0928 C4       		.byte	-60
+ 2374 0929 08       		.byte	8
+ 2375 092a DE       		.byte	-34
+ 2376 092b 04       		.byte	4
+ 2377 092c E2       		.byte	-30
+ 2378 092d 01       		.byte	1
+ 2379 092e 00       		.byte	0
+ 2380 092f 2D       		.byte	45
+ 2381 0930 08       		.byte	8
+ 2382 0931 29       		.byte	41
+ 2383 0932 0C       		.byte	12
+ 2384 0933 2D       		.byte	45
+ 2385 0934 0E       		.byte	14
+ 2386 0935 21       		.byte	33
+ 2387 0936 10       		.byte	16
+ 2388 0937 55       		.byte	85
+ 2389 0938 1A       		.byte	26
+ 2390 0939 50       		.byte	80
+ 2391 093a 1C       		.byte	28
+ 2392 093b 05       		.byte	5
+ 2393 093c 80       		.byte	-128
+ 2394 093d 80       		.byte	-128
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 43
+
+
+ 2395 093e 00       		.byte	0
+ 2396 093f 00       		.byte	0
+ 2397 0940 40       		.byte	64
+ 2398 0941 00       		.byte	0
+ 2399 0942 00       		.byte	0
+ 2400 0943 00       		.byte	0
+ 2401 0944 00       		.byte	0
+ 2402 0945 0F       		.byte	15
+ 2403 0946 0F       		.byte	15
+ 2404 0947 00       		.byte	0
+ 2405 0948 0F       		.byte	15
+ 2406 0949 00       		.byte	0
+ 2407 094a 00       		.byte	0
+ 2408 094b 00       		.byte	0
+ 2409 094c 80       		.byte	-128
+ 2410 094d 00       		.byte	0
+ 2411 094e 40       		.byte	64
+ 2412 094f 80       		.byte	-128
+ 2413 0950 80       		.byte	-128
+ 2414 0951 00       		.byte	0
+ 2415 0952 80       		.byte	-128
+ 2416 0953 00       		.byte	0
+ 2417 0954 00       		.byte	0
+ 2418 0955 00       		.byte	0
+ 2419 0956 00       		.byte	0
+ 2420 0957 00       		.byte	0
+ 2421 0958 80       		.byte	-128
+ 2422 0959 CB       		.byte	-53
+ 2423 095a 4B       		.byte	75
+ 2424 095b 00       		.byte	0
+ 2425 095c 40       		.byte	64
+ 2426 095d 00       		.byte	0
+ 2427 095e 00       		.byte	0
+ 2428 095f 00       		.byte	0
+ 2429 0960 0C       		.byte	12
+ 2430 0961 00       		.byte	0
+ 2431 0962 00       		.byte	0
+ 2432 0963 0C       		.byte	12
+ 2433 0964 00       		.byte	0
+ 2434 0965 00       		.byte	0
+ 2435 0966 00       		.byte	0
+ 2436 0967 00       		.byte	0
+ 2437 0968 00       		.byte	0
+ 2438 0969 00       		.byte	0
+ 2439 096a 00       		.byte	0
+ 2440 096b 00       		.byte	0
+ 2441 096c 00       		.byte	0
+ 2442 096d 0F       		.byte	15
+ 2443 096e 0F       		.byte	15
+ 2444 096f 00       		.byte	0
+ 2445 0970 0F       		.byte	15
+ 2446 0971 00       		.byte	0
+ 2447 0972 00       		.byte	0
+ 2448 0973 00       		.byte	0
+ 2449              		.section	.cywolatch,"a",%progbits
+ 2450              		.align	2
+ 2451              		.type	cy_meta_wonvl, %object
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 44
+
+
+ 2452              		.size	cy_meta_wonvl, 4
+ 2453              	cy_meta_wonvl:
+ 2454 0000 BC       		.byte	-68
+ 2455 0001 90       		.byte	-112
+ 2456 0002 AC       		.byte	-84
+ 2457 0003 AF       		.byte	-81
+ 2458              		.section	.cycustnvl,"a",%progbits
+ 2459              		.align	2
+ 2460              		.type	cy_meta_custnvl, %object
+ 2461              		.size	cy_meta_custnvl, 4
+ 2462              	cy_meta_custnvl:
+ 2463 0000 00       		.byte	0
+ 2464 0001 00       		.byte	0
+ 2465 0002 40       		.byte	64
+ 2466 0003 05       		.byte	5
+ 2467              		.section	.cymeta,"a",%progbits
+ 2468              		.align	2
+ 2469              		.type	cy_metadata, %object
+ 2470              		.size	cy_metadata, 12
+ 2471              	cy_metadata:
+ 2472 0000 00       		.byte	0
+ 2473 0001 01       		.byte	1
+ 2474 0002 2E       		.byte	46
+ 2475 0003 16       		.byte	22
+ 2476 0004 10       		.byte	16
+ 2477 0005 69       		.byte	105
+ 2478 0006 00       		.byte	0
+ 2479 0007 01       		.byte	1
+ 2480 0008 00       		.byte	0
+ 2481 0009 00       		.byte	0
+ 2482 000a 00       		.byte	0
+ 2483 000b 00       		.byte	0
+ 2484              		.section	.cyflashprotect,"a",%progbits
+ 2485              		.align	2
+ 2486              		.type	cy_meta_flashprotect, %object
+ 2487              		.size	cy_meta_flashprotect, 256
+ 2488              	cy_meta_flashprotect:
+ 2489 0000 00000000 		.space	256
+ 2489      00000000 
+ 2489      00000000 
+ 2489      00000000 
+ 2489      00000000 
+ 2490              		.text
+ 2491              	.Letext0:
+ 2492              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 2493              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 2494              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 2495              		.section	.debug_info,"",%progbits
+ 2496              	.Ldebug_info0:
+ 2497 0000 35010000 		.4byte	0x135
+ 2498 0004 0400     		.2byte	0x4
+ 2499 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 2500 000a 04       		.byte	0x4
+ 2501 000b 01       		.uleb128 0x1
+ 2502 000c 30000000 		.4byte	.LASF17
+ 2503 0010 0C       		.byte	0xc
+ 2504 0011 93010000 		.4byte	.LASF18
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 45
+
+
+ 2505 0015 7E010000 		.4byte	.LASF19
+ 2506 0019 00000000 		.4byte	.Ldebug_line0
+ 2507 001d 02       		.uleb128 0x2
+ 2508 001e 01       		.byte	0x1
+ 2509 001f 06       		.byte	0x6
+ 2510 0020 16000000 		.4byte	.LASF0
+ 2511 0024 03       		.uleb128 0x3
+ 2512 0025 00000000 		.4byte	.LASF9
+ 2513 0029 01       		.byte	0x1
+ 2514 002a 1D       		.byte	0x1d
+ 2515 002b 2F000000 		.4byte	0x2f
+ 2516 002f 02       		.uleb128 0x2
+ 2517 0030 01       		.byte	0x1
+ 2518 0031 08       		.byte	0x8
+ 2519 0032 22000000 		.4byte	.LASF1
+ 2520 0036 02       		.uleb128 0x2
+ 2521 0037 02       		.byte	0x2
+ 2522 0038 05       		.byte	0x5
+ 2523 0039 6B010000 		.4byte	.LASF2
+ 2524 003d 02       		.uleb128 0x2
+ 2525 003e 02       		.byte	0x2
+ 2526 003f 07       		.byte	0x7
+ 2527 0040 D0000000 		.4byte	.LASF3
+ 2528 0044 02       		.uleb128 0x2
+ 2529 0045 04       		.byte	0x4
+ 2530 0046 05       		.byte	0x5
+ 2531 0047 75010000 		.4byte	.LASF4
+ 2532 004b 02       		.uleb128 0x2
+ 2533 004c 04       		.byte	0x4
+ 2534 004d 07       		.byte	0x7
+ 2535 004e BE000000 		.4byte	.LASF5
+ 2536 0052 02       		.uleb128 0x2
+ 2537 0053 08       		.byte	0x8
+ 2538 0054 05       		.byte	0x5
+ 2539 0055 5D010000 		.4byte	.LASF6
+ 2540 0059 02       		.uleb128 0x2
+ 2541 005a 08       		.byte	0x8
+ 2542 005b 07       		.byte	0x7
+ 2543 005c 12010000 		.4byte	.LASF7
+ 2544 0060 04       		.uleb128 0x4
+ 2545 0061 04       		.byte	0x4
+ 2546 0062 05       		.byte	0x5
+ 2547 0063 696E7400 		.ascii	"int\000"
+ 2548 0067 02       		.uleb128 0x2
+ 2549 0068 04       		.byte	0x4
+ 2550 0069 07       		.byte	0x7
+ 2551 006a 05010000 		.4byte	.LASF8
+ 2552 006e 03       		.uleb128 0x3
+ 2553 006f 29010000 		.4byte	.LASF10
+ 2554 0073 02       		.byte	0x2
+ 2555 0074 18       		.byte	0x18
+ 2556 0075 24000000 		.4byte	0x24
+ 2557 0079 05       		.uleb128 0x5
+ 2558 007a 91000000 		.4byte	0x91
+ 2559 007e 8A000000 		.4byte	0x8a
+ 2560 0082 06       		.uleb128 0x6
+ 2561 0083 8A000000 		.4byte	0x8a
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 46
+
+
+ 2562 0087 7309     		.2byte	0x973
+ 2563 0089 00       		.byte	0
+ 2564 008a 02       		.uleb128 0x2
+ 2565 008b 04       		.byte	0x4
+ 2566 008c 07       		.byte	0x7
+ 2567 008d 54010000 		.4byte	.LASF11
+ 2568 0091 07       		.uleb128 0x7
+ 2569 0092 6E000000 		.4byte	0x6e
+ 2570 0096 08       		.uleb128 0x8
+ 2571 0097 F3000000 		.4byte	.LASF12
+ 2572 009b 03       		.byte	0x3
+ 2573 009c 1F       		.byte	0x1f
+ 2574 009d A7000000 		.4byte	0xa7
+ 2575 00a1 05       		.uleb128 0x5
+ 2576 00a2 03       		.byte	0x3
+ 2577 00a3 00000000 		.4byte	cy_meta_configecc
+ 2578 00a7 07       		.uleb128 0x7
+ 2579 00a8 79000000 		.4byte	0x79
+ 2580 00ac 05       		.uleb128 0x5
+ 2581 00ad 91000000 		.4byte	0x91
+ 2582 00b1 BC000000 		.4byte	0xbc
+ 2583 00b5 09       		.uleb128 0x9
+ 2584 00b6 8A000000 		.4byte	0x8a
+ 2585 00ba 03       		.byte	0x3
+ 2586 00bb 00       		.byte	0
+ 2587 00bc 0A       		.uleb128 0xa
+ 2588 00bd E3000000 		.4byte	.LASF13
+ 2589 00c1 03       		.byte	0x3
+ 2590 00c2 5B01     		.2byte	0x15b
+ 2591 00c4 CE000000 		.4byte	0xce
+ 2592 00c8 05       		.uleb128 0x5
+ 2593 00c9 03       		.byte	0x3
+ 2594 00ca 00000000 		.4byte	cy_meta_custnvl
+ 2595 00ce 07       		.uleb128 0x7
+ 2596 00cf AC000000 		.4byte	0xac
+ 2597 00d3 0A       		.uleb128 0xa
+ 2598 00d4 46010000 		.4byte	.LASF14
+ 2599 00d8 03       		.byte	0x3
+ 2600 00d9 6901     		.2byte	0x169
+ 2601 00db E5000000 		.4byte	0xe5
+ 2602 00df 05       		.uleb128 0x5
+ 2603 00e0 03       		.byte	0x3
+ 2604 00e1 00000000 		.4byte	cy_meta_wonvl
+ 2605 00e5 07       		.uleb128 0x7
+ 2606 00e6 AC000000 		.4byte	0xac
+ 2607 00ea 05       		.uleb128 0x5
+ 2608 00eb 91000000 		.4byte	0x91
+ 2609 00ef FA000000 		.4byte	0xfa
+ 2610 00f3 09       		.uleb128 0x9
+ 2611 00f4 8A000000 		.4byte	0x8a
+ 2612 00f8 FF       		.byte	0xff
+ 2613 00f9 00       		.byte	0
+ 2614 00fa 0A       		.uleb128 0xa
+ 2615 00fb 31010000 		.4byte	.LASF15
+ 2616 00ff 03       		.byte	0x3
+ 2617 0100 7701     		.2byte	0x177
+ 2618 0102 0C010000 		.4byte	0x10c
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 47
+
+
+ 2619 0106 05       		.uleb128 0x5
+ 2620 0107 03       		.byte	0x3
+ 2621 0108 00000000 		.4byte	cy_meta_flashprotect
+ 2622 010c 07       		.uleb128 0x7
+ 2623 010d EA000000 		.4byte	0xea
+ 2624 0111 05       		.uleb128 0x5
+ 2625 0112 91000000 		.4byte	0x91
+ 2626 0116 21010000 		.4byte	0x121
+ 2627 011a 09       		.uleb128 0x9
+ 2628 011b 8A000000 		.4byte	0x8a
+ 2629 011f 0B       		.byte	0xb
+ 2630 0120 00       		.byte	0
+ 2631 0121 0A       		.uleb128 0xa
+ 2632 0122 0A000000 		.4byte	.LASF16
+ 2633 0126 03       		.byte	0x3
+ 2634 0127 A401     		.2byte	0x1a4
+ 2635 0129 33010000 		.4byte	0x133
+ 2636 012d 05       		.uleb128 0x5
+ 2637 012e 03       		.byte	0x3
+ 2638 012f 00000000 		.4byte	cy_metadata
+ 2639 0133 07       		.uleb128 0x7
+ 2640 0134 11010000 		.4byte	0x111
+ 2641 0138 00       		.byte	0
+ 2642              		.section	.debug_abbrev,"",%progbits
+ 2643              	.Ldebug_abbrev0:
+ 2644 0000 01       		.uleb128 0x1
+ 2645 0001 11       		.uleb128 0x11
+ 2646 0002 01       		.byte	0x1
+ 2647 0003 25       		.uleb128 0x25
+ 2648 0004 0E       		.uleb128 0xe
+ 2649 0005 13       		.uleb128 0x13
+ 2650 0006 0B       		.uleb128 0xb
+ 2651 0007 03       		.uleb128 0x3
+ 2652 0008 0E       		.uleb128 0xe
+ 2653 0009 1B       		.uleb128 0x1b
+ 2654 000a 0E       		.uleb128 0xe
+ 2655 000b 10       		.uleb128 0x10
+ 2656 000c 17       		.uleb128 0x17
+ 2657 000d 00       		.byte	0
+ 2658 000e 00       		.byte	0
+ 2659 000f 02       		.uleb128 0x2
+ 2660 0010 24       		.uleb128 0x24
+ 2661 0011 00       		.byte	0
+ 2662 0012 0B       		.uleb128 0xb
+ 2663 0013 0B       		.uleb128 0xb
+ 2664 0014 3E       		.uleb128 0x3e
+ 2665 0015 0B       		.uleb128 0xb
+ 2666 0016 03       		.uleb128 0x3
+ 2667 0017 0E       		.uleb128 0xe
+ 2668 0018 00       		.byte	0
+ 2669 0019 00       		.byte	0
+ 2670 001a 03       		.uleb128 0x3
+ 2671 001b 16       		.uleb128 0x16
+ 2672 001c 00       		.byte	0
+ 2673 001d 03       		.uleb128 0x3
+ 2674 001e 0E       		.uleb128 0xe
+ 2675 001f 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 48
+
+
+ 2676 0020 0B       		.uleb128 0xb
+ 2677 0021 3B       		.uleb128 0x3b
+ 2678 0022 0B       		.uleb128 0xb
+ 2679 0023 49       		.uleb128 0x49
+ 2680 0024 13       		.uleb128 0x13
+ 2681 0025 00       		.byte	0
+ 2682 0026 00       		.byte	0
+ 2683 0027 04       		.uleb128 0x4
+ 2684 0028 24       		.uleb128 0x24
+ 2685 0029 00       		.byte	0
+ 2686 002a 0B       		.uleb128 0xb
+ 2687 002b 0B       		.uleb128 0xb
+ 2688 002c 3E       		.uleb128 0x3e
+ 2689 002d 0B       		.uleb128 0xb
+ 2690 002e 03       		.uleb128 0x3
+ 2691 002f 08       		.uleb128 0x8
+ 2692 0030 00       		.byte	0
+ 2693 0031 00       		.byte	0
+ 2694 0032 05       		.uleb128 0x5
+ 2695 0033 01       		.uleb128 0x1
+ 2696 0034 01       		.byte	0x1
+ 2697 0035 49       		.uleb128 0x49
+ 2698 0036 13       		.uleb128 0x13
+ 2699 0037 01       		.uleb128 0x1
+ 2700 0038 13       		.uleb128 0x13
+ 2701 0039 00       		.byte	0
+ 2702 003a 00       		.byte	0
+ 2703 003b 06       		.uleb128 0x6
+ 2704 003c 21       		.uleb128 0x21
+ 2705 003d 00       		.byte	0
+ 2706 003e 49       		.uleb128 0x49
+ 2707 003f 13       		.uleb128 0x13
+ 2708 0040 2F       		.uleb128 0x2f
+ 2709 0041 05       		.uleb128 0x5
+ 2710 0042 00       		.byte	0
+ 2711 0043 00       		.byte	0
+ 2712 0044 07       		.uleb128 0x7
+ 2713 0045 26       		.uleb128 0x26
+ 2714 0046 00       		.byte	0
+ 2715 0047 49       		.uleb128 0x49
+ 2716 0048 13       		.uleb128 0x13
+ 2717 0049 00       		.byte	0
+ 2718 004a 00       		.byte	0
+ 2719 004b 08       		.uleb128 0x8
+ 2720 004c 34       		.uleb128 0x34
+ 2721 004d 00       		.byte	0
+ 2722 004e 03       		.uleb128 0x3
+ 2723 004f 0E       		.uleb128 0xe
+ 2724 0050 3A       		.uleb128 0x3a
+ 2725 0051 0B       		.uleb128 0xb
+ 2726 0052 3B       		.uleb128 0x3b
+ 2727 0053 0B       		.uleb128 0xb
+ 2728 0054 49       		.uleb128 0x49
+ 2729 0055 13       		.uleb128 0x13
+ 2730 0056 3F       		.uleb128 0x3f
+ 2731 0057 19       		.uleb128 0x19
+ 2732 0058 02       		.uleb128 0x2
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 49
+
+
+ 2733 0059 18       		.uleb128 0x18
+ 2734 005a 00       		.byte	0
+ 2735 005b 00       		.byte	0
+ 2736 005c 09       		.uleb128 0x9
+ 2737 005d 21       		.uleb128 0x21
+ 2738 005e 00       		.byte	0
+ 2739 005f 49       		.uleb128 0x49
+ 2740 0060 13       		.uleb128 0x13
+ 2741 0061 2F       		.uleb128 0x2f
+ 2742 0062 0B       		.uleb128 0xb
+ 2743 0063 00       		.byte	0
+ 2744 0064 00       		.byte	0
+ 2745 0065 0A       		.uleb128 0xa
+ 2746 0066 34       		.uleb128 0x34
+ 2747 0067 00       		.byte	0
+ 2748 0068 03       		.uleb128 0x3
+ 2749 0069 0E       		.uleb128 0xe
+ 2750 006a 3A       		.uleb128 0x3a
+ 2751 006b 0B       		.uleb128 0xb
+ 2752 006c 3B       		.uleb128 0x3b
+ 2753 006d 05       		.uleb128 0x5
+ 2754 006e 49       		.uleb128 0x49
+ 2755 006f 13       		.uleb128 0x13
+ 2756 0070 3F       		.uleb128 0x3f
+ 2757 0071 19       		.uleb128 0x19
+ 2758 0072 02       		.uleb128 0x2
+ 2759 0073 18       		.uleb128 0x18
+ 2760 0074 00       		.byte	0
+ 2761 0075 00       		.byte	0
+ 2762 0076 00       		.byte	0
+ 2763              		.section	.debug_aranges,"",%progbits
+ 2764 0000 14000000 		.4byte	0x14
+ 2765 0004 0200     		.2byte	0x2
+ 2766 0006 00000000 		.4byte	.Ldebug_info0
+ 2767 000a 04       		.byte	0x4
+ 2768 000b 00       		.byte	0
+ 2769 000c 0000     		.2byte	0
+ 2770 000e 0000     		.2byte	0
+ 2771 0010 00000000 		.4byte	0
+ 2772 0014 00000000 		.4byte	0
+ 2773              		.section	.debug_line,"",%progbits
+ 2774              	.Ldebug_line0:
+ 2775 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 2775      02003701 
+ 2775      00000201 
+ 2775      FB0E0D00 
+ 2775      01010101 
+ 2776              	.LASF9:
+ 2777 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 2777      6E74385F 
+ 2777      7400
+ 2778              	.LASF16:
+ 2779 000a 63795F6D 		.ascii	"cy_metadata\000"
+ 2779      65746164 
+ 2779      61746100 
+ 2780              	.LASF0:
+ 2781 0016 7369676E 		.ascii	"signed char\000"
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 50
+
+
+ 2781      65642063 
+ 2781      68617200 
+ 2782              	.LASF1:
+ 2783 0022 756E7369 		.ascii	"unsigned char\000"
+ 2783      676E6564 
+ 2783      20636861 
+ 2783      7200
+ 2784              	.LASF17:
+ 2785 0030 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2785      43313120 
+ 2785      352E342E 
+ 2785      31203230 
+ 2785      31363036 
+ 2786 0063 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2786      20726576 
+ 2786      6973696F 
+ 2786      6E203233 
+ 2786      37373135 
+ 2787 0096 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2787      66756E63 
+ 2787      74696F6E 
+ 2787      2D736563 
+ 2787      74696F6E 
+ 2788              	.LASF5:
+ 2789 00be 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2789      20756E73 
+ 2789      69676E65 
+ 2789      6420696E 
+ 2789      7400
+ 2790              	.LASF3:
+ 2791 00d0 73686F72 		.ascii	"short unsigned int\000"
+ 2791      7420756E 
+ 2791      7369676E 
+ 2791      65642069 
+ 2791      6E7400
+ 2792              	.LASF13:
+ 2793 00e3 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 2793      6574615F 
+ 2793      63757374 
+ 2793      6E766C00 
+ 2794              	.LASF12:
+ 2795 00f3 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 2795      6574615F 
+ 2795      636F6E66 
+ 2795      69676563 
+ 2795      6300
+ 2796              	.LASF8:
+ 2797 0105 756E7369 		.ascii	"unsigned int\000"
+ 2797      676E6564 
+ 2797      20696E74 
+ 2797      00
+ 2798              	.LASF7:
+ 2799 0112 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2799      206C6F6E 
+ 2799      6720756E 
+ 2799      7369676E 
+ 2799      65642069 
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\cc8y1NWk.s 			page 51
+
+
+ 2800              	.LASF10:
+ 2801 0129 75696E74 		.ascii	"uint8_t\000"
+ 2801      385F7400 
+ 2802              	.LASF15:
+ 2803 0131 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 2803      6574615F 
+ 2803      666C6173 
+ 2803      6870726F 
+ 2803      74656374 
+ 2804              	.LASF14:
+ 2805 0146 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 2805      6574615F 
+ 2805      776F6E76 
+ 2805      6C00
+ 2806              	.LASF11:
+ 2807 0154 73697A65 		.ascii	"sizetype\000"
+ 2807      74797065 
+ 2807      00
+ 2808              	.LASF6:
+ 2809 015d 6C6F6E67 		.ascii	"long long int\000"
+ 2809      206C6F6E 
+ 2809      6720696E 
+ 2809      7400
+ 2810              	.LASF2:
+ 2811 016b 73686F72 		.ascii	"short int\000"
+ 2811      7420696E 
+ 2811      7400
+ 2812              	.LASF4:
+ 2813 0175 6C6F6E67 		.ascii	"long int\000"
+ 2813      20696E74 
+ 2813      00
+ 2814              	.LASF19:
+ 2815 017e 433A5C75 		.ascii	"C:\\ultra\\ultra.cydsn\000"
+ 2815      6C747261 
+ 2815      5C756C74 
+ 2815      72612E63 
+ 2815      7964736E 
+ 2816              	.LASF18:
+ 2817 0193 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 2817      72617465 
+ 2817      645F536F 
+ 2817      75726365 
+ 2817      5C50536F 
+ 2818              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

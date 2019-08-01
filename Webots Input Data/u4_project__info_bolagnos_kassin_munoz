@@ -1,0 +1,35 @@
+------------------POSITION SENSOR---------------------
+Technical specifications:
+
+Model: KY-040
+Type: Incremental Encoder
+Cycles per revolution (CPR): 20
+
+
+
+2*PI/ number of counts
+2*PI/20= .31415
+-----------------DISTANCE SENSOR: HC-SR04 ---------------------
+(http://www.electronica60norte.com/mwfls/pdf/HC-SR04.pdf)
+
+Look Up Table 
+0.02 	0	 0
+.50	65535    0
+
+resolution: max-min/resolution cm
+
+resolution: 500cm-2cm/.3cm=1660
+
+
+
+
+The resolution we want to take it every 1 step
+
+-------------------TORQUE FOR ROTATIONAL MOTOR--------------------------------
+
+Torque= 4.5 Kg*Fcm ----> N*m= .09807 N*m
+
+Max Velocity= (2pi/60)(100rpm)=10.47172
+
+
+

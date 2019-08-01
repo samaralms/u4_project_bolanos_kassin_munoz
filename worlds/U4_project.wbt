@@ -1,0 +1,1927 @@
+#VRML_SIM R2019a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.3658967191336201 -0.7099309948857216 -0.6017620571520126 2.326552616135327
+  position 0.31034668134702215 5.019079346854307 -0.32653575529351464
+  follow "robot"
+  followOrientation TRUE
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 100 100
+}
+Robot {
+  translation 0 0.05 0
+  children [
+    DEF body Shape {
+      appearance PBRAppearance {
+        baseColor 0.08799877927824827 0.7061417563134204 0.8800030518043793
+        metalness 0.5
+      }
+      geometry Box {
+        size 0.2 0.01 0.15
+      }
+    }
+    Transform {
+      translation 0.075 0 0.078
+      children [
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            axis 0 0 1
+          }
+          device [
+            RotationalMotor {
+              name "motor_wheel_right_1"
+              maxVelocity 10.47172
+              maxTorque 1
+            }
+            PositionSensor {
+              name "encoder_wheel_right_1"
+            }
+          ]
+          endPoint Solid {
+            translation 2.2058217100884087e-08 0.00042513771352981896 2.47432259112279e-07
+            rotation -0.7561929799323837 3.4215902142718456e-05 -0.6543486654148946 9.365376846705462e-06
+            children [
+              DEF llanta Group {
+                children [
+                  Transform {
+                    rotation 1 0 0 1.5707963220000003
+                    children [
+                      Shape {
+                        appearance DEF llanta PBRAppearance {
+                          metalness 0
+                        }
+                        geometry Cylinder {
+                          height 0.006
+                          radius 0.0375
+                        }
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 4.794896319052709e-11 0.015
+                    rotation 1 0 0 1.5707963220000003
+                    children [
+                      Shape {
+                        appearance DEF llanta PBRAppearance {
+                          metalness 0
+                        }
+                        geometry Cylinder {
+                          height 0.024
+                          radius 0.0125
+                        }
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 1.9179585276210836e-10 0.03
+                    rotation 1 0 0 1.5707963220000003
+                    children [
+                      Shape {
+                        appearance DEF llanta PBRAppearance {
+                          metalness 0
+                        }
+                        geometry Cylinder {
+                          height 0.006
+                          radius 0.0375
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+              DEF rodillos Group {
+                children [
+                  Transform {
+                    translation 0 0 0.015
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 0.5235987740000014
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(1)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 1.047197548000001
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(2)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 1.5707963220000007
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(3)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 2.094395096000001
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(4)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 2.6179938700000007
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(5)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 3.141592644000001
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(6)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 3.665191418000001
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(7)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 4.188790192000001
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(8)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 0.9999999999999999 4.712388966000001
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(9)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 5.235987740000001
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(10)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 5.759586514
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(11)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+            name "solid(1)"
+            physics Physics {
+            }
+          }
+        }
+      ]
+    }
+    Transform {
+      translation 0.075 0 -0.108
+      rotation 0 1 0 6.283185307179586
+      children [
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            axis 0 0 1
+          }
+          device [
+            RotationalMotor {
+              name "motor_wheel_left_1"
+              maxVelocity 10.47172
+              maxTorque 1
+            }
+            PositionSensor {
+              name "encoder_wheel_left_1"
+            }
+          ]
+          endPoint Solid {
+            translation -3.9229277210272196e-08 0.0004402915932214531 2.408675894155498e-07
+            rotation -0.7564844557181134 -5.9710980337191683e-05 0.6540116701492938 9.661515790775565e-06
+            children [
+              DEF llanta Group {
+                children [
+                  Transform {
+                    rotation 1 0 0 1.5707963220000003
+                    children [
+                      Shape {
+                        appearance DEF llanta PBRAppearance {
+                          metalness 0
+                        }
+                        geometry Cylinder {
+                          height 0.006
+                          radius 0.0375
+                        }
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 4.794896319052709e-11 0.015
+                    rotation 1 0 0 1.5707963220000003
+                    children [
+                      Shape {
+                        appearance DEF llanta PBRAppearance {
+                          metalness 0
+                        }
+                        geometry Cylinder {
+                          height 0.024
+                          radius 0.0125
+                        }
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 1.9179585276210836e-10 0.03
+                    rotation 1 0 0 1.5707963220000003
+                    children [
+                      Shape {
+                        appearance DEF llanta PBRAppearance {
+                          metalness 0
+                        }
+                        geometry Cylinder {
+                          height 0.006
+                          radius 0.0375
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+              DEF rodillos Group {
+                children [
+                  Transform {
+                    translation 0 0 0.015
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 0.5235987739999998
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(1)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 1.0471975479999993
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(2)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 1.5707963219999992
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(3)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 2.094395095999999
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(4)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 2.617993869999999
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(5)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 -1 3.141592682359174
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(6)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 -1 2.6179939083591743
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(7)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 -1 2.0943951343591745
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(8)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 -1 1.5707963603591744
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(9)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 -1 1.0471975863591743
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(10)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 -1 0.5235988123591743
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(11)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+            name "solid(3)"
+            physics Physics {
+            }
+          }
+        }
+      ]
+    }
+    Transform {
+      translation -0.075 0 -0.10799999999999998
+      children [
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            axis 0 0 1
+          }
+          device [
+            RotationalMotor {
+              name "motor_wheel_left_2"
+              maxVelocity 10.47172
+              maxTorque 1
+            }
+            PositionSensor {
+              name "encoder_wheel_left_2"
+            }
+          ]
+          endPoint Solid {
+            translation 3.922932521604982e-08 0.00044029157912863913 2.408634815903587e-07
+            rotation -0.7564844696962002 5.971114263702752e-05 -0.6540116539810572 9.661515790775565e-06
+            children [
+              DEF llanta Group {
+                children [
+                  Transform {
+                    rotation 1 0 0 1.5707963220000003
+                    children [
+                      Shape {
+                        appearance DEF llanta PBRAppearance {
+                          metalness 0
+                        }
+                        geometry Cylinder {
+                          height 0.006
+                          radius 0.0375
+                        }
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 4.794896319052709e-11 0.015
+                    rotation 1 0 0 1.5707963220000003
+                    children [
+                      Shape {
+                        appearance DEF llanta PBRAppearance {
+                          metalness 0
+                        }
+                        geometry Cylinder {
+                          height 0.024
+                          radius 0.0125
+                        }
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 1.9179585276210836e-10 0.03
+                    rotation 1 0 0 1.5707963220000003
+                    children [
+                      Shape {
+                        appearance DEF llanta PBRAppearance {
+                          metalness 0
+                        }
+                        geometry Cylinder {
+                          height 0.006
+                          radius 0.0375
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+              DEF rodillos Group {
+                children [
+                  Transform {
+                    translation 0 0 0.015
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 0.5235987740000014
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(1)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 1.047197548000001
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(2)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 1.5707963220000007
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(3)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 2.094395096000001
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(4)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 2.6179938700000007
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(5)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 3.141592644000001
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(6)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 3.665191418000001
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(7)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 4.188790192000001
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(8)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 0.9999999999999999 4.712388966000001
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(9)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 5.235987740000001
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(10)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 5.759586514
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 0 1 0 2.3561944830000003
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                USE rodillex
+                              ]
+                              name "solid(11)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+            name "solid(2)"
+            physics Physics {
+            }
+          }
+        }
+      ]
+    }
+    Transform {
+      translation -0.075 0 0.078
+      rotation 0 1 0 6.283185307179586
+      children [
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            axis 0 0 1
+          }
+          device [
+            PositionSensor {
+              name "encoder_wheel_right_2"
+            }
+            RotationalMotor {
+              name "motor_wheel_right_2"
+              maxVelocity 10.47172
+              maxTorque 1
+            }
+          ]
+          endPoint Solid {
+            translation -2.2058120867786505e-08 0.000425137730638679 2.474362846976996e-07
+            rotation -0.7561929635906344 -3.421566212932851e-05 0.6543486843001228 9.365376846705462e-06
+            children [
+              DEF llanta Group {
+                children [
+                  Transform {
+                    rotation 1 0 0 1.5707963220000003
+                    children [
+                      Shape {
+                        appearance DEF llanta PBRAppearance {
+                          metalness 0
+                        }
+                        geometry Cylinder {
+                          height 0.006
+                          radius 0.0375
+                        }
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 4.794896319052709e-11 0.015
+                    rotation 1 0 0 1.5707963220000003
+                    children [
+                      Shape {
+                        appearance DEF llanta PBRAppearance {
+                          metalness 0
+                        }
+                        geometry Cylinder {
+                          height 0.024
+                          radius 0.0125
+                        }
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 1.9179585276210836e-10 0.03
+                    rotation 1 0 0 1.5707963220000003
+                    children [
+                      Shape {
+                        appearance DEF llanta PBRAppearance {
+                          metalness 0
+                        }
+                        geometry Cylinder {
+                          height 0.006
+                          radius 0.0375
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+              DEF rodillos Group {
+                children [
+                  Transform {
+                    translation 0 0 0.015
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 0.5235987739999998
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(1)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 1.0471975479999993
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(2)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 1.5707963219999992
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(3)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 2.094395095999999
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(4)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 1 2.617993869999999
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(5)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 -1 3.141592682359174
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(6)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 -1 2.6179939083591743
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(7)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 -1 2.0943951343591745
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(8)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 -1 1.5707963603591744
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(9)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 -1 1.0471975863591743
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(10)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0 0.015
+                    rotation 0 0 -1 0.5235988123591743
+                    children [
+                      DEF angulo Transform {
+                        translation 0 0.03 0
+                        rotation 9.589793063148232e-09 -1 -3.9722223336395906e-09 2.356194502179586
+                        children [
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                            }
+                            endPoint DEF solidex Solid {
+                              rotation 0 0 1 1.5707963220000003
+                              children [
+                                DEF rodillex Shape {
+                                  appearance PBRAppearance {
+                                    baseColor 0 0 0
+                                    metalness 0
+                                  }
+                                  geometry Capsule {
+                                    height 0.03
+                                    radius 0.0075
+                                  }
+                                }
+                              ]
+                              name "solid(11)"
+                              boundingObject USE rodillex
+                              physics Physics {
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+            name "solid(4)"
+            physics Physics {
+            }
+          }
+        }
+      ]
+    }
+    DEF DISTANCE_SEN Transform {
+      translation 0.09999999999999999 0 0
+      children [
+        DEF BAR Shape {
+          appearance PBRAppearance {
+            baseColor 0.00784313725490196 0.23529411764705882 0.5333333333333333
+            roughness 1
+          }
+          geometry Box {
+            size 0.005 0.02 0.04
+          }
+        }
+        DEF DIST_RIGHT Transform {
+          translation 0 0 0.01
+          rotation 0 1 0 -0.2
+          children [
+            DEF DIS_RIGHT DistanceSensor {
+              rotation 1 0 0 3.1416
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0 0 0
+                  }
+                  geometry Sphere {
+                    radius 0.008
+                  }
+                }
+              ]
+              name "distance_sensor_left"
+              lookupTable [
+                0.02 0 0
+                0.5 1660 0
+              ]
+              resolution 1
+            }
+          ]
+        }
+        DEF DIST_LEFT Transform {
+          translation 0 0 -0.01
+          children [
+            DEF DIS_LEFT DistanceSensor {
+              rotation 0.9948402116491736 0 -0.10145419304211825 3.1416
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0 0 0
+                  }
+                  geometry Sphere {
+                    radius 0.008
+                  }
+                }
+              ]
+              name "distance_sensor_right"
+              lookupTable [
+                0.02 0 0
+                0.5 1660 0
+              ]
+              resolution 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  boundingObject USE body
+  physics Physics {
+    mass 25
+  }
+  controller "my_controller"
+}
+Solid {
+  translation 1.02 0.24 0.09
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry DEF CYL Cylinder {
+        height 0.5
+        radius 0.1
+      }
+    }
+  ]
+  boundingObject USE CYL
+}
+Solid {
+  translation 1.12 0.24 -0.7900000000000001
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry DEF CYL Cylinder {
+        height 0.5
+        radius 0.1
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE CYL
+}

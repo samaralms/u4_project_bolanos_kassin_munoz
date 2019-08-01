@@ -1,0 +1,122 @@
+C:/ultra/ultra.cydsn/CortexM3/ARM_GCC_541/Debug/main.o : C:/ultra/ultra.cydsn/Generated_Source/PSoC5/A1_left.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/A1_left_aliases.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/A2_left.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/A2_left_aliases.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/B1_right.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/B1_right_aliases.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/B2_right.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/B2_right_aliases.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/C1_left.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/C1_left_aliases.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/C2_left.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/C2_left_aliases.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/CLK.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/CLK_aliases.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Clock.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Clock_1.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Clock_2.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Clock_3.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Clock_4.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Clock_5.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/CyDmac.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/CyFlash.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/CyLib.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/CySpc.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/D1_right.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/D1_right_aliases.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/D2_right.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/D2_right_aliases.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/DT.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/DT_aliases.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/PWM.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/PWM_1.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/PWM_2.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/PWM_3.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/QuadDec.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/QuadDec_Cnt8.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Timer.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Trigger.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Trigger_aliases.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Trigger_out.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/UART.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/UART_IntClock.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cmsis_armcc.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cmsis_compiler.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cmsis_gcc.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/core_cm3.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cyPm.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cydevice.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cydevice_trm.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cydisabledsheets.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cyfitter.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cypins.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cytypes.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/echo.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/echo_aliases.h C:/ultra/ultra.cydsn/Generated_Source/PSoC5/project.h C:/ultra/ultra.cydsn/main.c 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/A1_left.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/A1_left_aliases.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/A2_left.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/A2_left_aliases.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/B1_right.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/B1_right_aliases.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/B2_right.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/B2_right_aliases.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/C1_left.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/C1_left_aliases.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/C2_left.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/C2_left_aliases.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/CLK.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/CLK_aliases.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Clock.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Clock_1.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Clock_2.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Clock_3.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Clock_4.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Clock_5.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/CyDmac.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/CyFlash.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/CyLib.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/CySpc.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/D1_right.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/D1_right_aliases.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/D2_right.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/D2_right_aliases.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/DT.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/DT_aliases.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/PWM.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/PWM_1.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/PWM_2.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/PWM_3.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/QuadDec.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/QuadDec_Cnt8.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Timer.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Trigger.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Trigger_aliases.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/Trigger_out.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/UART.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/UART_IntClock.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cmsis_armcc.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cmsis_compiler.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cmsis_gcc.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/core_cm3.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cyPm.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cydevice.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cyfitter.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cypins.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/cytypes.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/echo.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/echo_aliases.h : 
+
+C:/ultra/ultra.cydsn/Generated_Source/PSoC5/project.h : 
+
+C:/ultra/ultra.cydsn/main.c : 
+

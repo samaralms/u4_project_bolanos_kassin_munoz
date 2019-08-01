@@ -1,0 +1,3063 @@
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.goRobot,"ax",%progbits
+  20              		.align	2
+  21              		.global	goRobot
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	goRobot, %function
+  25              	goRobot:
+  26              	.LFB64:
+  27              		.file 1 "main.c"
+   1:main.c        ****  #include "project.h"
+   2:main.c        **** #include "string.h"
+   3:main.c        **** #include "stdio.h"
+   4:main.c        **** #include "string.h"
+   5:main.c        **** #include "stdlib.h"
+   6:main.c        **** 
+   7:main.c        **** #define StringToPrint_SIZE 32
+   8:main.c        **** #define PWM 120
+   9:main.c        **** char StringToPrint[StringToPrint_SIZE];
+  10:main.c        ****  
+  11:main.c        **** int value_counter=0; 
+  12:main.c        **** int con= 0; 
+  13:main.c        **** int stop = 0;
+  14:main.c        **** int comp = 0;
+  15:main.c        **** int dataIn = 0;
+  16:main.c        **** int robot_state;
+  17:main.c        **** int state; 
+  18:main.c        **** int i=0;
+  19:main.c        **** 
+  20:main.c        **** float distancia=0.0;        
+  21:main.c        ****                
+  22:main.c        **** char data[2];
+  23:main.c        **** char string[3];
+  24:main.c        **** char dato_lit_car; 
+  25:main.c        **** 
+  26:main.c        **** enum{
+  27:main.c        ****     AUTONOMOUS,
+  28:main.c        ****     CONTROLLER,
+  29:main.c        ****     AVOID
+  30:main.c        **** };
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 2
+
+
+  31:main.c        **** 
+  32:main.c        **** void goRobot(){
+  28              		.loc 1 32 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  33:main.c        ****     PWM_WriteCompare1(PWM);  
+  36              		.loc 1 33 0
+  37 0002 7820     		movs	r0, #120
+  38 0004 FFF7FEFF 		bl	PWM_WriteCompare1
+  39              	.LVL0:
+  34:main.c        ****     PWM_1_WriteCompare1(PWM);
+  40              		.loc 1 34 0
+  41 0008 7820     		movs	r0, #120
+  42 000a FFF7FEFF 		bl	PWM_1_WriteCompare1
+  43              	.LVL1:
+  35:main.c        ****     PWM_2_WriteCompare1(PWM); 
+  44              		.loc 1 35 0
+  45 000e 7820     		movs	r0, #120
+  46 0010 FFF7FEFF 		bl	PWM_2_WriteCompare1
+  47              	.LVL2:
+  36:main.c        ****     PWM_3_WriteCompare1(PWM);
+  48              		.loc 1 36 0
+  49 0014 7820     		movs	r0, #120
+  50 0016 FFF7FEFF 		bl	PWM_3_WriteCompare1
+  51              	.LVL3:
+  37:main.c        ****         
+  38:main.c        ****     PWM_WriteCompare2(0);
+  52              		.loc 1 38 0
+  53 001a 0020     		movs	r0, #0
+  54 001c FFF7FEFF 		bl	PWM_WriteCompare2
+  55              	.LVL4:
+  39:main.c        ****     PWM_1_WriteCompare2(0);
+  56              		.loc 1 39 0
+  57 0020 0020     		movs	r0, #0
+  58 0022 FFF7FEFF 		bl	PWM_1_WriteCompare2
+  59              	.LVL5:
+  40:main.c        ****     PWM_2_WriteCompare2(0);
+  60              		.loc 1 40 0
+  61 0026 0020     		movs	r0, #0
+  62 0028 FFF7FEFF 		bl	PWM_2_WriteCompare2
+  63              	.LVL6:
+  41:main.c        ****     PWM_3_WriteCompare2(0);
+  64              		.loc 1 41 0
+  65 002c 0020     		movs	r0, #0
+  66 002e FFF7FEFF 		bl	PWM_3_WriteCompare2
+  67              	.LVL7:
+  68 0032 08BD     		pop	{r3, pc}
+  69              		.cfi_endproc
+  70              	.LFE64:
+  71              		.size	goRobot, .-goRobot
+  72              		.section	.text.backRobot,"ax",%progbits
+  73              		.align	2
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 3
+
+
+  74              		.global	backRobot
+  75              		.thumb
+  76              		.thumb_func
+  77              		.type	backRobot, %function
+  78              	backRobot:
+  79              	.LFB65:
+  42:main.c        **** }
+  43:main.c        **** 
+  44:main.c        **** void backRobot(){
+  80              		.loc 1 44 0
+  81              		.cfi_startproc
+  82              		@ args = 0, pretend = 0, frame = 0
+  83              		@ frame_needed = 0, uses_anonymous_args = 0
+  84 0000 08B5     		push	{r3, lr}
+  85              		.cfi_def_cfa_offset 8
+  86              		.cfi_offset 3, -8
+  87              		.cfi_offset 14, -4
+  45:main.c        ****     PWM_WriteCompare1(0);  
+  88              		.loc 1 45 0
+  89 0002 0020     		movs	r0, #0
+  90 0004 FFF7FEFF 		bl	PWM_WriteCompare1
+  91              	.LVL8:
+  46:main.c        ****     PWM_1_WriteCompare1(0);
+  92              		.loc 1 46 0
+  93 0008 0020     		movs	r0, #0
+  94 000a FFF7FEFF 		bl	PWM_1_WriteCompare1
+  95              	.LVL9:
+  47:main.c        ****     PWM_2_WriteCompare1(0); 
+  96              		.loc 1 47 0
+  97 000e 0020     		movs	r0, #0
+  98 0010 FFF7FEFF 		bl	PWM_2_WriteCompare1
+  99              	.LVL10:
+  48:main.c        ****     PWM_3_WriteCompare1(0);
+ 100              		.loc 1 48 0
+ 101 0014 0020     		movs	r0, #0
+ 102 0016 FFF7FEFF 		bl	PWM_3_WriteCompare1
+ 103              	.LVL11:
+  49:main.c        ****         
+  50:main.c        ****     PWM_WriteCompare2(PWM);
+ 104              		.loc 1 50 0
+ 105 001a 7820     		movs	r0, #120
+ 106 001c FFF7FEFF 		bl	PWM_WriteCompare2
+ 107              	.LVL12:
+  51:main.c        ****     PWM_1_WriteCompare2(PWM);
+ 108              		.loc 1 51 0
+ 109 0020 7820     		movs	r0, #120
+ 110 0022 FFF7FEFF 		bl	PWM_1_WriteCompare2
+ 111              	.LVL13:
+  52:main.c        ****     PWM_2_WriteCompare2(PWM);
+ 112              		.loc 1 52 0
+ 113 0026 7820     		movs	r0, #120
+ 114 0028 FFF7FEFF 		bl	PWM_2_WriteCompare2
+ 115              	.LVL14:
+  53:main.c        ****     PWM_3_WriteCompare2(PWM);
+ 116              		.loc 1 53 0
+ 117 002c 7820     		movs	r0, #120
+ 118 002e FFF7FEFF 		bl	PWM_3_WriteCompare2
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 4
+
+
+ 119              	.LVL15:
+ 120 0032 08BD     		pop	{r3, pc}
+ 121              		.cfi_endproc
+ 122              	.LFE65:
+ 123              		.size	backRobot, .-backRobot
+ 124              		.section	.text.robotLeft,"ax",%progbits
+ 125              		.align	2
+ 126              		.global	robotLeft
+ 127              		.thumb
+ 128              		.thumb_func
+ 129              		.type	robotLeft, %function
+ 130              	robotLeft:
+ 131              	.LFB66:
+  54:main.c        **** }
+  55:main.c        **** 
+  56:main.c        **** void robotLeft(){
+ 132              		.loc 1 56 0
+ 133              		.cfi_startproc
+ 134              		@ args = 0, pretend = 0, frame = 0
+ 135              		@ frame_needed = 0, uses_anonymous_args = 0
+ 136 0000 08B5     		push	{r3, lr}
+ 137              		.cfi_def_cfa_offset 8
+ 138              		.cfi_offset 3, -8
+ 139              		.cfi_offset 14, -4
+  57:main.c        ****      PWM_WriteCompare1(PWM);
+ 140              		.loc 1 57 0
+ 141 0002 7820     		movs	r0, #120
+ 142 0004 FFF7FEFF 		bl	PWM_WriteCompare1
+ 143              	.LVL16:
+  58:main.c        ****      PWM_2_WriteCompare1(0);
+ 144              		.loc 1 58 0
+ 145 0008 0020     		movs	r0, #0
+ 146 000a FFF7FEFF 		bl	PWM_2_WriteCompare1
+ 147              	.LVL17:
+  59:main.c        ****      PWM_1_WriteCompare1(0);
+ 148              		.loc 1 59 0
+ 149 000e 0020     		movs	r0, #0
+ 150 0010 FFF7FEFF 		bl	PWM_1_WriteCompare1
+ 151              	.LVL18:
+  60:main.c        ****      PWM_3_WriteCompare1(PWM);
+ 152              		.loc 1 60 0
+ 153 0014 7820     		movs	r0, #120
+ 154 0016 FFF7FEFF 		bl	PWM_3_WriteCompare1
+ 155              	.LVL19:
+  61:main.c        ****          
+  62:main.c        ****      PWM_WriteCompare2(0);
+ 156              		.loc 1 62 0
+ 157 001a 0020     		movs	r0, #0
+ 158 001c FFF7FEFF 		bl	PWM_WriteCompare2
+ 159              	.LVL20:
+  63:main.c        ****      PWM_2_WriteCompare2(PWM);
+ 160              		.loc 1 63 0
+ 161 0020 7820     		movs	r0, #120
+ 162 0022 FFF7FEFF 		bl	PWM_2_WriteCompare2
+ 163              	.LVL21:
+  64:main.c        ****      PWM_1_WriteCompare2(PWM);
+ 164              		.loc 1 64 0
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 5
+
+
+ 165 0026 7820     		movs	r0, #120
+ 166 0028 FFF7FEFF 		bl	PWM_1_WriteCompare2
+ 167              	.LVL22:
+  65:main.c        ****      PWM_3_WriteCompare2(0);   
+ 168              		.loc 1 65 0
+ 169 002c 0020     		movs	r0, #0
+ 170 002e FFF7FEFF 		bl	PWM_3_WriteCompare2
+ 171              	.LVL23:
+ 172 0032 08BD     		pop	{r3, pc}
+ 173              		.cfi_endproc
+ 174              	.LFE66:
+ 175              		.size	robotLeft, .-robotLeft
+ 176              		.section	.text.robotRight,"ax",%progbits
+ 177              		.align	2
+ 178              		.global	robotRight
+ 179              		.thumb
+ 180              		.thumb_func
+ 181              		.type	robotRight, %function
+ 182              	robotRight:
+ 183              	.LFB67:
+  66:main.c        **** }
+  67:main.c        **** 
+  68:main.c        **** void robotRight(){
+ 184              		.loc 1 68 0
+ 185              		.cfi_startproc
+ 186              		@ args = 0, pretend = 0, frame = 0
+ 187              		@ frame_needed = 0, uses_anonymous_args = 0
+ 188 0000 08B5     		push	{r3, lr}
+ 189              		.cfi_def_cfa_offset 8
+ 190              		.cfi_offset 3, -8
+ 191              		.cfi_offset 14, -4
+  69:main.c        ****      PWM_WriteCompare1(0);
+ 192              		.loc 1 69 0
+ 193 0002 0020     		movs	r0, #0
+ 194 0004 FFF7FEFF 		bl	PWM_WriteCompare1
+ 195              	.LVL24:
+  70:main.c        ****      PWM_2_WriteCompare1(PWM);
+ 196              		.loc 1 70 0
+ 197 0008 7820     		movs	r0, #120
+ 198 000a FFF7FEFF 		bl	PWM_2_WriteCompare1
+ 199              	.LVL25:
+  71:main.c        ****      PWM_1_WriteCompare1(PWM);
+ 200              		.loc 1 71 0
+ 201 000e 7820     		movs	r0, #120
+ 202 0010 FFF7FEFF 		bl	PWM_1_WriteCompare1
+ 203              	.LVL26:
+  72:main.c        ****      PWM_3_WriteCompare1(0);
+ 204              		.loc 1 72 0
+ 205 0014 0020     		movs	r0, #0
+ 206 0016 FFF7FEFF 		bl	PWM_3_WriteCompare1
+ 207              	.LVL27:
+  73:main.c        ****          
+  74:main.c        ****      PWM_WriteCompare2(PWM);
+ 208              		.loc 1 74 0
+ 209 001a 7820     		movs	r0, #120
+ 210 001c FFF7FEFF 		bl	PWM_WriteCompare2
+ 211              	.LVL28:
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 6
+
+
+  75:main.c        ****      PWM_2_WriteCompare2(0);
+ 212              		.loc 1 75 0
+ 213 0020 0020     		movs	r0, #0
+ 214 0022 FFF7FEFF 		bl	PWM_2_WriteCompare2
+ 215              	.LVL29:
+  76:main.c        ****      PWM_1_WriteCompare2(0);
+ 216              		.loc 1 76 0
+ 217 0026 0020     		movs	r0, #0
+ 218 0028 FFF7FEFF 		bl	PWM_1_WriteCompare2
+ 219              	.LVL30:
+  77:main.c        ****      PWM_3_WriteCompare2(PWM);   
+ 220              		.loc 1 77 0
+ 221 002c 7820     		movs	r0, #120
+ 222 002e FFF7FEFF 		bl	PWM_3_WriteCompare2
+ 223              	.LVL31:
+ 224 0032 08BD     		pop	{r3, pc}
+ 225              		.cfi_endproc
+ 226              	.LFE67:
+ 227              		.size	robotRight, .-robotRight
+ 228              		.section	.text.spinLeft,"ax",%progbits
+ 229              		.align	2
+ 230              		.global	spinLeft
+ 231              		.thumb
+ 232              		.thumb_func
+ 233              		.type	spinLeft, %function
+ 234              	spinLeft:
+ 235              	.LFB68:
+  78:main.c        **** }
+  79:main.c        **** void spinLeft(){
+ 236              		.loc 1 79 0
+ 237              		.cfi_startproc
+ 238              		@ args = 0, pretend = 0, frame = 0
+ 239              		@ frame_needed = 0, uses_anonymous_args = 0
+ 240 0000 08B5     		push	{r3, lr}
+ 241              		.cfi_def_cfa_offset 8
+ 242              		.cfi_offset 3, -8
+ 243              		.cfi_offset 14, -4
+  80:main.c        ****      PWM_WriteCompare1(PWM);
+ 244              		.loc 1 80 0
+ 245 0002 7820     		movs	r0, #120
+ 246 0004 FFF7FEFF 		bl	PWM_WriteCompare1
+ 247              	.LVL32:
+  81:main.c        ****      PWM_2_WriteCompare1(PWM);
+ 248              		.loc 1 81 0
+ 249 0008 7820     		movs	r0, #120
+ 250 000a FFF7FEFF 		bl	PWM_2_WriteCompare1
+ 251              	.LVL33:
+  82:main.c        ****      PWM_1_WriteCompare1(0);
+ 252              		.loc 1 82 0
+ 253 000e 0020     		movs	r0, #0
+ 254 0010 FFF7FEFF 		bl	PWM_1_WriteCompare1
+ 255              	.LVL34:
+  83:main.c        ****      PWM_3_WriteCompare1(0);
+ 256              		.loc 1 83 0
+ 257 0014 0020     		movs	r0, #0
+ 258 0016 FFF7FEFF 		bl	PWM_3_WriteCompare1
+ 259              	.LVL35:
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 7
+
+
+  84:main.c        ****          
+  85:main.c        ****      PWM_WriteCompare2(0);
+ 260              		.loc 1 85 0
+ 261 001a 0020     		movs	r0, #0
+ 262 001c FFF7FEFF 		bl	PWM_WriteCompare2
+ 263              	.LVL36:
+  86:main.c        ****      PWM_2_WriteCompare2(0);
+ 264              		.loc 1 86 0
+ 265 0020 0020     		movs	r0, #0
+ 266 0022 FFF7FEFF 		bl	PWM_2_WriteCompare2
+ 267              	.LVL37:
+  87:main.c        ****      PWM_1_WriteCompare2(PWM);
+ 268              		.loc 1 87 0
+ 269 0026 7820     		movs	r0, #120
+ 270 0028 FFF7FEFF 		bl	PWM_1_WriteCompare2
+ 271              	.LVL38:
+  88:main.c        ****      PWM_3_WriteCompare2(PWM);   
+ 272              		.loc 1 88 0
+ 273 002c 7820     		movs	r0, #120
+ 274 002e FFF7FEFF 		bl	PWM_3_WriteCompare2
+ 275              	.LVL39:
+ 276 0032 08BD     		pop	{r3, pc}
+ 277              		.cfi_endproc
+ 278              	.LFE68:
+ 279              		.size	spinLeft, .-spinLeft
+ 280              		.section	.text.spinRight,"ax",%progbits
+ 281              		.align	2
+ 282              		.global	spinRight
+ 283              		.thumb
+ 284              		.thumb_func
+ 285              		.type	spinRight, %function
+ 286              	spinRight:
+ 287              	.LFB69:
+  89:main.c        **** }
+  90:main.c        **** 
+  91:main.c        **** void spinRight(){
+ 288              		.loc 1 91 0
+ 289              		.cfi_startproc
+ 290              		@ args = 0, pretend = 0, frame = 0
+ 291              		@ frame_needed = 0, uses_anonymous_args = 0
+ 292 0000 08B5     		push	{r3, lr}
+ 293              		.cfi_def_cfa_offset 8
+ 294              		.cfi_offset 3, -8
+ 295              		.cfi_offset 14, -4
+  92:main.c        ****      PWM_WriteCompare1(0);
+ 296              		.loc 1 92 0
+ 297 0002 0020     		movs	r0, #0
+ 298 0004 FFF7FEFF 		bl	PWM_WriteCompare1
+ 299              	.LVL40:
+  93:main.c        ****      PWM_2_WriteCompare1(0);
+ 300              		.loc 1 93 0
+ 301 0008 0020     		movs	r0, #0
+ 302 000a FFF7FEFF 		bl	PWM_2_WriteCompare1
+ 303              	.LVL41:
+  94:main.c        ****      PWM_1_WriteCompare1(PWM);
+ 304              		.loc 1 94 0
+ 305 000e 7820     		movs	r0, #120
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 8
+
+
+ 306 0010 FFF7FEFF 		bl	PWM_1_WriteCompare1
+ 307              	.LVL42:
+  95:main.c        ****      PWM_3_WriteCompare1(PWM);
+ 308              		.loc 1 95 0
+ 309 0014 7820     		movs	r0, #120
+ 310 0016 FFF7FEFF 		bl	PWM_3_WriteCompare1
+ 311              	.LVL43:
+  96:main.c        ****          
+  97:main.c        ****      PWM_WriteCompare2(PWM);
+ 312              		.loc 1 97 0
+ 313 001a 7820     		movs	r0, #120
+ 314 001c FFF7FEFF 		bl	PWM_WriteCompare2
+ 315              	.LVL44:
+  98:main.c        ****      PWM_2_WriteCompare2(PWM);
+ 316              		.loc 1 98 0
+ 317 0020 7820     		movs	r0, #120
+ 318 0022 FFF7FEFF 		bl	PWM_2_WriteCompare2
+ 319              	.LVL45:
+  99:main.c        ****      PWM_1_WriteCompare2(0);
+ 320              		.loc 1 99 0
+ 321 0026 0020     		movs	r0, #0
+ 322 0028 FFF7FEFF 		bl	PWM_1_WriteCompare2
+ 323              	.LVL46:
+ 100:main.c        ****      PWM_3_WriteCompare2(0);   
+ 324              		.loc 1 100 0
+ 325 002c 0020     		movs	r0, #0
+ 326 002e FFF7FEFF 		bl	PWM_3_WriteCompare2
+ 327              	.LVL47:
+ 328 0032 08BD     		pop	{r3, pc}
+ 329              		.cfi_endproc
+ 330              	.LFE69:
+ 331              		.size	spinRight, .-spinRight
+ 332              		.section	.text.Turn,"ax",%progbits
+ 333              		.align	2
+ 334              		.global	Turn
+ 335              		.thumb
+ 336              		.thumb_func
+ 337              		.type	Turn, %function
+ 338              	Turn:
+ 339              	.LFB70:
+ 101:main.c        **** }
+ 102:main.c        **** 
+ 103:main.c        **** void Turn(){
+ 340              		.loc 1 103 0
+ 341              		.cfi_startproc
+ 342              		@ args = 0, pretend = 0, frame = 0
+ 343              		@ frame_needed = 0, uses_anonymous_args = 0
+ 344 0000 08B5     		push	{r3, lr}
+ 345              		.cfi_def_cfa_offset 8
+ 346              		.cfi_offset 3, -8
+ 347              		.cfi_offset 14, -4
+ 104:main.c        ****     PWM_WriteCompare1(PWM);
+ 348              		.loc 1 104 0
+ 349 0002 7820     		movs	r0, #120
+ 350 0004 FFF7FEFF 		bl	PWM_WriteCompare1
+ 351              	.LVL48:
+ 105:main.c        ****     PWM_1_WriteCompare1(PWM);
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 9
+
+
+ 352              		.loc 1 105 0
+ 353 0008 7820     		movs	r0, #120
+ 354 000a FFF7FEFF 		bl	PWM_1_WriteCompare1
+ 355              	.LVL49:
+ 106:main.c        ****     PWM_2_WriteCompare1(0);
+ 356              		.loc 1 106 0
+ 357 000e 0020     		movs	r0, #0
+ 358 0010 FFF7FEFF 		bl	PWM_2_WriteCompare1
+ 359              	.LVL50:
+ 107:main.c        ****     PWM_3_WriteCompare1(0);
+ 360              		.loc 1 107 0
+ 361 0014 0020     		movs	r0, #0
+ 362 0016 FFF7FEFF 		bl	PWM_3_WriteCompare1
+ 363              	.LVL51:
+ 108:main.c        ****          
+ 109:main.c        ****     PWM_WriteCompare2(0);
+ 364              		.loc 1 109 0
+ 365 001a 0020     		movs	r0, #0
+ 366 001c FFF7FEFF 		bl	PWM_WriteCompare2
+ 367              	.LVL52:
+ 110:main.c        ****     PWM_1_WriteCompare2(0);
+ 368              		.loc 1 110 0
+ 369 0020 0020     		movs	r0, #0
+ 370 0022 FFF7FEFF 		bl	PWM_1_WriteCompare2
+ 371              	.LVL53:
+ 111:main.c        ****     PWM_2_WriteCompare2(PWM);
+ 372              		.loc 1 111 0
+ 373 0026 7820     		movs	r0, #120
+ 374 0028 FFF7FEFF 		bl	PWM_2_WriteCompare2
+ 375              	.LVL54:
+ 112:main.c        ****     PWM_3_WriteCompare2(PWM);
+ 376              		.loc 1 112 0
+ 377 002c 7820     		movs	r0, #120
+ 378 002e FFF7FEFF 		bl	PWM_3_WriteCompare2
+ 379              	.LVL55:
+ 380 0032 08BD     		pop	{r3, pc}
+ 381              		.cfi_endproc
+ 382              	.LFE70:
+ 383              		.size	Turn, .-Turn
+ 384              		.section	.text.Stop,"ax",%progbits
+ 385              		.align	2
+ 386              		.global	Stop
+ 387              		.thumb
+ 388              		.thumb_func
+ 389              		.type	Stop, %function
+ 390              	Stop:
+ 391              	.LFB71:
+ 113:main.c        **** }
+ 114:main.c        ****  
+ 115:main.c        **** void Stop(){
+ 392              		.loc 1 115 0
+ 393              		.cfi_startproc
+ 394              		@ args = 0, pretend = 0, frame = 0
+ 395              		@ frame_needed = 0, uses_anonymous_args = 0
+ 396 0000 08B5     		push	{r3, lr}
+ 397              		.cfi_def_cfa_offset 8
+ 398              		.cfi_offset 3, -8
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 10
+
+
+ 399              		.cfi_offset 14, -4
+ 116:main.c        ****     PWM_WriteCompare1(0);
+ 400              		.loc 1 116 0
+ 401 0002 0020     		movs	r0, #0
+ 402 0004 FFF7FEFF 		bl	PWM_WriteCompare1
+ 403              	.LVL56:
+ 117:main.c        ****     PWM_1_WriteCompare1(0);
+ 404              		.loc 1 117 0
+ 405 0008 0020     		movs	r0, #0
+ 406 000a FFF7FEFF 		bl	PWM_1_WriteCompare1
+ 407              	.LVL57:
+ 118:main.c        ****     PWM_2_WriteCompare1(0);
+ 408              		.loc 1 118 0
+ 409 000e 0020     		movs	r0, #0
+ 410 0010 FFF7FEFF 		bl	PWM_2_WriteCompare1
+ 411              	.LVL58:
+ 119:main.c        ****     PWM_3_WriteCompare1(0);
+ 412              		.loc 1 119 0
+ 413 0014 0020     		movs	r0, #0
+ 414 0016 FFF7FEFF 		bl	PWM_3_WriteCompare1
+ 415              	.LVL59:
+ 120:main.c        **** 
+ 121:main.c        ****     PWM_WriteCompare2(0);
+ 416              		.loc 1 121 0
+ 417 001a 0020     		movs	r0, #0
+ 418 001c FFF7FEFF 		bl	PWM_WriteCompare2
+ 419              	.LVL60:
+ 122:main.c        ****     PWM_1_WriteCompare2(0); 
+ 420              		.loc 1 122 0
+ 421 0020 0020     		movs	r0, #0
+ 422 0022 FFF7FEFF 		bl	PWM_1_WriteCompare2
+ 423              	.LVL61:
+ 123:main.c        ****     PWM_2_WriteCompare2(0); 
+ 424              		.loc 1 123 0
+ 425 0026 0020     		movs	r0, #0
+ 426 0028 FFF7FEFF 		bl	PWM_2_WriteCompare2
+ 427              	.LVL62:
+ 124:main.c        ****     PWM_3_WriteCompare2(0);  
+ 428              		.loc 1 124 0
+ 429 002c 0020     		movs	r0, #0
+ 430 002e FFF7FEFF 		bl	PWM_3_WriteCompare2
+ 431              	.LVL63:
+ 432 0032 08BD     		pop	{r3, pc}
+ 433              		.cfi_endproc
+ 434              	.LFE71:
+ 435              		.size	Stop, .-Stop
+ 436              		.global	__aeabi_i2d
+ 437              		.global	__aeabi_ddiv
+ 438              		.global	__aeabi_d2f
+ 439              		.global	__aeabi_fcmple
+ 440              		.section	.text.main,"ax",%progbits
+ 441              		.align	2
+ 442              		.global	main
+ 443              		.thumb
+ 444              		.thumb_func
+ 445              		.type	main, %function
+ 446              	main:
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 11
+
+
+ 447              	.LFB72:
+ 125:main.c        **** }
+ 126:main.c        **** 
+ 127:main.c        **** int main(void) {
+ 448              		.loc 1 127 0
+ 449              		.cfi_startproc
+ 450              		@ Volatile: function does not return.
+ 451              		@ args = 0, pretend = 0, frame = 0
+ 452              		@ frame_needed = 0, uses_anonymous_args = 0
+ 453 0000 08B5     		push	{r3, lr}
+ 454              		.cfi_def_cfa_offset 8
+ 455              		.cfi_offset 3, -8
+ 456              		.cfi_offset 14, -4
+ 128:main.c        ****     
+ 129:main.c        ****     CyGlobalIntEnable;      //habilitación de interrupciones globales
+ 457              		.loc 1 129 0
+ 458              		.syntax unified
+ 459              	@ 129 "main.c" 1
+ 460 0002 62B6     		CPSIE   i
+ 461              	@ 0 "" 2
+ 130:main.c        ****     
+ 131:main.c        ****     Timer_Start();          //Inicialización del timer
+ 462              		.loc 1 131 0
+ 463              		.thumb
+ 464              		.syntax unified
+ 465 0004 FFF7FEFF 		bl	Timer_Start
+ 466              	.LVL64:
+ 132:main.c        ****     QuadDec_Start();
+ 467              		.loc 1 132 0
+ 468 0008 FFF7FEFF 		bl	QuadDec_Start
+ 469              	.LVL65:
+ 133:main.c        ****     
+ 134:main.c        ****     UART_Start();
+ 470              		.loc 1 134 0
+ 471 000c FFF7FEFF 		bl	UART_Start
+ 472              	.LVL66:
+ 135:main.c        ****     UART_Enable(); 
+ 473              		.loc 1 135 0
+ 474 0010 FFF7FEFF 		bl	UART_Enable
+ 475              	.LVL67:
+ 136:main.c        ****     
+ 137:main.c        ****     PWM_Start();
+ 476              		.loc 1 137 0
+ 477 0014 FFF7FEFF 		bl	PWM_Start
+ 478              	.LVL68:
+ 138:main.c        ****     PWM_Enable();
+ 479              		.loc 1 138 0
+ 480 0018 FFF7FEFF 		bl	PWM_Enable
+ 481              	.LVL69:
+ 139:main.c        ****     PWM_1_Start();
+ 482              		.loc 1 139 0
+ 483 001c FFF7FEFF 		bl	PWM_1_Start
+ 484              	.LVL70:
+ 140:main.c        ****     PWM_1_Enable();    
+ 485              		.loc 1 140 0
+ 486 0020 FFF7FEFF 		bl	PWM_1_Enable
+ 487              	.LVL71:
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 12
+
+
+ 141:main.c        ****     PWM_2_Start();
+ 488              		.loc 1 141 0
+ 489 0024 FFF7FEFF 		bl	PWM_2_Start
+ 490              	.LVL72:
+ 142:main.c        ****     PWM_2_Enable();   
+ 491              		.loc 1 142 0
+ 492 0028 FFF7FEFF 		bl	PWM_2_Enable
+ 493              	.LVL73:
+ 143:main.c        ****     PWM_3_Start();
+ 494              		.loc 1 143 0
+ 495 002c FFF7FEFF 		bl	PWM_3_Start
+ 496              	.LVL74:
+ 144:main.c        ****     PWM_3_Enable();
+ 497              		.loc 1 144 0
+ 498 0030 FFF7FEFF 		bl	PWM_3_Enable
+ 499              	.LVL75:
+ 500              	.L18:
+ 145:main.c        ****  
+ 146:main.c        ****     for(;;)
+ 147:main.c        ****     {
+ 148:main.c        ****         if(dataIn <= 3){
+ 501              		.loc 1 148 0
+ 502 0034 574B     		ldr	r3, .L41
+ 503 0036 1B68     		ldr	r3, [r3]
+ 504 0038 032B     		cmp	r3, #3
+ 505 003a 0CDC     		bgt	.L19
+ 149:main.c        ****             dato_lit_car = UART_GetChar();
+ 506              		.loc 1 149 0
+ 507 003c FFF7FEFF 		bl	UART_GetChar
+ 508              	.LVL76:
+ 509 0040 554B     		ldr	r3, .L41+4
+ 510 0042 1870     		strb	r0, [r3]
+ 150:main.c        ****         if(dato_lit_car != ' '){
+ 511              		.loc 1 150 0
+ 512 0044 2028     		cmp	r0, #32
+ 513 0046 0CD0     		beq	.L20
+ 151:main.c        ****             string[dataIn] = dato_lit_car;
+ 514              		.loc 1 151 0
+ 515 0048 524A     		ldr	r2, .L41
+ 516 004a 1368     		ldr	r3, [r2]
+ 517 004c 5349     		ldr	r1, .L41+8
+ 518 004e C854     		strb	r0, [r1, r3]
+ 152:main.c        ****             dataIn++;}
+ 519              		.loc 1 152 0
+ 520 0050 0133     		adds	r3, r3, #1
+ 521 0052 1360     		str	r3, [r2]
+ 522 0054 05E0     		b	.L20
+ 523              	.L19:
+ 153:main.c        ****         }   
+ 154:main.c        ****         else {
+ 155:main.c        ****             UART_PutString(string);
+ 524              		.loc 1 155 0
+ 525 0056 5148     		ldr	r0, .L41+8
+ 526 0058 FFF7FEFF 		bl	UART_PutString
+ 527              	.LVL77:
+ 156:main.c        ****             dataIn=0;
+ 528              		.loc 1 156 0
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 13
+
+
+ 529 005c 0022     		movs	r2, #0
+ 530 005e 4D4B     		ldr	r3, .L41
+ 531 0060 1A60     		str	r2, [r3]
+ 532              	.L20:
+ 157:main.c        ****         }
+ 158:main.c        ****         
+ 159:main.c        ****         if (string[1] == 'w') {
+ 533              		.loc 1 159 0
+ 534 0062 4E4B     		ldr	r3, .L41+8
+ 535 0064 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 536 0066 772B     		cmp	r3, #119
+ 537 0068 02D1     		bne	.L21
+ 160:main.c        ****             robot_state=CONTROLLER; 
+ 538              		.loc 1 160 0
+ 539 006a 0121     		movs	r1, #1
+ 540 006c 4C4A     		ldr	r2, .L41+12
+ 541 006e 1160     		str	r1, [r2]
+ 542              	.L21:
+ 161:main.c        ****         }
+ 162:main.c        ****         if (string[1] == 'g') {
+ 543              		.loc 1 162 0
+ 544 0070 672B     		cmp	r3, #103
+ 545 0072 02D1     		bne	.L22
+ 163:main.c        ****             robot_state=AUTONOMOUS; 
+ 546              		.loc 1 163 0
+ 547 0074 0022     		movs	r2, #0
+ 548 0076 4A4B     		ldr	r3, .L41+12
+ 549 0078 1A60     		str	r2, [r3]
+ 550              	.L22:
+ 164:main.c        ****         }
+ 165:main.c        ****         if (robot_state == CONTROLLER) {
+ 551              		.loc 1 165 0
+ 552 007a 494B     		ldr	r3, .L41+12
+ 553 007c 1B68     		ldr	r3, [r3]
+ 554 007e 012B     		cmp	r3, #1
+ 555 0080 01D1     		bne	.L23
+ 166:main.c        ****             Stop(); 
+ 556              		.loc 1 166 0
+ 557 0082 FFF7FEFF 		bl	Stop
+ 558              	.LVL78:
+ 559              	.L23:
+ 167:main.c        ****         }
+ 168:main.c        ****         if (string[1] == 'u' && robot_state==CONTROLLER) {
+ 560              		.loc 1 168 0
+ 561 0086 454B     		ldr	r3, .L41+8
+ 562 0088 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 563 008a 752B     		cmp	r3, #117
+ 564 008c 05D1     		bne	.L24
+ 565              		.loc 1 168 0 is_stmt 0 discriminator 1
+ 566 008e 444B     		ldr	r3, .L41+12
+ 567 0090 1B68     		ldr	r3, [r3]
+ 568 0092 012B     		cmp	r3, #1
+ 569 0094 01D1     		bne	.L24
+ 169:main.c        ****             goRobot();   
+ 570              		.loc 1 169 0 is_stmt 1
+ 571 0096 FFF7FEFF 		bl	goRobot
+ 572              	.LVL79:
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 14
+
+
+ 573              	.L24:
+ 170:main.c        ****         }
+ 171:main.c        ****         if (string[1] == 'd' && robot_state==CONTROLLER) {
+ 574              		.loc 1 171 0
+ 575 009a 404B     		ldr	r3, .L41+8
+ 576 009c 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 577 009e 642B     		cmp	r3, #100
+ 578 00a0 05D1     		bne	.L25
+ 579              		.loc 1 171 0 is_stmt 0 discriminator 1
+ 580 00a2 3F4B     		ldr	r3, .L41+12
+ 581 00a4 1B68     		ldr	r3, [r3]
+ 582 00a6 012B     		cmp	r3, #1
+ 583 00a8 01D1     		bne	.L25
+ 172:main.c        ****             backRobot();    
+ 584              		.loc 1 172 0 is_stmt 1
+ 585 00aa FFF7FEFF 		bl	backRobot
+ 586              	.LVL80:
+ 587              	.L25:
+ 173:main.c        ****         }
+ 174:main.c        ****         if (string[1] == 'l' && robot_state==CONTROLLER) { 
+ 588              		.loc 1 174 0
+ 589 00ae 3B4B     		ldr	r3, .L41+8
+ 590 00b0 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 591 00b2 6C2B     		cmp	r3, #108
+ 592 00b4 05D1     		bne	.L26
+ 593              		.loc 1 174 0 is_stmt 0 discriminator 1
+ 594 00b6 3A4B     		ldr	r3, .L41+12
+ 595 00b8 1B68     		ldr	r3, [r3]
+ 596 00ba 012B     		cmp	r3, #1
+ 597 00bc 01D1     		bne	.L26
+ 175:main.c        ****             robotLeft(); 
+ 598              		.loc 1 175 0 is_stmt 1
+ 599 00be FFF7FEFF 		bl	robotLeft
+ 600              	.LVL81:
+ 601              	.L26:
+ 176:main.c        ****         }
+ 177:main.c        ****         if (string[1] == 'r' && robot_state==CONTROLLER) {
+ 602              		.loc 1 177 0
+ 603 00c2 364B     		ldr	r3, .L41+8
+ 604 00c4 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 605 00c6 722B     		cmp	r3, #114
+ 606 00c8 05D1     		bne	.L27
+ 607              		.loc 1 177 0 is_stmt 0 discriminator 1
+ 608 00ca 354B     		ldr	r3, .L41+12
+ 609 00cc 1B68     		ldr	r3, [r3]
+ 610 00ce 012B     		cmp	r3, #1
+ 611 00d0 01D1     		bne	.L27
+ 178:main.c        ****             robotRight(); 
+ 612              		.loc 1 178 0 is_stmt 1
+ 613 00d2 FFF7FEFF 		bl	robotRight
+ 614              	.LVL82:
+ 615              	.L27:
+ 179:main.c        ****         }
+ 180:main.c        ****         if (string[1] == 'f' && robot_state==CONTROLLER) {
+ 616              		.loc 1 180 0
+ 617 00d6 314B     		ldr	r3, .L41+8
+ 618 00d8 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 15
+
+
+ 619 00da 662B     		cmp	r3, #102
+ 620 00dc 05D1     		bne	.L28
+ 621              		.loc 1 180 0 is_stmt 0 discriminator 1
+ 622 00de 304B     		ldr	r3, .L41+12
+ 623 00e0 1B68     		ldr	r3, [r3]
+ 624 00e2 012B     		cmp	r3, #1
+ 625 00e4 01D1     		bne	.L28
+ 181:main.c        ****             spinRight(); 
+ 626              		.loc 1 181 0 is_stmt 1
+ 627 00e6 FFF7FEFF 		bl	spinRight
+ 628              	.LVL83:
+ 629              	.L28:
+ 182:main.c        ****         } 
+ 183:main.c        ****         if (string[1] == 'a' && robot_state==CONTROLLER) {
+ 630              		.loc 1 183 0
+ 631 00ea 2C4B     		ldr	r3, .L41+8
+ 632 00ec 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 633 00ee 612B     		cmp	r3, #97
+ 634 00f0 05D1     		bne	.L29
+ 635              		.loc 1 183 0 is_stmt 0 discriminator 1
+ 636 00f2 2B4B     		ldr	r3, .L41+12
+ 637 00f4 1B68     		ldr	r3, [r3]
+ 638 00f6 012B     		cmp	r3, #1
+ 639 00f8 01D1     		bne	.L29
+ 184:main.c        ****             spinLeft(); 
+ 640              		.loc 1 184 0 is_stmt 1
+ 641 00fa FFF7FEFF 		bl	spinLeft
+ 642              	.LVL84:
+ 643              	.L29:
+ 185:main.c        ****         } 
+ 186:main.c        ****         if (string[1] == 's') {
+ 644              		.loc 1 186 0
+ 645 00fe 274B     		ldr	r3, .L41+8
+ 646 0100 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 647 0102 732B     		cmp	r3, #115
+ 648 0104 0ED1     		bne	.L31
+ 187:main.c        ****             Stop();  
+ 649              		.loc 1 187 0
+ 650 0106 FFF7FEFF 		bl	Stop
+ 651              	.LVL85:
+ 652 010a 0BE0     		b	.L31
+ 653              	.L32:
+ 188:main.c        ****         }   
+ 189:main.c        ****         
+ 190:main.c        **** ////////////////////////////////////////////////////////////////////////////////////////////////   
+ 191:main.c        **** 
+ 192:main.c        ****         while(echo_Read()==0)
+ 193:main.c        ****         {
+ 194:main.c        ****             Trigger_out_Write(1);
+ 654              		.loc 1 194 0
+ 655 010c 0120     		movs	r0, #1
+ 656 010e FFF7FEFF 		bl	Trigger_out_Write
+ 657              	.LVL86:
+ 195:main.c        ****             CyDelay(10u);        
+ 658              		.loc 1 195 0
+ 659 0112 0A20     		movs	r0, #10
+ 660 0114 FFF7FEFF 		bl	CyDelay
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 16
+
+
+ 661              	.LVL87:
+ 196:main.c        ****             Trigger_out_Write(0);
+ 662              		.loc 1 196 0
+ 663 0118 0020     		movs	r0, #0
+ 664 011a FFF7FEFF 		bl	Trigger_out_Write
+ 665              	.LVL88:
+ 197:main.c        ****             CyDelay(1);          
+ 666              		.loc 1 197 0
+ 667 011e 0120     		movs	r0, #1
+ 668 0120 FFF7FEFF 		bl	CyDelay
+ 669              	.LVL89:
+ 670              	.L31:
+ 192:main.c        ****         {
+ 671              		.loc 1 192 0
+ 672 0124 FFF7FEFF 		bl	echo_Read
+ 673              	.LVL90:
+ 674 0128 0028     		cmp	r0, #0
+ 675 012a EFD0     		beq	.L32
+ 676              	.L33:
+ 198:main.c        ****         }
+ 199:main.c        ****         while(echo_Read()== 1) {}; 
+ 677              		.loc 1 199 0 discriminator 1
+ 678 012c FFF7FEFF 		bl	echo_Read
+ 679              	.LVL91:
+ 680 0130 0128     		cmp	r0, #1
+ 681 0132 FBD0     		beq	.L33
+ 200:main.c        ****         
+ 201:main.c        ****         value_counter = 65535-Timer_ReadCounter();        
+ 682              		.loc 1 201 0
+ 683 0134 FFF7FEFF 		bl	Timer_ReadCounter
+ 684              	.LVL92:
+ 685 0138 C0F57F40 		rsb	r0, r0, #65280
+ 686 013c FF30     		adds	r0, r0, #255
+ 687 013e 154C     		ldr	r4, .L41
+ 688 0140 6060     		str	r0, [r4, #4]
+ 202:main.c        ****         distancia = value_counter / 58.0 ;        
+ 689              		.loc 1 202 0
+ 690 0142 FFF7FEFF 		bl	__aeabi_i2d
+ 691              	.LVL93:
+ 692 0146 0022     		movs	r2, #0
+ 693 0148 164B     		ldr	r3, .L41+16
+ 694 014a FFF7FEFF 		bl	__aeabi_ddiv
+ 695              	.LVL94:
+ 696 014e FFF7FEFF 		bl	__aeabi_d2f
+ 697              	.LVL95:
+ 698 0152 A060     		str	r0, [r4, #8]	@ float
+ 203:main.c        ****                      
+ 204:main.c        ****         if (distancia <= 30 && robot_state==AUTONOMOUS) { //Solo si la distancia es menor a 30cm
+ 699              		.loc 1 204 0
+ 700 0154 1449     		ldr	r1, .L41+20
+ 701 0156 FFF7FEFF 		bl	__aeabi_fcmple
+ 702              	.LVL96:
+ 703 015a 40B1     		cbz	r0, .L34
+ 704              		.loc 1 204 0 is_stmt 0 discriminator 1
+ 705 015c 104B     		ldr	r3, .L41+12
+ 706 015e 1B68     		ldr	r3, [r3]
+ 707 0160 2BB9     		cbnz	r3, .L34
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 17
+
+
+ 205:main.c        ****             robot_state=AUTONOMOUS; 
+ 708              		.loc 1 205 0 is_stmt 1
+ 709 0162 0022     		movs	r2, #0
+ 710 0164 0E4B     		ldr	r3, .L41+12
+ 711 0166 1A60     		str	r2, [r3]
+ 206:main.c        ****             goRobot(); 
+ 712              		.loc 1 206 0
+ 713 0168 FFF7FEFF 		bl	goRobot
+ 714              	.LVL97:
+ 715 016c 02E0     		b	.L36
+ 716              	.L34:
+ 207:main.c        ****         }
+ 208:main.c        ****         else {
+ 209:main.c        ****             i=1;
+ 717              		.loc 1 209 0
+ 718 016e 0122     		movs	r2, #1
+ 719 0170 084B     		ldr	r3, .L41
+ 720 0172 DA60     		str	r2, [r3, #12]
+ 721              	.L36:
+ 210:main.c        ****         }    
+ 211:main.c        ****         if (i>=1 && i<40) {
+ 722              		.loc 1 211 0
+ 723 0174 074B     		ldr	r3, .L41
+ 724 0176 DB68     		ldr	r3, [r3, #12]
+ 725 0178 013B     		subs	r3, r3, #1
+ 726 017a 262B     		cmp	r3, #38
+ 727 017c 06D8     		bhi	.L37
+ 212:main.c        ****             Turn(); 
+ 728              		.loc 1 212 0
+ 729 017e FFF7FEFF 		bl	Turn
+ 730              	.LVL98:
+ 213:main.c        ****             i++;
+ 731              		.loc 1 213 0
+ 732 0182 044A     		ldr	r2, .L41
+ 733 0184 D368     		ldr	r3, [r2, #12]
+ 734 0186 0133     		adds	r3, r3, #1
+ 735 0188 D360     		str	r3, [r2, #12]
+ 736 018a 53E7     		b	.L18
+ 737              	.L37:
+ 214:main.c        ****         } 
+ 215:main.c        ****         else {
+ 216:main.c        ****            i=0; 
+ 738              		.loc 1 216 0
+ 739 018c 0022     		movs	r2, #0
+ 740 018e 014B     		ldr	r3, .L41
+ 741 0190 DA60     		str	r2, [r3, #12]
+ 742 0192 4FE7     		b	.L18
+ 743              	.L42:
+ 744              		.align	2
+ 745              	.L41:
+ 746 0194 00000000 		.word	.LANCHOR0
+ 747 0198 00000000 		.word	dato_lit_car
+ 748 019c 00000000 		.word	string
+ 749 01a0 00000000 		.word	robot_state
+ 750 01a4 00004D40 		.word	1078788096
+ 751 01a8 0000F041 		.word	1106247680
+ 752              		.cfi_endproc
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 18
+
+
+ 753              	.LFE72:
+ 754              		.size	main, .-main
+ 755              		.comm	dato_lit_car,1,1
+ 756              		.comm	string,3,4
+ 757              		.comm	data,2,4
+ 758              		.global	distancia
+ 759              		.global	i
+ 760              		.comm	state,4,4
+ 761              		.comm	robot_state,4,4
+ 762              		.global	dataIn
+ 763              		.global	comp
+ 764              		.global	stop
+ 765              		.global	con
+ 766              		.global	value_counter
+ 767              		.comm	StringToPrint,32,4
+ 768              		.bss
+ 769              		.align	2
+ 770              		.set	.LANCHOR0,. + 0
+ 771              		.type	dataIn, %object
+ 772              		.size	dataIn, 4
+ 773              	dataIn:
+ 774 0000 00000000 		.space	4
+ 775              		.type	value_counter, %object
+ 776              		.size	value_counter, 4
+ 777              	value_counter:
+ 778 0004 00000000 		.space	4
+ 779              		.type	distancia, %object
+ 780              		.size	distancia, 4
+ 781              	distancia:
+ 782 0008 00000000 		.space	4
+ 783              		.type	i, %object
+ 784              		.size	i, 4
+ 785              	i:
+ 786 000c 00000000 		.space	4
+ 787              		.type	comp, %object
+ 788              		.size	comp, 4
+ 789              	comp:
+ 790 0010 00000000 		.space	4
+ 791              		.type	stop, %object
+ 792              		.size	stop, 4
+ 793              	stop:
+ 794 0014 00000000 		.space	4
+ 795              		.type	con, %object
+ 796              		.size	con, 4
+ 797              	con:
+ 798 0018 00000000 		.space	4
+ 799              		.text
+ 800              	.Letext0:
+ 801              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 802              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 803              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
+ 804              		.file 5 "Generated_Source\\PSoC5/PWM.h"
+ 805              		.file 6 "Generated_Source\\PSoC5/PWM_1.h"
+ 806              		.file 7 "Generated_Source\\PSoC5/PWM_2.h"
+ 807              		.file 8 "Generated_Source\\PSoC5/PWM_3.h"
+ 808              		.file 9 "Generated_Source\\PSoC5/Timer.h"
+ 809              		.file 10 "Generated_Source\\PSoC5/QuadDec.h"
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 19
+
+
+ 810              		.file 11 "Generated_Source\\PSoC5/UART.h"
+ 811              		.file 12 "Generated_Source\\PSoC5/Trigger_out.h"
+ 812              		.file 13 "Generated_Source\\PSoC5/CyLib.h"
+ 813              		.file 14 "Generated_Source\\PSoC5/echo.h"
+ 814              		.section	.debug_info,"",%progbits
+ 815              	.Ldebug_info0:
+ 816 0000 CD090000 		.4byte	0x9cd
+ 817 0004 0400     		.2byte	0x4
+ 818 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 819 000a 04       		.byte	0x4
+ 820 000b 01       		.uleb128 0x1
+ 821 000c 24030000 		.4byte	.LASF65
+ 822 0010 0C       		.byte	0xc
+ 823 0011 A3020000 		.4byte	.LASF66
+ 824 0015 C8020000 		.4byte	.LASF67
+ 825 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 826 001d 00000000 		.4byte	0
+ 827 0021 00000000 		.4byte	.Ldebug_line0
+ 828 0025 02       		.uleb128 0x2
+ 829 0026 01       		.byte	0x1
+ 830 0027 06       		.byte	0x6
+ 831 0028 C2000000 		.4byte	.LASF0
+ 832 002c 02       		.uleb128 0x2
+ 833 002d 01       		.byte	0x1
+ 834 002e 08       		.byte	0x8
+ 835 002f A8010000 		.4byte	.LASF1
+ 836 0033 02       		.uleb128 0x2
+ 837 0034 02       		.byte	0x2
+ 838 0035 05       		.byte	0x5
+ 839 0036 23000000 		.4byte	.LASF2
+ 840 003a 02       		.uleb128 0x2
+ 841 003b 02       		.byte	0x2
+ 842 003c 07       		.byte	0x7
+ 843 003d 2D020000 		.4byte	.LASF3
+ 844 0041 03       		.uleb128 0x3
+ 845 0042 EA020000 		.4byte	.LASF9
+ 846 0046 02       		.byte	0x2
+ 847 0047 3F       		.byte	0x3f
+ 848 0048 4C000000 		.4byte	0x4c
+ 849 004c 02       		.uleb128 0x2
+ 850 004d 04       		.byte	0x4
+ 851 004e 05       		.byte	0x5
+ 852 004f 27010000 		.4byte	.LASF4
+ 853 0053 02       		.uleb128 0x2
+ 854 0054 04       		.byte	0x4
+ 855 0055 07       		.byte	0x7
+ 856 0056 AA020000 		.4byte	.LASF5
+ 857 005a 02       		.uleb128 0x2
+ 858 005b 08       		.byte	0x8
+ 859 005c 05       		.byte	0x5
+ 860 005d DE000000 		.4byte	.LASF6
+ 861 0061 02       		.uleb128 0x2
+ 862 0062 08       		.byte	0x8
+ 863 0063 07       		.byte	0x7
+ 864 0064 BF010000 		.4byte	.LASF7
+ 865 0068 04       		.uleb128 0x4
+ 866 0069 04       		.byte	0x4
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 20
+
+
+ 867 006a 05       		.byte	0x5
+ 868 006b 696E7400 		.ascii	"int\000"
+ 869 006f 02       		.uleb128 0x2
+ 870 0070 04       		.byte	0x4
+ 871 0071 07       		.byte	0x7
+ 872 0072 F6010000 		.4byte	.LASF8
+ 873 0076 03       		.uleb128 0x3
+ 874 0077 72020000 		.4byte	.LASF10
+ 875 007b 03       		.byte	0x3
+ 876 007c 2C       		.byte	0x2c
+ 877 007d 41000000 		.4byte	0x41
+ 878 0081 02       		.uleb128 0x2
+ 879 0082 04       		.byte	0x4
+ 880 0083 04       		.byte	0x4
+ 881 0084 D8000000 		.4byte	.LASF11
+ 882 0088 02       		.uleb128 0x2
+ 883 0089 08       		.byte	0x8
+ 884 008a 04       		.byte	0x4
+ 885 008b BC020000 		.4byte	.LASF12
+ 886 008f 02       		.uleb128 0x2
+ 887 0090 01       		.byte	0x1
+ 888 0091 08       		.byte	0x8
+ 889 0092 50020000 		.4byte	.LASF13
+ 890 0096 02       		.uleb128 0x2
+ 891 0097 08       		.byte	0x8
+ 892 0098 04       		.byte	0x4
+ 893 0099 8F010000 		.4byte	.LASF14
+ 894 009d 02       		.uleb128 0x2
+ 895 009e 04       		.byte	0x4
+ 896 009f 07       		.byte	0x7
+ 897 00a0 2D000000 		.4byte	.LASF15
+ 898 00a4 05       		.uleb128 0x5
+ 899 00a5 01       		.byte	0x1
+ 900 00a6 2C000000 		.4byte	0x2c
+ 901 00aa 01       		.byte	0x1
+ 902 00ab 1A       		.byte	0x1a
+ 903 00ac C3000000 		.4byte	0xc3
+ 904 00b0 06       		.uleb128 0x6
+ 905 00b1 10010000 		.4byte	.LASF16
+ 906 00b5 00       		.byte	0
+ 907 00b6 06       		.uleb128 0x6
+ 908 00b7 5E000000 		.4byte	.LASF17
+ 909 00bb 01       		.byte	0x1
+ 910 00bc 06       		.uleb128 0x6
+ 911 00bd 9D020000 		.4byte	.LASF18
+ 912 00c1 02       		.byte	0x2
+ 913 00c2 00       		.byte	0
+ 914 00c3 07       		.uleb128 0x7
+ 915 00c4 7A020000 		.4byte	.LASF19
+ 916 00c8 01       		.byte	0x1
+ 917 00c9 20       		.byte	0x20
+ 918 00ca 00000000 		.4byte	.LFB64
+ 919 00ce 34000000 		.4byte	.LFE64-.LFB64
+ 920 00d2 01       		.uleb128 0x1
+ 921 00d3 9C       		.byte	0x9c
+ 922 00d4 71010000 		.4byte	0x171
+ 923 00d8 08       		.uleb128 0x8
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 21
+
+
+ 924 00d9 08000000 		.4byte	.LVL0
+ 925 00dd B2080000 		.4byte	0x8b2
+ 926 00e1 EC000000 		.4byte	0xec
+ 927 00e5 09       		.uleb128 0x9
+ 928 00e6 01       		.uleb128 0x1
+ 929 00e7 50       		.byte	0x50
+ 930 00e8 02       		.uleb128 0x2
+ 931 00e9 08       		.byte	0x8
+ 932 00ea 78       		.byte	0x78
+ 933 00eb 00       		.byte	0
+ 934 00ec 08       		.uleb128 0x8
+ 935 00ed 0E000000 		.4byte	.LVL1
+ 936 00f1 BD080000 		.4byte	0x8bd
+ 937 00f5 00010000 		.4byte	0x100
+ 938 00f9 09       		.uleb128 0x9
+ 939 00fa 01       		.uleb128 0x1
+ 940 00fb 50       		.byte	0x50
+ 941 00fc 02       		.uleb128 0x2
+ 942 00fd 08       		.byte	0x8
+ 943 00fe 78       		.byte	0x78
+ 944 00ff 00       		.byte	0
+ 945 0100 08       		.uleb128 0x8
+ 946 0101 14000000 		.4byte	.LVL2
+ 947 0105 C8080000 		.4byte	0x8c8
+ 948 0109 14010000 		.4byte	0x114
+ 949 010d 09       		.uleb128 0x9
+ 950 010e 01       		.uleb128 0x1
+ 951 010f 50       		.byte	0x50
+ 952 0110 02       		.uleb128 0x2
+ 953 0111 08       		.byte	0x8
+ 954 0112 78       		.byte	0x78
+ 955 0113 00       		.byte	0
+ 956 0114 08       		.uleb128 0x8
+ 957 0115 1A000000 		.4byte	.LVL3
+ 958 0119 D3080000 		.4byte	0x8d3
+ 959 011d 28010000 		.4byte	0x128
+ 960 0121 09       		.uleb128 0x9
+ 961 0122 01       		.uleb128 0x1
+ 962 0123 50       		.byte	0x50
+ 963 0124 02       		.uleb128 0x2
+ 964 0125 08       		.byte	0x8
+ 965 0126 78       		.byte	0x78
+ 966 0127 00       		.byte	0
+ 967 0128 08       		.uleb128 0x8
+ 968 0129 20000000 		.4byte	.LVL4
+ 969 012d DE080000 		.4byte	0x8de
+ 970 0131 3B010000 		.4byte	0x13b
+ 971 0135 09       		.uleb128 0x9
+ 972 0136 01       		.uleb128 0x1
+ 973 0137 50       		.byte	0x50
+ 974 0138 01       		.uleb128 0x1
+ 975 0139 30       		.byte	0x30
+ 976 013a 00       		.byte	0
+ 977 013b 08       		.uleb128 0x8
+ 978 013c 26000000 		.4byte	.LVL5
+ 979 0140 E9080000 		.4byte	0x8e9
+ 980 0144 4E010000 		.4byte	0x14e
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 22
+
+
+ 981 0148 09       		.uleb128 0x9
+ 982 0149 01       		.uleb128 0x1
+ 983 014a 50       		.byte	0x50
+ 984 014b 01       		.uleb128 0x1
+ 985 014c 30       		.byte	0x30
+ 986 014d 00       		.byte	0
+ 987 014e 08       		.uleb128 0x8
+ 988 014f 2C000000 		.4byte	.LVL6
+ 989 0153 F4080000 		.4byte	0x8f4
+ 990 0157 61010000 		.4byte	0x161
+ 991 015b 09       		.uleb128 0x9
+ 992 015c 01       		.uleb128 0x1
+ 993 015d 50       		.byte	0x50
+ 994 015e 01       		.uleb128 0x1
+ 995 015f 30       		.byte	0x30
+ 996 0160 00       		.byte	0
+ 997 0161 0A       		.uleb128 0xa
+ 998 0162 32000000 		.4byte	.LVL7
+ 999 0166 FF080000 		.4byte	0x8ff
+ 1000 016a 09       		.uleb128 0x9
+ 1001 016b 01       		.uleb128 0x1
+ 1002 016c 50       		.byte	0x50
+ 1003 016d 01       		.uleb128 0x1
+ 1004 016e 30       		.byte	0x30
+ 1005 016f 00       		.byte	0
+ 1006 0170 00       		.byte	0
+ 1007 0171 07       		.uleb128 0x7
+ 1008 0172 93020000 		.4byte	.LASF20
+ 1009 0176 01       		.byte	0x1
+ 1010 0177 2C       		.byte	0x2c
+ 1011 0178 00000000 		.4byte	.LFB65
+ 1012 017c 34000000 		.4byte	.LFE65-.LFB65
+ 1013 0180 01       		.uleb128 0x1
+ 1014 0181 9C       		.byte	0x9c
+ 1015 0182 1F020000 		.4byte	0x21f
+ 1016 0186 08       		.uleb128 0x8
+ 1017 0187 08000000 		.4byte	.LVL8
+ 1018 018b B2080000 		.4byte	0x8b2
+ 1019 018f 99010000 		.4byte	0x199
+ 1020 0193 09       		.uleb128 0x9
+ 1021 0194 01       		.uleb128 0x1
+ 1022 0195 50       		.byte	0x50
+ 1023 0196 01       		.uleb128 0x1
+ 1024 0197 30       		.byte	0x30
+ 1025 0198 00       		.byte	0
+ 1026 0199 08       		.uleb128 0x8
+ 1027 019a 0E000000 		.4byte	.LVL9
+ 1028 019e BD080000 		.4byte	0x8bd
+ 1029 01a2 AC010000 		.4byte	0x1ac
+ 1030 01a6 09       		.uleb128 0x9
+ 1031 01a7 01       		.uleb128 0x1
+ 1032 01a8 50       		.byte	0x50
+ 1033 01a9 01       		.uleb128 0x1
+ 1034 01aa 30       		.byte	0x30
+ 1035 01ab 00       		.byte	0
+ 1036 01ac 08       		.uleb128 0x8
+ 1037 01ad 14000000 		.4byte	.LVL10
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 23
+
+
+ 1038 01b1 C8080000 		.4byte	0x8c8
+ 1039 01b5 BF010000 		.4byte	0x1bf
+ 1040 01b9 09       		.uleb128 0x9
+ 1041 01ba 01       		.uleb128 0x1
+ 1042 01bb 50       		.byte	0x50
+ 1043 01bc 01       		.uleb128 0x1
+ 1044 01bd 30       		.byte	0x30
+ 1045 01be 00       		.byte	0
+ 1046 01bf 08       		.uleb128 0x8
+ 1047 01c0 1A000000 		.4byte	.LVL11
+ 1048 01c4 D3080000 		.4byte	0x8d3
+ 1049 01c8 D2010000 		.4byte	0x1d2
+ 1050 01cc 09       		.uleb128 0x9
+ 1051 01cd 01       		.uleb128 0x1
+ 1052 01ce 50       		.byte	0x50
+ 1053 01cf 01       		.uleb128 0x1
+ 1054 01d0 30       		.byte	0x30
+ 1055 01d1 00       		.byte	0
+ 1056 01d2 08       		.uleb128 0x8
+ 1057 01d3 20000000 		.4byte	.LVL12
+ 1058 01d7 DE080000 		.4byte	0x8de
+ 1059 01db E6010000 		.4byte	0x1e6
+ 1060 01df 09       		.uleb128 0x9
+ 1061 01e0 01       		.uleb128 0x1
+ 1062 01e1 50       		.byte	0x50
+ 1063 01e2 02       		.uleb128 0x2
+ 1064 01e3 08       		.byte	0x8
+ 1065 01e4 78       		.byte	0x78
+ 1066 01e5 00       		.byte	0
+ 1067 01e6 08       		.uleb128 0x8
+ 1068 01e7 26000000 		.4byte	.LVL13
+ 1069 01eb E9080000 		.4byte	0x8e9
+ 1070 01ef FA010000 		.4byte	0x1fa
+ 1071 01f3 09       		.uleb128 0x9
+ 1072 01f4 01       		.uleb128 0x1
+ 1073 01f5 50       		.byte	0x50
+ 1074 01f6 02       		.uleb128 0x2
+ 1075 01f7 08       		.byte	0x8
+ 1076 01f8 78       		.byte	0x78
+ 1077 01f9 00       		.byte	0
+ 1078 01fa 08       		.uleb128 0x8
+ 1079 01fb 2C000000 		.4byte	.LVL14
+ 1080 01ff F4080000 		.4byte	0x8f4
+ 1081 0203 0E020000 		.4byte	0x20e
+ 1082 0207 09       		.uleb128 0x9
+ 1083 0208 01       		.uleb128 0x1
+ 1084 0209 50       		.byte	0x50
+ 1085 020a 02       		.uleb128 0x2
+ 1086 020b 08       		.byte	0x8
+ 1087 020c 78       		.byte	0x78
+ 1088 020d 00       		.byte	0
+ 1089 020e 0A       		.uleb128 0xa
+ 1090 020f 32000000 		.4byte	.LVL15
+ 1091 0213 FF080000 		.4byte	0x8ff
+ 1092 0217 09       		.uleb128 0x9
+ 1093 0218 01       		.uleb128 0x1
+ 1094 0219 50       		.byte	0x50
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 24
+
+
+ 1095 021a 02       		.uleb128 0x2
+ 1096 021b 08       		.byte	0x8
+ 1097 021c 78       		.byte	0x78
+ 1098 021d 00       		.byte	0
+ 1099 021e 00       		.byte	0
+ 1100 021f 07       		.uleb128 0x7
+ 1101 0220 54000000 		.4byte	.LASF21
+ 1102 0224 01       		.byte	0x1
+ 1103 0225 38       		.byte	0x38
+ 1104 0226 00000000 		.4byte	.LFB66
+ 1105 022a 34000000 		.4byte	.LFE66-.LFB66
+ 1106 022e 01       		.uleb128 0x1
+ 1107 022f 9C       		.byte	0x9c
+ 1108 0230 CD020000 		.4byte	0x2cd
+ 1109 0234 08       		.uleb128 0x8
+ 1110 0235 08000000 		.4byte	.LVL16
+ 1111 0239 B2080000 		.4byte	0x8b2
+ 1112 023d 48020000 		.4byte	0x248
+ 1113 0241 09       		.uleb128 0x9
+ 1114 0242 01       		.uleb128 0x1
+ 1115 0243 50       		.byte	0x50
+ 1116 0244 02       		.uleb128 0x2
+ 1117 0245 08       		.byte	0x8
+ 1118 0246 78       		.byte	0x78
+ 1119 0247 00       		.byte	0
+ 1120 0248 08       		.uleb128 0x8
+ 1121 0249 0E000000 		.4byte	.LVL17
+ 1122 024d C8080000 		.4byte	0x8c8
+ 1123 0251 5B020000 		.4byte	0x25b
+ 1124 0255 09       		.uleb128 0x9
+ 1125 0256 01       		.uleb128 0x1
+ 1126 0257 50       		.byte	0x50
+ 1127 0258 01       		.uleb128 0x1
+ 1128 0259 30       		.byte	0x30
+ 1129 025a 00       		.byte	0
+ 1130 025b 08       		.uleb128 0x8
+ 1131 025c 14000000 		.4byte	.LVL18
+ 1132 0260 BD080000 		.4byte	0x8bd
+ 1133 0264 6E020000 		.4byte	0x26e
+ 1134 0268 09       		.uleb128 0x9
+ 1135 0269 01       		.uleb128 0x1
+ 1136 026a 50       		.byte	0x50
+ 1137 026b 01       		.uleb128 0x1
+ 1138 026c 30       		.byte	0x30
+ 1139 026d 00       		.byte	0
+ 1140 026e 08       		.uleb128 0x8
+ 1141 026f 1A000000 		.4byte	.LVL19
+ 1142 0273 D3080000 		.4byte	0x8d3
+ 1143 0277 82020000 		.4byte	0x282
+ 1144 027b 09       		.uleb128 0x9
+ 1145 027c 01       		.uleb128 0x1
+ 1146 027d 50       		.byte	0x50
+ 1147 027e 02       		.uleb128 0x2
+ 1148 027f 08       		.byte	0x8
+ 1149 0280 78       		.byte	0x78
+ 1150 0281 00       		.byte	0
+ 1151 0282 08       		.uleb128 0x8
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 25
+
+
+ 1152 0283 20000000 		.4byte	.LVL20
+ 1153 0287 DE080000 		.4byte	0x8de
+ 1154 028b 95020000 		.4byte	0x295
+ 1155 028f 09       		.uleb128 0x9
+ 1156 0290 01       		.uleb128 0x1
+ 1157 0291 50       		.byte	0x50
+ 1158 0292 01       		.uleb128 0x1
+ 1159 0293 30       		.byte	0x30
+ 1160 0294 00       		.byte	0
+ 1161 0295 08       		.uleb128 0x8
+ 1162 0296 26000000 		.4byte	.LVL21
+ 1163 029a F4080000 		.4byte	0x8f4
+ 1164 029e A9020000 		.4byte	0x2a9
+ 1165 02a2 09       		.uleb128 0x9
+ 1166 02a3 01       		.uleb128 0x1
+ 1167 02a4 50       		.byte	0x50
+ 1168 02a5 02       		.uleb128 0x2
+ 1169 02a6 08       		.byte	0x8
+ 1170 02a7 78       		.byte	0x78
+ 1171 02a8 00       		.byte	0
+ 1172 02a9 08       		.uleb128 0x8
+ 1173 02aa 2C000000 		.4byte	.LVL22
+ 1174 02ae E9080000 		.4byte	0x8e9
+ 1175 02b2 BD020000 		.4byte	0x2bd
+ 1176 02b6 09       		.uleb128 0x9
+ 1177 02b7 01       		.uleb128 0x1
+ 1178 02b8 50       		.byte	0x50
+ 1179 02b9 02       		.uleb128 0x2
+ 1180 02ba 08       		.byte	0x8
+ 1181 02bb 78       		.byte	0x78
+ 1182 02bc 00       		.byte	0
+ 1183 02bd 0A       		.uleb128 0xa
+ 1184 02be 32000000 		.4byte	.LVL23
+ 1185 02c2 FF080000 		.4byte	0x8ff
+ 1186 02c6 09       		.uleb128 0x9
+ 1187 02c7 01       		.uleb128 0x1
+ 1188 02c8 50       		.byte	0x50
+ 1189 02c9 01       		.uleb128 0x1
+ 1190 02ca 30       		.byte	0x30
+ 1191 02cb 00       		.byte	0
+ 1192 02cc 00       		.byte	0
+ 1193 02cd 07       		.uleb128 0x7
+ 1194 02ce 41010000 		.4byte	.LASF22
+ 1195 02d2 01       		.byte	0x1
+ 1196 02d3 44       		.byte	0x44
+ 1197 02d4 00000000 		.4byte	.LFB67
+ 1198 02d8 34000000 		.4byte	.LFE67-.LFB67
+ 1199 02dc 01       		.uleb128 0x1
+ 1200 02dd 9C       		.byte	0x9c
+ 1201 02de 7B030000 		.4byte	0x37b
+ 1202 02e2 08       		.uleb128 0x8
+ 1203 02e3 08000000 		.4byte	.LVL24
+ 1204 02e7 B2080000 		.4byte	0x8b2
+ 1205 02eb F5020000 		.4byte	0x2f5
+ 1206 02ef 09       		.uleb128 0x9
+ 1207 02f0 01       		.uleb128 0x1
+ 1208 02f1 50       		.byte	0x50
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 26
+
+
+ 1209 02f2 01       		.uleb128 0x1
+ 1210 02f3 30       		.byte	0x30
+ 1211 02f4 00       		.byte	0
+ 1212 02f5 08       		.uleb128 0x8
+ 1213 02f6 0E000000 		.4byte	.LVL25
+ 1214 02fa C8080000 		.4byte	0x8c8
+ 1215 02fe 09030000 		.4byte	0x309
+ 1216 0302 09       		.uleb128 0x9
+ 1217 0303 01       		.uleb128 0x1
+ 1218 0304 50       		.byte	0x50
+ 1219 0305 02       		.uleb128 0x2
+ 1220 0306 08       		.byte	0x8
+ 1221 0307 78       		.byte	0x78
+ 1222 0308 00       		.byte	0
+ 1223 0309 08       		.uleb128 0x8
+ 1224 030a 14000000 		.4byte	.LVL26
+ 1225 030e BD080000 		.4byte	0x8bd
+ 1226 0312 1D030000 		.4byte	0x31d
+ 1227 0316 09       		.uleb128 0x9
+ 1228 0317 01       		.uleb128 0x1
+ 1229 0318 50       		.byte	0x50
+ 1230 0319 02       		.uleb128 0x2
+ 1231 031a 08       		.byte	0x8
+ 1232 031b 78       		.byte	0x78
+ 1233 031c 00       		.byte	0
+ 1234 031d 08       		.uleb128 0x8
+ 1235 031e 1A000000 		.4byte	.LVL27
+ 1236 0322 D3080000 		.4byte	0x8d3
+ 1237 0326 30030000 		.4byte	0x330
+ 1238 032a 09       		.uleb128 0x9
+ 1239 032b 01       		.uleb128 0x1
+ 1240 032c 50       		.byte	0x50
+ 1241 032d 01       		.uleb128 0x1
+ 1242 032e 30       		.byte	0x30
+ 1243 032f 00       		.byte	0
+ 1244 0330 08       		.uleb128 0x8
+ 1245 0331 20000000 		.4byte	.LVL28
+ 1246 0335 DE080000 		.4byte	0x8de
+ 1247 0339 44030000 		.4byte	0x344
+ 1248 033d 09       		.uleb128 0x9
+ 1249 033e 01       		.uleb128 0x1
+ 1250 033f 50       		.byte	0x50
+ 1251 0340 02       		.uleb128 0x2
+ 1252 0341 08       		.byte	0x8
+ 1253 0342 78       		.byte	0x78
+ 1254 0343 00       		.byte	0
+ 1255 0344 08       		.uleb128 0x8
+ 1256 0345 26000000 		.4byte	.LVL29
+ 1257 0349 F4080000 		.4byte	0x8f4
+ 1258 034d 57030000 		.4byte	0x357
+ 1259 0351 09       		.uleb128 0x9
+ 1260 0352 01       		.uleb128 0x1
+ 1261 0353 50       		.byte	0x50
+ 1262 0354 01       		.uleb128 0x1
+ 1263 0355 30       		.byte	0x30
+ 1264 0356 00       		.byte	0
+ 1265 0357 08       		.uleb128 0x8
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 27
+
+
+ 1266 0358 2C000000 		.4byte	.LVL30
+ 1267 035c E9080000 		.4byte	0x8e9
+ 1268 0360 6A030000 		.4byte	0x36a
+ 1269 0364 09       		.uleb128 0x9
+ 1270 0365 01       		.uleb128 0x1
+ 1271 0366 50       		.byte	0x50
+ 1272 0367 01       		.uleb128 0x1
+ 1273 0368 30       		.byte	0x30
+ 1274 0369 00       		.byte	0
+ 1275 036a 0A       		.uleb128 0xa
+ 1276 036b 32000000 		.4byte	.LVL31
+ 1277 036f FF080000 		.4byte	0x8ff
+ 1278 0373 09       		.uleb128 0x9
+ 1279 0374 01       		.uleb128 0x1
+ 1280 0375 50       		.byte	0x50
+ 1281 0376 02       		.uleb128 0x2
+ 1282 0377 08       		.byte	0x8
+ 1283 0378 78       		.byte	0x78
+ 1284 0379 00       		.byte	0
+ 1285 037a 00       		.byte	0
+ 1286 037b 07       		.uleb128 0x7
+ 1287 037c B6010000 		.4byte	.LASF23
+ 1288 0380 01       		.byte	0x1
+ 1289 0381 4F       		.byte	0x4f
+ 1290 0382 00000000 		.4byte	.LFB68
+ 1291 0386 34000000 		.4byte	.LFE68-.LFB68
+ 1292 038a 01       		.uleb128 0x1
+ 1293 038b 9C       		.byte	0x9c
+ 1294 038c 29040000 		.4byte	0x429
+ 1295 0390 08       		.uleb128 0x8
+ 1296 0391 08000000 		.4byte	.LVL32
+ 1297 0395 B2080000 		.4byte	0x8b2
+ 1298 0399 A4030000 		.4byte	0x3a4
+ 1299 039d 09       		.uleb128 0x9
+ 1300 039e 01       		.uleb128 0x1
+ 1301 039f 50       		.byte	0x50
+ 1302 03a0 02       		.uleb128 0x2
+ 1303 03a1 08       		.byte	0x8
+ 1304 03a2 78       		.byte	0x78
+ 1305 03a3 00       		.byte	0
+ 1306 03a4 08       		.uleb128 0x8
+ 1307 03a5 0E000000 		.4byte	.LVL33
+ 1308 03a9 C8080000 		.4byte	0x8c8
+ 1309 03ad B8030000 		.4byte	0x3b8
+ 1310 03b1 09       		.uleb128 0x9
+ 1311 03b2 01       		.uleb128 0x1
+ 1312 03b3 50       		.byte	0x50
+ 1313 03b4 02       		.uleb128 0x2
+ 1314 03b5 08       		.byte	0x8
+ 1315 03b6 78       		.byte	0x78
+ 1316 03b7 00       		.byte	0
+ 1317 03b8 08       		.uleb128 0x8
+ 1318 03b9 14000000 		.4byte	.LVL34
+ 1319 03bd BD080000 		.4byte	0x8bd
+ 1320 03c1 CB030000 		.4byte	0x3cb
+ 1321 03c5 09       		.uleb128 0x9
+ 1322 03c6 01       		.uleb128 0x1
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 28
+
+
+ 1323 03c7 50       		.byte	0x50
+ 1324 03c8 01       		.uleb128 0x1
+ 1325 03c9 30       		.byte	0x30
+ 1326 03ca 00       		.byte	0
+ 1327 03cb 08       		.uleb128 0x8
+ 1328 03cc 1A000000 		.4byte	.LVL35
+ 1329 03d0 D3080000 		.4byte	0x8d3
+ 1330 03d4 DE030000 		.4byte	0x3de
+ 1331 03d8 09       		.uleb128 0x9
+ 1332 03d9 01       		.uleb128 0x1
+ 1333 03da 50       		.byte	0x50
+ 1334 03db 01       		.uleb128 0x1
+ 1335 03dc 30       		.byte	0x30
+ 1336 03dd 00       		.byte	0
+ 1337 03de 08       		.uleb128 0x8
+ 1338 03df 20000000 		.4byte	.LVL36
+ 1339 03e3 DE080000 		.4byte	0x8de
+ 1340 03e7 F1030000 		.4byte	0x3f1
+ 1341 03eb 09       		.uleb128 0x9
+ 1342 03ec 01       		.uleb128 0x1
+ 1343 03ed 50       		.byte	0x50
+ 1344 03ee 01       		.uleb128 0x1
+ 1345 03ef 30       		.byte	0x30
+ 1346 03f0 00       		.byte	0
+ 1347 03f1 08       		.uleb128 0x8
+ 1348 03f2 26000000 		.4byte	.LVL37
+ 1349 03f6 F4080000 		.4byte	0x8f4
+ 1350 03fa 04040000 		.4byte	0x404
+ 1351 03fe 09       		.uleb128 0x9
+ 1352 03ff 01       		.uleb128 0x1
+ 1353 0400 50       		.byte	0x50
+ 1354 0401 01       		.uleb128 0x1
+ 1355 0402 30       		.byte	0x30
+ 1356 0403 00       		.byte	0
+ 1357 0404 08       		.uleb128 0x8
+ 1358 0405 2C000000 		.4byte	.LVL38
+ 1359 0409 E9080000 		.4byte	0x8e9
+ 1360 040d 18040000 		.4byte	0x418
+ 1361 0411 09       		.uleb128 0x9
+ 1362 0412 01       		.uleb128 0x1
+ 1363 0413 50       		.byte	0x50
+ 1364 0414 02       		.uleb128 0x2
+ 1365 0415 08       		.byte	0x8
+ 1366 0416 78       		.byte	0x78
+ 1367 0417 00       		.byte	0
+ 1368 0418 0A       		.uleb128 0xa
+ 1369 0419 32000000 		.4byte	.LVL39
+ 1370 041d FF080000 		.4byte	0x8ff
+ 1371 0421 09       		.uleb128 0x9
+ 1372 0422 01       		.uleb128 0x1
+ 1373 0423 50       		.byte	0x50
+ 1374 0424 02       		.uleb128 0x2
+ 1375 0425 08       		.byte	0x8
+ 1376 0426 78       		.byte	0x78
+ 1377 0427 00       		.byte	0
+ 1378 0428 00       		.byte	0
+ 1379 0429 07       		.uleb128 0x7
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 29
+
+
+ 1380 042a 03020000 		.4byte	.LASF24
+ 1381 042e 01       		.byte	0x1
+ 1382 042f 5B       		.byte	0x5b
+ 1383 0430 00000000 		.4byte	.LFB69
+ 1384 0434 34000000 		.4byte	.LFE69-.LFB69
+ 1385 0438 01       		.uleb128 0x1
+ 1386 0439 9C       		.byte	0x9c
+ 1387 043a D7040000 		.4byte	0x4d7
+ 1388 043e 08       		.uleb128 0x8
+ 1389 043f 08000000 		.4byte	.LVL40
+ 1390 0443 B2080000 		.4byte	0x8b2
+ 1391 0447 51040000 		.4byte	0x451
+ 1392 044b 09       		.uleb128 0x9
+ 1393 044c 01       		.uleb128 0x1
+ 1394 044d 50       		.byte	0x50
+ 1395 044e 01       		.uleb128 0x1
+ 1396 044f 30       		.byte	0x30
+ 1397 0450 00       		.byte	0
+ 1398 0451 08       		.uleb128 0x8
+ 1399 0452 0E000000 		.4byte	.LVL41
+ 1400 0456 C8080000 		.4byte	0x8c8
+ 1401 045a 64040000 		.4byte	0x464
+ 1402 045e 09       		.uleb128 0x9
+ 1403 045f 01       		.uleb128 0x1
+ 1404 0460 50       		.byte	0x50
+ 1405 0461 01       		.uleb128 0x1
+ 1406 0462 30       		.byte	0x30
+ 1407 0463 00       		.byte	0
+ 1408 0464 08       		.uleb128 0x8
+ 1409 0465 14000000 		.4byte	.LVL42
+ 1410 0469 BD080000 		.4byte	0x8bd
+ 1411 046d 78040000 		.4byte	0x478
+ 1412 0471 09       		.uleb128 0x9
+ 1413 0472 01       		.uleb128 0x1
+ 1414 0473 50       		.byte	0x50
+ 1415 0474 02       		.uleb128 0x2
+ 1416 0475 08       		.byte	0x8
+ 1417 0476 78       		.byte	0x78
+ 1418 0477 00       		.byte	0
+ 1419 0478 08       		.uleb128 0x8
+ 1420 0479 1A000000 		.4byte	.LVL43
+ 1421 047d D3080000 		.4byte	0x8d3
+ 1422 0481 8C040000 		.4byte	0x48c
+ 1423 0485 09       		.uleb128 0x9
+ 1424 0486 01       		.uleb128 0x1
+ 1425 0487 50       		.byte	0x50
+ 1426 0488 02       		.uleb128 0x2
+ 1427 0489 08       		.byte	0x8
+ 1428 048a 78       		.byte	0x78
+ 1429 048b 00       		.byte	0
+ 1430 048c 08       		.uleb128 0x8
+ 1431 048d 20000000 		.4byte	.LVL44
+ 1432 0491 DE080000 		.4byte	0x8de
+ 1433 0495 A0040000 		.4byte	0x4a0
+ 1434 0499 09       		.uleb128 0x9
+ 1435 049a 01       		.uleb128 0x1
+ 1436 049b 50       		.byte	0x50
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 30
+
+
+ 1437 049c 02       		.uleb128 0x2
+ 1438 049d 08       		.byte	0x8
+ 1439 049e 78       		.byte	0x78
+ 1440 049f 00       		.byte	0
+ 1441 04a0 08       		.uleb128 0x8
+ 1442 04a1 26000000 		.4byte	.LVL45
+ 1443 04a5 F4080000 		.4byte	0x8f4
+ 1444 04a9 B4040000 		.4byte	0x4b4
+ 1445 04ad 09       		.uleb128 0x9
+ 1446 04ae 01       		.uleb128 0x1
+ 1447 04af 50       		.byte	0x50
+ 1448 04b0 02       		.uleb128 0x2
+ 1449 04b1 08       		.byte	0x8
+ 1450 04b2 78       		.byte	0x78
+ 1451 04b3 00       		.byte	0
+ 1452 04b4 08       		.uleb128 0x8
+ 1453 04b5 2C000000 		.4byte	.LVL46
+ 1454 04b9 E9080000 		.4byte	0x8e9
+ 1455 04bd C7040000 		.4byte	0x4c7
+ 1456 04c1 09       		.uleb128 0x9
+ 1457 04c2 01       		.uleb128 0x1
+ 1458 04c3 50       		.byte	0x50
+ 1459 04c4 01       		.uleb128 0x1
+ 1460 04c5 30       		.byte	0x30
+ 1461 04c6 00       		.byte	0
+ 1462 04c7 0A       		.uleb128 0xa
+ 1463 04c8 32000000 		.4byte	.LVL47
+ 1464 04cc FF080000 		.4byte	0x8ff
+ 1465 04d0 09       		.uleb128 0x9
+ 1466 04d1 01       		.uleb128 0x1
+ 1467 04d2 50       		.byte	0x50
+ 1468 04d3 01       		.uleb128 0x1
+ 1469 04d4 30       		.byte	0x30
+ 1470 04d5 00       		.byte	0
+ 1471 04d6 00       		.byte	0
+ 1472 04d7 07       		.uleb128 0x7
+ 1473 04d8 C3020000 		.4byte	.LASF25
+ 1474 04dc 01       		.byte	0x1
+ 1475 04dd 67       		.byte	0x67
+ 1476 04de 00000000 		.4byte	.LFB70
+ 1477 04e2 34000000 		.4byte	.LFE70-.LFB70
+ 1478 04e6 01       		.uleb128 0x1
+ 1479 04e7 9C       		.byte	0x9c
+ 1480 04e8 85050000 		.4byte	0x585
+ 1481 04ec 08       		.uleb128 0x8
+ 1482 04ed 08000000 		.4byte	.LVL48
+ 1483 04f1 B2080000 		.4byte	0x8b2
+ 1484 04f5 00050000 		.4byte	0x500
+ 1485 04f9 09       		.uleb128 0x9
+ 1486 04fa 01       		.uleb128 0x1
+ 1487 04fb 50       		.byte	0x50
+ 1488 04fc 02       		.uleb128 0x2
+ 1489 04fd 08       		.byte	0x8
+ 1490 04fe 78       		.byte	0x78
+ 1491 04ff 00       		.byte	0
+ 1492 0500 08       		.uleb128 0x8
+ 1493 0501 0E000000 		.4byte	.LVL49
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 31
+
+
+ 1494 0505 BD080000 		.4byte	0x8bd
+ 1495 0509 14050000 		.4byte	0x514
+ 1496 050d 09       		.uleb128 0x9
+ 1497 050e 01       		.uleb128 0x1
+ 1498 050f 50       		.byte	0x50
+ 1499 0510 02       		.uleb128 0x2
+ 1500 0511 08       		.byte	0x8
+ 1501 0512 78       		.byte	0x78
+ 1502 0513 00       		.byte	0
+ 1503 0514 08       		.uleb128 0x8
+ 1504 0515 14000000 		.4byte	.LVL50
+ 1505 0519 C8080000 		.4byte	0x8c8
+ 1506 051d 27050000 		.4byte	0x527
+ 1507 0521 09       		.uleb128 0x9
+ 1508 0522 01       		.uleb128 0x1
+ 1509 0523 50       		.byte	0x50
+ 1510 0524 01       		.uleb128 0x1
+ 1511 0525 30       		.byte	0x30
+ 1512 0526 00       		.byte	0
+ 1513 0527 08       		.uleb128 0x8
+ 1514 0528 1A000000 		.4byte	.LVL51
+ 1515 052c D3080000 		.4byte	0x8d3
+ 1516 0530 3A050000 		.4byte	0x53a
+ 1517 0534 09       		.uleb128 0x9
+ 1518 0535 01       		.uleb128 0x1
+ 1519 0536 50       		.byte	0x50
+ 1520 0537 01       		.uleb128 0x1
+ 1521 0538 30       		.byte	0x30
+ 1522 0539 00       		.byte	0
+ 1523 053a 08       		.uleb128 0x8
+ 1524 053b 20000000 		.4byte	.LVL52
+ 1525 053f DE080000 		.4byte	0x8de
+ 1526 0543 4D050000 		.4byte	0x54d
+ 1527 0547 09       		.uleb128 0x9
+ 1528 0548 01       		.uleb128 0x1
+ 1529 0549 50       		.byte	0x50
+ 1530 054a 01       		.uleb128 0x1
+ 1531 054b 30       		.byte	0x30
+ 1532 054c 00       		.byte	0
+ 1533 054d 08       		.uleb128 0x8
+ 1534 054e 26000000 		.4byte	.LVL53
+ 1535 0552 E9080000 		.4byte	0x8e9
+ 1536 0556 60050000 		.4byte	0x560
+ 1537 055a 09       		.uleb128 0x9
+ 1538 055b 01       		.uleb128 0x1
+ 1539 055c 50       		.byte	0x50
+ 1540 055d 01       		.uleb128 0x1
+ 1541 055e 30       		.byte	0x30
+ 1542 055f 00       		.byte	0
+ 1543 0560 08       		.uleb128 0x8
+ 1544 0561 2C000000 		.4byte	.LVL54
+ 1545 0565 F4080000 		.4byte	0x8f4
+ 1546 0569 74050000 		.4byte	0x574
+ 1547 056d 09       		.uleb128 0x9
+ 1548 056e 01       		.uleb128 0x1
+ 1549 056f 50       		.byte	0x50
+ 1550 0570 02       		.uleb128 0x2
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 32
+
+
+ 1551 0571 08       		.byte	0x8
+ 1552 0572 78       		.byte	0x78
+ 1553 0573 00       		.byte	0
+ 1554 0574 0A       		.uleb128 0xa
+ 1555 0575 32000000 		.4byte	.LVL55
+ 1556 0579 FF080000 		.4byte	0x8ff
+ 1557 057d 09       		.uleb128 0x9
+ 1558 057e 01       		.uleb128 0x1
+ 1559 057f 50       		.byte	0x50
+ 1560 0580 02       		.uleb128 0x2
+ 1561 0581 08       		.byte	0x8
+ 1562 0582 78       		.byte	0x78
+ 1563 0583 00       		.byte	0
+ 1564 0584 00       		.byte	0
+ 1565 0585 07       		.uleb128 0x7
+ 1566 0586 F4020000 		.4byte	.LASF26
+ 1567 058a 01       		.byte	0x1
+ 1568 058b 73       		.byte	0x73
+ 1569 058c 00000000 		.4byte	.LFB71
+ 1570 0590 34000000 		.4byte	.LFE71-.LFB71
+ 1571 0594 01       		.uleb128 0x1
+ 1572 0595 9C       		.byte	0x9c
+ 1573 0596 2F060000 		.4byte	0x62f
+ 1574 059a 08       		.uleb128 0x8
+ 1575 059b 08000000 		.4byte	.LVL56
+ 1576 059f B2080000 		.4byte	0x8b2
+ 1577 05a3 AD050000 		.4byte	0x5ad
+ 1578 05a7 09       		.uleb128 0x9
+ 1579 05a8 01       		.uleb128 0x1
+ 1580 05a9 50       		.byte	0x50
+ 1581 05aa 01       		.uleb128 0x1
+ 1582 05ab 30       		.byte	0x30
+ 1583 05ac 00       		.byte	0
+ 1584 05ad 08       		.uleb128 0x8
+ 1585 05ae 0E000000 		.4byte	.LVL57
+ 1586 05b2 BD080000 		.4byte	0x8bd
+ 1587 05b6 C0050000 		.4byte	0x5c0
+ 1588 05ba 09       		.uleb128 0x9
+ 1589 05bb 01       		.uleb128 0x1
+ 1590 05bc 50       		.byte	0x50
+ 1591 05bd 01       		.uleb128 0x1
+ 1592 05be 30       		.byte	0x30
+ 1593 05bf 00       		.byte	0
+ 1594 05c0 08       		.uleb128 0x8
+ 1595 05c1 14000000 		.4byte	.LVL58
+ 1596 05c5 C8080000 		.4byte	0x8c8
+ 1597 05c9 D3050000 		.4byte	0x5d3
+ 1598 05cd 09       		.uleb128 0x9
+ 1599 05ce 01       		.uleb128 0x1
+ 1600 05cf 50       		.byte	0x50
+ 1601 05d0 01       		.uleb128 0x1
+ 1602 05d1 30       		.byte	0x30
+ 1603 05d2 00       		.byte	0
+ 1604 05d3 08       		.uleb128 0x8
+ 1605 05d4 1A000000 		.4byte	.LVL59
+ 1606 05d8 D3080000 		.4byte	0x8d3
+ 1607 05dc E6050000 		.4byte	0x5e6
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 33
+
+
+ 1608 05e0 09       		.uleb128 0x9
+ 1609 05e1 01       		.uleb128 0x1
+ 1610 05e2 50       		.byte	0x50
+ 1611 05e3 01       		.uleb128 0x1
+ 1612 05e4 30       		.byte	0x30
+ 1613 05e5 00       		.byte	0
+ 1614 05e6 08       		.uleb128 0x8
+ 1615 05e7 20000000 		.4byte	.LVL60
+ 1616 05eb DE080000 		.4byte	0x8de
+ 1617 05ef F9050000 		.4byte	0x5f9
+ 1618 05f3 09       		.uleb128 0x9
+ 1619 05f4 01       		.uleb128 0x1
+ 1620 05f5 50       		.byte	0x50
+ 1621 05f6 01       		.uleb128 0x1
+ 1622 05f7 30       		.byte	0x30
+ 1623 05f8 00       		.byte	0
+ 1624 05f9 08       		.uleb128 0x8
+ 1625 05fa 26000000 		.4byte	.LVL61
+ 1626 05fe E9080000 		.4byte	0x8e9
+ 1627 0602 0C060000 		.4byte	0x60c
+ 1628 0606 09       		.uleb128 0x9
+ 1629 0607 01       		.uleb128 0x1
+ 1630 0608 50       		.byte	0x50
+ 1631 0609 01       		.uleb128 0x1
+ 1632 060a 30       		.byte	0x30
+ 1633 060b 00       		.byte	0
+ 1634 060c 08       		.uleb128 0x8
+ 1635 060d 2C000000 		.4byte	.LVL62
+ 1636 0611 F4080000 		.4byte	0x8f4
+ 1637 0615 1F060000 		.4byte	0x61f
+ 1638 0619 09       		.uleb128 0x9
+ 1639 061a 01       		.uleb128 0x1
+ 1640 061b 50       		.byte	0x50
+ 1641 061c 01       		.uleb128 0x1
+ 1642 061d 30       		.byte	0x30
+ 1643 061e 00       		.byte	0
+ 1644 061f 0A       		.uleb128 0xa
+ 1645 0620 32000000 		.4byte	.LVL63
+ 1646 0624 FF080000 		.4byte	0x8ff
+ 1647 0628 09       		.uleb128 0x9
+ 1648 0629 01       		.uleb128 0x1
+ 1649 062a 50       		.byte	0x50
+ 1650 062b 01       		.uleb128 0x1
+ 1651 062c 30       		.byte	0x30
+ 1652 062d 00       		.byte	0
+ 1653 062e 00       		.byte	0
+ 1654 062f 0B       		.uleb128 0xb
+ 1655 0630 4F000000 		.4byte	.LASF68
+ 1656 0634 01       		.byte	0x1
+ 1657 0635 7F       		.byte	0x7f
+ 1658 0636 68000000 		.4byte	0x68
+ 1659 063a 00000000 		.4byte	.LFB72
+ 1660 063e AC010000 		.4byte	.LFE72-.LFB72
+ 1661 0642 01       		.uleb128 0x1
+ 1662 0643 9C       		.byte	0x9c
+ 1663 0644 96070000 		.4byte	0x796
+ 1664 0648 0C       		.uleb128 0xc
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 34
+
+
+ 1665 0649 08000000 		.4byte	.LVL64
+ 1666 064d 0A090000 		.4byte	0x90a
+ 1667 0651 0C       		.uleb128 0xc
+ 1668 0652 0C000000 		.4byte	.LVL65
+ 1669 0656 15090000 		.4byte	0x915
+ 1670 065a 0C       		.uleb128 0xc
+ 1671 065b 10000000 		.4byte	.LVL66
+ 1672 065f 20090000 		.4byte	0x920
+ 1673 0663 0C       		.uleb128 0xc
+ 1674 0664 14000000 		.4byte	.LVL67
+ 1675 0668 2B090000 		.4byte	0x92b
+ 1676 066c 0C       		.uleb128 0xc
+ 1677 066d 18000000 		.4byte	.LVL68
+ 1678 0671 36090000 		.4byte	0x936
+ 1679 0675 0C       		.uleb128 0xc
+ 1680 0676 1C000000 		.4byte	.LVL69
+ 1681 067a 41090000 		.4byte	0x941
+ 1682 067e 0C       		.uleb128 0xc
+ 1683 067f 20000000 		.4byte	.LVL70
+ 1684 0683 4C090000 		.4byte	0x94c
+ 1685 0687 0C       		.uleb128 0xc
+ 1686 0688 24000000 		.4byte	.LVL71
+ 1687 068c 57090000 		.4byte	0x957
+ 1688 0690 0C       		.uleb128 0xc
+ 1689 0691 28000000 		.4byte	.LVL72
+ 1690 0695 62090000 		.4byte	0x962
+ 1691 0699 0C       		.uleb128 0xc
+ 1692 069a 2C000000 		.4byte	.LVL73
+ 1693 069e 6D090000 		.4byte	0x96d
+ 1694 06a2 0C       		.uleb128 0xc
+ 1695 06a3 30000000 		.4byte	.LVL74
+ 1696 06a7 78090000 		.4byte	0x978
+ 1697 06ab 0C       		.uleb128 0xc
+ 1698 06ac 34000000 		.4byte	.LVL75
+ 1699 06b0 83090000 		.4byte	0x983
+ 1700 06b4 0C       		.uleb128 0xc
+ 1701 06b5 40000000 		.4byte	.LVL76
+ 1702 06b9 8E090000 		.4byte	0x98e
+ 1703 06bd 08       		.uleb128 0x8
+ 1704 06be 5C000000 		.4byte	.LVL77
+ 1705 06c2 99090000 		.4byte	0x999
+ 1706 06c6 D4060000 		.4byte	0x6d4
+ 1707 06ca 09       		.uleb128 0x9
+ 1708 06cb 01       		.uleb128 0x1
+ 1709 06cc 50       		.byte	0x50
+ 1710 06cd 05       		.uleb128 0x5
+ 1711 06ce 03       		.byte	0x3
+ 1712 06cf 00000000 		.4byte	string
+ 1713 06d3 00       		.byte	0
+ 1714 06d4 0C       		.uleb128 0xc
+ 1715 06d5 86000000 		.4byte	.LVL78
+ 1716 06d9 85050000 		.4byte	0x585
+ 1717 06dd 0C       		.uleb128 0xc
+ 1718 06de 9A000000 		.4byte	.LVL79
+ 1719 06e2 C3000000 		.4byte	0xc3
+ 1720 06e6 0C       		.uleb128 0xc
+ 1721 06e7 AE000000 		.4byte	.LVL80
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 35
+
+
+ 1722 06eb 71010000 		.4byte	0x171
+ 1723 06ef 0C       		.uleb128 0xc
+ 1724 06f0 C2000000 		.4byte	.LVL81
+ 1725 06f4 1F020000 		.4byte	0x21f
+ 1726 06f8 0C       		.uleb128 0xc
+ 1727 06f9 D6000000 		.4byte	.LVL82
+ 1728 06fd CD020000 		.4byte	0x2cd
+ 1729 0701 0C       		.uleb128 0xc
+ 1730 0702 EA000000 		.4byte	.LVL83
+ 1731 0706 29040000 		.4byte	0x429
+ 1732 070a 0C       		.uleb128 0xc
+ 1733 070b FE000000 		.4byte	.LVL84
+ 1734 070f 7B030000 		.4byte	0x37b
+ 1735 0713 0C       		.uleb128 0xc
+ 1736 0714 0A010000 		.4byte	.LVL85
+ 1737 0718 85050000 		.4byte	0x585
+ 1738 071c 08       		.uleb128 0x8
+ 1739 071d 12010000 		.4byte	.LVL86
+ 1740 0721 A4090000 		.4byte	0x9a4
+ 1741 0725 2F070000 		.4byte	0x72f
+ 1742 0729 09       		.uleb128 0x9
+ 1743 072a 01       		.uleb128 0x1
+ 1744 072b 50       		.byte	0x50
+ 1745 072c 01       		.uleb128 0x1
+ 1746 072d 31       		.byte	0x31
+ 1747 072e 00       		.byte	0
+ 1748 072f 08       		.uleb128 0x8
+ 1749 0730 18010000 		.4byte	.LVL87
+ 1750 0734 AF090000 		.4byte	0x9af
+ 1751 0738 42070000 		.4byte	0x742
+ 1752 073c 09       		.uleb128 0x9
+ 1753 073d 01       		.uleb128 0x1
+ 1754 073e 50       		.byte	0x50
+ 1755 073f 01       		.uleb128 0x1
+ 1756 0740 3A       		.byte	0x3a
+ 1757 0741 00       		.byte	0
+ 1758 0742 08       		.uleb128 0x8
+ 1759 0743 1E010000 		.4byte	.LVL88
+ 1760 0747 A4090000 		.4byte	0x9a4
+ 1761 074b 55070000 		.4byte	0x755
+ 1762 074f 09       		.uleb128 0x9
+ 1763 0750 01       		.uleb128 0x1
+ 1764 0751 50       		.byte	0x50
+ 1765 0752 01       		.uleb128 0x1
+ 1766 0753 30       		.byte	0x30
+ 1767 0754 00       		.byte	0
+ 1768 0755 08       		.uleb128 0x8
+ 1769 0756 24010000 		.4byte	.LVL89
+ 1770 075a AF090000 		.4byte	0x9af
+ 1771 075e 68070000 		.4byte	0x768
+ 1772 0762 09       		.uleb128 0x9
+ 1773 0763 01       		.uleb128 0x1
+ 1774 0764 50       		.byte	0x50
+ 1775 0765 01       		.uleb128 0x1
+ 1776 0766 31       		.byte	0x31
+ 1777 0767 00       		.byte	0
+ 1778 0768 0C       		.uleb128 0xc
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 36
+
+
+ 1779 0769 28010000 		.4byte	.LVL90
+ 1780 076d BA090000 		.4byte	0x9ba
+ 1781 0771 0C       		.uleb128 0xc
+ 1782 0772 30010000 		.4byte	.LVL91
+ 1783 0776 BA090000 		.4byte	0x9ba
+ 1784 077a 0C       		.uleb128 0xc
+ 1785 077b 38010000 		.4byte	.LVL92
+ 1786 077f C5090000 		.4byte	0x9c5
+ 1787 0783 0C       		.uleb128 0xc
+ 1788 0784 6C010000 		.4byte	.LVL97
+ 1789 0788 C3000000 		.4byte	0xc3
+ 1790 078c 0C       		.uleb128 0xc
+ 1791 078d 82010000 		.4byte	.LVL98
+ 1792 0791 D7040000 		.4byte	0x4d7
+ 1793 0795 00       		.byte	0
+ 1794 0796 0D       		.uleb128 0xd
+ 1795 0797 17030000 		.4byte	.LASF27
+ 1796 079b 04       		.byte	0x4
+ 1797 079c 1207     		.2byte	0x712
+ 1798 079e A2070000 		.4byte	0x7a2
+ 1799 07a2 0E       		.uleb128 0xe
+ 1800 07a3 76000000 		.4byte	0x76
+ 1801 07a7 0F       		.uleb128 0xf
+ 1802 07a8 8F000000 		.4byte	0x8f
+ 1803 07ac B7070000 		.4byte	0x7b7
+ 1804 07b0 10       		.uleb128 0x10
+ 1805 07b1 9D000000 		.4byte	0x9d
+ 1806 07b5 1F       		.byte	0x1f
+ 1807 07b6 00       		.byte	0
+ 1808 07b7 11       		.uleb128 0x11
+ 1809 07b8 B4000000 		.4byte	.LASF28
+ 1810 07bc 01       		.byte	0x1
+ 1811 07bd 09       		.byte	0x9
+ 1812 07be A7070000 		.4byte	0x7a7
+ 1813 07c2 05       		.uleb128 0x5
+ 1814 07c3 03       		.byte	0x3
+ 1815 07c4 00000000 		.4byte	StringToPrint
+ 1816 07c8 11       		.uleb128 0x11
+ 1817 07c9 A6000000 		.4byte	.LASF29
+ 1818 07cd 01       		.byte	0x1
+ 1819 07ce 0B       		.byte	0xb
+ 1820 07cf 68000000 		.4byte	0x68
+ 1821 07d3 05       		.uleb128 0x5
+ 1822 07d4 03       		.byte	0x3
+ 1823 07d5 00000000 		.4byte	value_counter
+ 1824 07d9 12       		.uleb128 0x12
+ 1825 07da 636F6E00 		.ascii	"con\000"
+ 1826 07de 01       		.byte	0x1
+ 1827 07df 0C       		.byte	0xc
+ 1828 07e0 68000000 		.4byte	0x68
+ 1829 07e4 05       		.uleb128 0x5
+ 1830 07e5 03       		.byte	0x3
+ 1831 07e6 00000000 		.4byte	con
+ 1832 07ea 11       		.uleb128 0x11
+ 1833 07eb 4B020000 		.4byte	.LASF30
+ 1834 07ef 01       		.byte	0x1
+ 1835 07f0 0D       		.byte	0xd
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 37
+
+
+ 1836 07f1 68000000 		.4byte	0x68
+ 1837 07f5 05       		.uleb128 0x5
+ 1838 07f6 03       		.byte	0x3
+ 1839 07f7 00000000 		.4byte	stop
+ 1840 07fb 11       		.uleb128 0x11
+ 1841 07fc 00000000 		.4byte	.LASF31
+ 1842 0800 01       		.byte	0x1
+ 1843 0801 0E       		.byte	0xe
+ 1844 0802 68000000 		.4byte	0x68
+ 1845 0806 05       		.uleb128 0x5
+ 1846 0807 03       		.byte	0x3
+ 1847 0808 00000000 		.4byte	comp
+ 1848 080c 11       		.uleb128 0x11
+ 1849 080d 4C010000 		.4byte	.LASF32
+ 1850 0811 01       		.byte	0x1
+ 1851 0812 0F       		.byte	0xf
+ 1852 0813 68000000 		.4byte	0x68
+ 1853 0817 05       		.uleb128 0x5
+ 1854 0818 03       		.byte	0x3
+ 1855 0819 00000000 		.4byte	dataIn
+ 1856 081d 11       		.uleb128 0x11
+ 1857 081e 82020000 		.4byte	.LASF33
+ 1858 0822 01       		.byte	0x1
+ 1859 0823 10       		.byte	0x10
+ 1860 0824 68000000 		.4byte	0x68
+ 1861 0828 05       		.uleb128 0x5
+ 1862 0829 03       		.byte	0x3
+ 1863 082a 00000000 		.4byte	robot_state
+ 1864 082e 11       		.uleb128 0x11
+ 1865 082f 1D000000 		.4byte	.LASF34
+ 1866 0833 01       		.byte	0x1
+ 1867 0834 11       		.byte	0x11
+ 1868 0835 68000000 		.4byte	0x68
+ 1869 0839 05       		.uleb128 0x5
+ 1870 083a 03       		.byte	0x3
+ 1871 083b 00000000 		.4byte	state
+ 1872 083f 12       		.uleb128 0x12
+ 1873 0840 6900     		.ascii	"i\000"
+ 1874 0842 01       		.byte	0x1
+ 1875 0843 12       		.byte	0x12
+ 1876 0844 68000000 		.4byte	0x68
+ 1877 0848 05       		.uleb128 0x5
+ 1878 0849 03       		.byte	0x3
+ 1879 084a 00000000 		.4byte	i
+ 1880 084e 11       		.uleb128 0x11
+ 1881 084f 37010000 		.4byte	.LASF35
+ 1882 0853 01       		.byte	0x1
+ 1883 0854 14       		.byte	0x14
+ 1884 0855 81000000 		.4byte	0x81
+ 1885 0859 05       		.uleb128 0x5
+ 1886 085a 03       		.byte	0x3
+ 1887 085b 00000000 		.4byte	distancia
+ 1888 085f 0F       		.uleb128 0xf
+ 1889 0860 8F000000 		.4byte	0x8f
+ 1890 0864 6F080000 		.4byte	0x86f
+ 1891 0868 10       		.uleb128 0x10
+ 1892 0869 9D000000 		.4byte	0x9d
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 38
+
+
+ 1893 086d 01       		.byte	0x1
+ 1894 086e 00       		.byte	0
+ 1895 086f 11       		.uleb128 0x11
+ 1896 0870 8E020000 		.4byte	.LASF36
+ 1897 0874 01       		.byte	0x1
+ 1898 0875 16       		.byte	0x16
+ 1899 0876 5F080000 		.4byte	0x85f
+ 1900 087a 05       		.uleb128 0x5
+ 1901 087b 03       		.byte	0x3
+ 1902 087c 00000000 		.4byte	data
+ 1903 0880 0F       		.uleb128 0xf
+ 1904 0881 8F000000 		.4byte	0x8f
+ 1905 0885 90080000 		.4byte	0x890
+ 1906 0889 10       		.uleb128 0x10
+ 1907 088a 9D000000 		.4byte	0x9d
+ 1908 088e 02       		.byte	0x2
+ 1909 088f 00       		.byte	0
+ 1910 0890 11       		.uleb128 0x11
+ 1911 0891 30010000 		.4byte	.LASF37
+ 1912 0895 01       		.byte	0x1
+ 1913 0896 17       		.byte	0x17
+ 1914 0897 80080000 		.4byte	0x880
+ 1915 089b 05       		.uleb128 0x5
+ 1916 089c 03       		.byte	0x3
+ 1917 089d 00000000 		.4byte	string
+ 1918 08a1 11       		.uleb128 0x11
+ 1919 08a2 36000000 		.4byte	.LASF38
+ 1920 08a6 01       		.byte	0x1
+ 1921 08a7 18       		.byte	0x18
+ 1922 08a8 8F000000 		.4byte	0x8f
+ 1923 08ac 05       		.uleb128 0x5
+ 1924 08ad 03       		.byte	0x3
+ 1925 08ae 00000000 		.4byte	dato_lit_car
+ 1926 08b2 13       		.uleb128 0x13
+ 1927 08b3 EC000000 		.4byte	.LASF39
+ 1928 08b7 EC000000 		.4byte	.LASF39
+ 1929 08bb 05       		.byte	0x5
+ 1930 08bc C7       		.byte	0xc7
+ 1931 08bd 13       		.uleb128 0x13
+ 1932 08be 53010000 		.4byte	.LASF40
+ 1933 08c2 53010000 		.4byte	.LASF40
+ 1934 08c6 06       		.byte	0x6
+ 1935 08c7 C7       		.byte	0xc7
+ 1936 08c8 13       		.uleb128 0x13
+ 1937 08c9 76000000 		.4byte	.LASF41
+ 1938 08cd 76000000 		.4byte	.LASF41
+ 1939 08d1 07       		.byte	0x7
+ 1940 08d2 C7       		.byte	0xc7
+ 1941 08d3 13       		.uleb128 0x13
+ 1942 08d4 03030000 		.4byte	.LASF42
+ 1943 08d8 03030000 		.4byte	.LASF42
+ 1944 08dc 08       		.byte	0x8
+ 1945 08dd C7       		.byte	0xc7
+ 1946 08de 13       		.uleb128 0x13
+ 1947 08df FE000000 		.4byte	.LASF43
+ 1948 08e3 FE000000 		.4byte	.LASF43
+ 1949 08e7 05       		.byte	0x5
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 39
+
+
+ 1950 08e8 CA       		.byte	0xca
+ 1951 08e9 13       		.uleb128 0x13
+ 1952 08ea 67010000 		.4byte	.LASF44
+ 1953 08ee 67010000 		.4byte	.LASF44
+ 1954 08f2 06       		.byte	0x6
+ 1955 08f3 CA       		.byte	0xca
+ 1956 08f4 13       		.uleb128 0x13
+ 1957 08f5 D6010000 		.4byte	.LASF45
+ 1958 08f9 D6010000 		.4byte	.LASF45
+ 1959 08fd 07       		.byte	0x7
+ 1960 08fe CA       		.byte	0xca
+ 1961 08ff 13       		.uleb128 0x13
+ 1962 0900 7B010000 		.4byte	.LASF46
+ 1963 0904 7B010000 		.4byte	.LASF46
+ 1964 0908 08       		.byte	0x8
+ 1965 0909 CA       		.byte	0xca
+ 1966 090a 13       		.uleb128 0x13
+ 1967 090b 1B010000 		.4byte	.LASF47
+ 1968 090f 1B010000 		.4byte	.LASF47
+ 1969 0913 09       		.byte	0x9
+ 1970 0914 5A       		.byte	0x5a
+ 1971 0915 13       		.uleb128 0x13
+ 1972 0916 1F020000 		.4byte	.LASF48
+ 1973 091a 1F020000 		.4byte	.LASF48
+ 1974 091e 0A       		.byte	0xa
+ 1975 091f 48       		.byte	0x48
+ 1976 0920 13       		.uleb128 0x13
+ 1977 0921 67020000 		.4byte	.LASF49
+ 1978 0925 67020000 		.4byte	.LASF49
+ 1979 0929 0B       		.byte	0xb
+ 1980 092a 54       		.byte	0x54
+ 1981 092b 13       		.uleb128 0x13
+ 1982 092c EA010000 		.4byte	.LASF50
+ 1983 0930 EA010000 		.4byte	.LASF50
+ 1984 0934 0B       		.byte	0xb
+ 1985 0935 5A       		.byte	0x5a
+ 1986 0936 13       		.uleb128 0x13
+ 1987 0937 F9020000 		.4byte	.LASF51
+ 1988 093b F9020000 		.4byte	.LASF51
+ 1989 093f 05       		.byte	0x5
+ 1990 0940 92       		.byte	0x92
+ 1991 0941 13       		.uleb128 0x13
+ 1992 0942 40020000 		.4byte	.LASF52
+ 1993 0946 40020000 		.4byte	.LASF52
+ 1994 094a 05       		.byte	0x5
+ 1995 094b DB       		.byte	0xdb
+ 1996 094c 13       		.uleb128 0x13
+ 1997 094d 05000000 		.4byte	.LASF53
+ 1998 0951 05000000 		.4byte	.LASF53
+ 1999 0955 06       		.byte	0x6
+ 2000 0956 92       		.byte	0x92
+ 2001 0957 13       		.uleb128 0x13
+ 2002 0958 9B010000 		.4byte	.LASF54
+ 2003 095c 9B010000 		.4byte	.LASF54
+ 2004 0960 06       		.byte	0x6
+ 2005 0961 DB       		.byte	0xdb
+ 2006 0962 13       		.uleb128 0x13
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 40
+
+
+ 2007 0963 11000000 		.4byte	.LASF55
+ 2008 0967 11000000 		.4byte	.LASF55
+ 2009 096b 07       		.byte	0x7
+ 2010 096c 92       		.byte	0x92
+ 2011 096d 13       		.uleb128 0x13
+ 2012 096e DD020000 		.4byte	.LASF56
+ 2013 0972 DD020000 		.4byte	.LASF56
+ 2014 0976 07       		.byte	0x7
+ 2015 0977 DB       		.byte	0xdb
+ 2016 0978 13       		.uleb128 0x13
+ 2017 0979 43000000 		.4byte	.LASF57
+ 2018 097d 43000000 		.4byte	.LASF57
+ 2019 0981 08       		.byte	0x8
+ 2020 0982 92       		.byte	0x92
+ 2021 0983 13       		.uleb128 0x13
+ 2022 0984 69000000 		.4byte	.LASF58
+ 2023 0988 69000000 		.4byte	.LASF58
+ 2024 098c 08       		.byte	0x8
+ 2025 098d DB       		.byte	0xdb
+ 2026 098e 13       		.uleb128 0x13
+ 2027 098f 8A000000 		.4byte	.LASF59
+ 2028 0993 8A000000 		.4byte	.LASF59
+ 2029 0997 0B       		.byte	0xb
+ 2030 0998 71       		.byte	0x71
+ 2031 0999 13       		.uleb128 0x13
+ 2032 099a 97000000 		.4byte	.LASF60
+ 2033 099e 97000000 		.4byte	.LASF60
+ 2034 09a2 0B       		.byte	0xb
+ 2035 09a3 8B       		.byte	0x8b
+ 2036 09a4 13       		.uleb128 0x13
+ 2037 09a5 0D020000 		.4byte	.LASF61
+ 2038 09a9 0D020000 		.4byte	.LASF61
+ 2039 09ad 0C       		.byte	0xc
+ 2040 09ae 2F       		.byte	0x2f
+ 2041 09af 13       		.uleb128 0x13
+ 2042 09b0 B2030000 		.4byte	.LASF62
+ 2043 09b4 B2030000 		.4byte	.LASF62
+ 2044 09b8 0D       		.byte	0xd
+ 2045 09b9 76       		.byte	0x76
+ 2046 09ba 13       		.uleb128 0x13
+ 2047 09bb CE000000 		.4byte	.LASF63
+ 2048 09bf CE000000 		.4byte	.LASF63
+ 2049 09c3 0E       		.byte	0xe
+ 2050 09c4 29       		.byte	0x29
+ 2051 09c5 13       		.uleb128 0x13
+ 2052 09c6 55020000 		.4byte	.LASF64
+ 2053 09ca 55020000 		.4byte	.LASF64
+ 2054 09ce 09       		.byte	0x9
+ 2055 09cf 69       		.byte	0x69
+ 2056 09d0 00       		.byte	0
+ 2057              		.section	.debug_abbrev,"",%progbits
+ 2058              	.Ldebug_abbrev0:
+ 2059 0000 01       		.uleb128 0x1
+ 2060 0001 11       		.uleb128 0x11
+ 2061 0002 01       		.byte	0x1
+ 2062 0003 25       		.uleb128 0x25
+ 2063 0004 0E       		.uleb128 0xe
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 41
+
+
+ 2064 0005 13       		.uleb128 0x13
+ 2065 0006 0B       		.uleb128 0xb
+ 2066 0007 03       		.uleb128 0x3
+ 2067 0008 0E       		.uleb128 0xe
+ 2068 0009 1B       		.uleb128 0x1b
+ 2069 000a 0E       		.uleb128 0xe
+ 2070 000b 55       		.uleb128 0x55
+ 2071 000c 17       		.uleb128 0x17
+ 2072 000d 11       		.uleb128 0x11
+ 2073 000e 01       		.uleb128 0x1
+ 2074 000f 10       		.uleb128 0x10
+ 2075 0010 17       		.uleb128 0x17
+ 2076 0011 00       		.byte	0
+ 2077 0012 00       		.byte	0
+ 2078 0013 02       		.uleb128 0x2
+ 2079 0014 24       		.uleb128 0x24
+ 2080 0015 00       		.byte	0
+ 2081 0016 0B       		.uleb128 0xb
+ 2082 0017 0B       		.uleb128 0xb
+ 2083 0018 3E       		.uleb128 0x3e
+ 2084 0019 0B       		.uleb128 0xb
+ 2085 001a 03       		.uleb128 0x3
+ 2086 001b 0E       		.uleb128 0xe
+ 2087 001c 00       		.byte	0
+ 2088 001d 00       		.byte	0
+ 2089 001e 03       		.uleb128 0x3
+ 2090 001f 16       		.uleb128 0x16
+ 2091 0020 00       		.byte	0
+ 2092 0021 03       		.uleb128 0x3
+ 2093 0022 0E       		.uleb128 0xe
+ 2094 0023 3A       		.uleb128 0x3a
+ 2095 0024 0B       		.uleb128 0xb
+ 2096 0025 3B       		.uleb128 0x3b
+ 2097 0026 0B       		.uleb128 0xb
+ 2098 0027 49       		.uleb128 0x49
+ 2099 0028 13       		.uleb128 0x13
+ 2100 0029 00       		.byte	0
+ 2101 002a 00       		.byte	0
+ 2102 002b 04       		.uleb128 0x4
+ 2103 002c 24       		.uleb128 0x24
+ 2104 002d 00       		.byte	0
+ 2105 002e 0B       		.uleb128 0xb
+ 2106 002f 0B       		.uleb128 0xb
+ 2107 0030 3E       		.uleb128 0x3e
+ 2108 0031 0B       		.uleb128 0xb
+ 2109 0032 03       		.uleb128 0x3
+ 2110 0033 08       		.uleb128 0x8
+ 2111 0034 00       		.byte	0
+ 2112 0035 00       		.byte	0
+ 2113 0036 05       		.uleb128 0x5
+ 2114 0037 04       		.uleb128 0x4
+ 2115 0038 01       		.byte	0x1
+ 2116 0039 0B       		.uleb128 0xb
+ 2117 003a 0B       		.uleb128 0xb
+ 2118 003b 49       		.uleb128 0x49
+ 2119 003c 13       		.uleb128 0x13
+ 2120 003d 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 42
+
+
+ 2121 003e 0B       		.uleb128 0xb
+ 2122 003f 3B       		.uleb128 0x3b
+ 2123 0040 0B       		.uleb128 0xb
+ 2124 0041 01       		.uleb128 0x1
+ 2125 0042 13       		.uleb128 0x13
+ 2126 0043 00       		.byte	0
+ 2127 0044 00       		.byte	0
+ 2128 0045 06       		.uleb128 0x6
+ 2129 0046 28       		.uleb128 0x28
+ 2130 0047 00       		.byte	0
+ 2131 0048 03       		.uleb128 0x3
+ 2132 0049 0E       		.uleb128 0xe
+ 2133 004a 1C       		.uleb128 0x1c
+ 2134 004b 0B       		.uleb128 0xb
+ 2135 004c 00       		.byte	0
+ 2136 004d 00       		.byte	0
+ 2137 004e 07       		.uleb128 0x7
+ 2138 004f 2E       		.uleb128 0x2e
+ 2139 0050 01       		.byte	0x1
+ 2140 0051 3F       		.uleb128 0x3f
+ 2141 0052 19       		.uleb128 0x19
+ 2142 0053 03       		.uleb128 0x3
+ 2143 0054 0E       		.uleb128 0xe
+ 2144 0055 3A       		.uleb128 0x3a
+ 2145 0056 0B       		.uleb128 0xb
+ 2146 0057 3B       		.uleb128 0x3b
+ 2147 0058 0B       		.uleb128 0xb
+ 2148 0059 11       		.uleb128 0x11
+ 2149 005a 01       		.uleb128 0x1
+ 2150 005b 12       		.uleb128 0x12
+ 2151 005c 06       		.uleb128 0x6
+ 2152 005d 40       		.uleb128 0x40
+ 2153 005e 18       		.uleb128 0x18
+ 2154 005f 9742     		.uleb128 0x2117
+ 2155 0061 19       		.uleb128 0x19
+ 2156 0062 01       		.uleb128 0x1
+ 2157 0063 13       		.uleb128 0x13
+ 2158 0064 00       		.byte	0
+ 2159 0065 00       		.byte	0
+ 2160 0066 08       		.uleb128 0x8
+ 2161 0067 898201   		.uleb128 0x4109
+ 2162 006a 01       		.byte	0x1
+ 2163 006b 11       		.uleb128 0x11
+ 2164 006c 01       		.uleb128 0x1
+ 2165 006d 31       		.uleb128 0x31
+ 2166 006e 13       		.uleb128 0x13
+ 2167 006f 01       		.uleb128 0x1
+ 2168 0070 13       		.uleb128 0x13
+ 2169 0071 00       		.byte	0
+ 2170 0072 00       		.byte	0
+ 2171 0073 09       		.uleb128 0x9
+ 2172 0074 8A8201   		.uleb128 0x410a
+ 2173 0077 00       		.byte	0
+ 2174 0078 02       		.uleb128 0x2
+ 2175 0079 18       		.uleb128 0x18
+ 2176 007a 9142     		.uleb128 0x2111
+ 2177 007c 18       		.uleb128 0x18
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 43
+
+
+ 2178 007d 00       		.byte	0
+ 2179 007e 00       		.byte	0
+ 2180 007f 0A       		.uleb128 0xa
+ 2181 0080 898201   		.uleb128 0x4109
+ 2182 0083 01       		.byte	0x1
+ 2183 0084 11       		.uleb128 0x11
+ 2184 0085 01       		.uleb128 0x1
+ 2185 0086 31       		.uleb128 0x31
+ 2186 0087 13       		.uleb128 0x13
+ 2187 0088 00       		.byte	0
+ 2188 0089 00       		.byte	0
+ 2189 008a 0B       		.uleb128 0xb
+ 2190 008b 2E       		.uleb128 0x2e
+ 2191 008c 01       		.byte	0x1
+ 2192 008d 3F       		.uleb128 0x3f
+ 2193 008e 19       		.uleb128 0x19
+ 2194 008f 03       		.uleb128 0x3
+ 2195 0090 0E       		.uleb128 0xe
+ 2196 0091 3A       		.uleb128 0x3a
+ 2197 0092 0B       		.uleb128 0xb
+ 2198 0093 3B       		.uleb128 0x3b
+ 2199 0094 0B       		.uleb128 0xb
+ 2200 0095 27       		.uleb128 0x27
+ 2201 0096 19       		.uleb128 0x19
+ 2202 0097 49       		.uleb128 0x49
+ 2203 0098 13       		.uleb128 0x13
+ 2204 0099 8701     		.uleb128 0x87
+ 2205 009b 19       		.uleb128 0x19
+ 2206 009c 11       		.uleb128 0x11
+ 2207 009d 01       		.uleb128 0x1
+ 2208 009e 12       		.uleb128 0x12
+ 2209 009f 06       		.uleb128 0x6
+ 2210 00a0 40       		.uleb128 0x40
+ 2211 00a1 18       		.uleb128 0x18
+ 2212 00a2 9642     		.uleb128 0x2116
+ 2213 00a4 19       		.uleb128 0x19
+ 2214 00a5 01       		.uleb128 0x1
+ 2215 00a6 13       		.uleb128 0x13
+ 2216 00a7 00       		.byte	0
+ 2217 00a8 00       		.byte	0
+ 2218 00a9 0C       		.uleb128 0xc
+ 2219 00aa 898201   		.uleb128 0x4109
+ 2220 00ad 00       		.byte	0
+ 2221 00ae 11       		.uleb128 0x11
+ 2222 00af 01       		.uleb128 0x1
+ 2223 00b0 31       		.uleb128 0x31
+ 2224 00b1 13       		.uleb128 0x13
+ 2225 00b2 00       		.byte	0
+ 2226 00b3 00       		.byte	0
+ 2227 00b4 0D       		.uleb128 0xd
+ 2228 00b5 34       		.uleb128 0x34
+ 2229 00b6 00       		.byte	0
+ 2230 00b7 03       		.uleb128 0x3
+ 2231 00b8 0E       		.uleb128 0xe
+ 2232 00b9 3A       		.uleb128 0x3a
+ 2233 00ba 0B       		.uleb128 0xb
+ 2234 00bb 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 44
+
+
+ 2235 00bc 05       		.uleb128 0x5
+ 2236 00bd 49       		.uleb128 0x49
+ 2237 00be 13       		.uleb128 0x13
+ 2238 00bf 3F       		.uleb128 0x3f
+ 2239 00c0 19       		.uleb128 0x19
+ 2240 00c1 3C       		.uleb128 0x3c
+ 2241 00c2 19       		.uleb128 0x19
+ 2242 00c3 00       		.byte	0
+ 2243 00c4 00       		.byte	0
+ 2244 00c5 0E       		.uleb128 0xe
+ 2245 00c6 35       		.uleb128 0x35
+ 2246 00c7 00       		.byte	0
+ 2247 00c8 49       		.uleb128 0x49
+ 2248 00c9 13       		.uleb128 0x13
+ 2249 00ca 00       		.byte	0
+ 2250 00cb 00       		.byte	0
+ 2251 00cc 0F       		.uleb128 0xf
+ 2252 00cd 01       		.uleb128 0x1
+ 2253 00ce 01       		.byte	0x1
+ 2254 00cf 49       		.uleb128 0x49
+ 2255 00d0 13       		.uleb128 0x13
+ 2256 00d1 01       		.uleb128 0x1
+ 2257 00d2 13       		.uleb128 0x13
+ 2258 00d3 00       		.byte	0
+ 2259 00d4 00       		.byte	0
+ 2260 00d5 10       		.uleb128 0x10
+ 2261 00d6 21       		.uleb128 0x21
+ 2262 00d7 00       		.byte	0
+ 2263 00d8 49       		.uleb128 0x49
+ 2264 00d9 13       		.uleb128 0x13
+ 2265 00da 2F       		.uleb128 0x2f
+ 2266 00db 0B       		.uleb128 0xb
+ 2267 00dc 00       		.byte	0
+ 2268 00dd 00       		.byte	0
+ 2269 00de 11       		.uleb128 0x11
+ 2270 00df 34       		.uleb128 0x34
+ 2271 00e0 00       		.byte	0
+ 2272 00e1 03       		.uleb128 0x3
+ 2273 00e2 0E       		.uleb128 0xe
+ 2274 00e3 3A       		.uleb128 0x3a
+ 2275 00e4 0B       		.uleb128 0xb
+ 2276 00e5 3B       		.uleb128 0x3b
+ 2277 00e6 0B       		.uleb128 0xb
+ 2278 00e7 49       		.uleb128 0x49
+ 2279 00e8 13       		.uleb128 0x13
+ 2280 00e9 3F       		.uleb128 0x3f
+ 2281 00ea 19       		.uleb128 0x19
+ 2282 00eb 02       		.uleb128 0x2
+ 2283 00ec 18       		.uleb128 0x18
+ 2284 00ed 00       		.byte	0
+ 2285 00ee 00       		.byte	0
+ 2286 00ef 12       		.uleb128 0x12
+ 2287 00f0 34       		.uleb128 0x34
+ 2288 00f1 00       		.byte	0
+ 2289 00f2 03       		.uleb128 0x3
+ 2290 00f3 08       		.uleb128 0x8
+ 2291 00f4 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 45
+
+
+ 2292 00f5 0B       		.uleb128 0xb
+ 2293 00f6 3B       		.uleb128 0x3b
+ 2294 00f7 0B       		.uleb128 0xb
+ 2295 00f8 49       		.uleb128 0x49
+ 2296 00f9 13       		.uleb128 0x13
+ 2297 00fa 3F       		.uleb128 0x3f
+ 2298 00fb 19       		.uleb128 0x19
+ 2299 00fc 02       		.uleb128 0x2
+ 2300 00fd 18       		.uleb128 0x18
+ 2301 00fe 00       		.byte	0
+ 2302 00ff 00       		.byte	0
+ 2303 0100 13       		.uleb128 0x13
+ 2304 0101 2E       		.uleb128 0x2e
+ 2305 0102 00       		.byte	0
+ 2306 0103 3F       		.uleb128 0x3f
+ 2307 0104 19       		.uleb128 0x19
+ 2308 0105 3C       		.uleb128 0x3c
+ 2309 0106 19       		.uleb128 0x19
+ 2310 0107 6E       		.uleb128 0x6e
+ 2311 0108 0E       		.uleb128 0xe
+ 2312 0109 03       		.uleb128 0x3
+ 2313 010a 0E       		.uleb128 0xe
+ 2314 010b 3A       		.uleb128 0x3a
+ 2315 010c 0B       		.uleb128 0xb
+ 2316 010d 3B       		.uleb128 0x3b
+ 2317 010e 0B       		.uleb128 0xb
+ 2318 010f 00       		.byte	0
+ 2319 0110 00       		.byte	0
+ 2320 0111 00       		.byte	0
+ 2321              		.section	.debug_aranges,"",%progbits
+ 2322 0000 5C000000 		.4byte	0x5c
+ 2323 0004 0200     		.2byte	0x2
+ 2324 0006 00000000 		.4byte	.Ldebug_info0
+ 2325 000a 04       		.byte	0x4
+ 2326 000b 00       		.byte	0
+ 2327 000c 0000     		.2byte	0
+ 2328 000e 0000     		.2byte	0
+ 2329 0010 00000000 		.4byte	.LFB64
+ 2330 0014 34000000 		.4byte	.LFE64-.LFB64
+ 2331 0018 00000000 		.4byte	.LFB65
+ 2332 001c 34000000 		.4byte	.LFE65-.LFB65
+ 2333 0020 00000000 		.4byte	.LFB66
+ 2334 0024 34000000 		.4byte	.LFE66-.LFB66
+ 2335 0028 00000000 		.4byte	.LFB67
+ 2336 002c 34000000 		.4byte	.LFE67-.LFB67
+ 2337 0030 00000000 		.4byte	.LFB68
+ 2338 0034 34000000 		.4byte	.LFE68-.LFB68
+ 2339 0038 00000000 		.4byte	.LFB69
+ 2340 003c 34000000 		.4byte	.LFE69-.LFB69
+ 2341 0040 00000000 		.4byte	.LFB70
+ 2342 0044 34000000 		.4byte	.LFE70-.LFB70
+ 2343 0048 00000000 		.4byte	.LFB71
+ 2344 004c 34000000 		.4byte	.LFE71-.LFB71
+ 2345 0050 00000000 		.4byte	.LFB72
+ 2346 0054 AC010000 		.4byte	.LFE72-.LFB72
+ 2347 0058 00000000 		.4byte	0
+ 2348 005c 00000000 		.4byte	0
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 46
+
+
+ 2349              		.section	.debug_ranges,"",%progbits
+ 2350              	.Ldebug_ranges0:
+ 2351 0000 00000000 		.4byte	.LFB64
+ 2352 0004 34000000 		.4byte	.LFE64
+ 2353 0008 00000000 		.4byte	.LFB65
+ 2354 000c 34000000 		.4byte	.LFE65
+ 2355 0010 00000000 		.4byte	.LFB66
+ 2356 0014 34000000 		.4byte	.LFE66
+ 2357 0018 00000000 		.4byte	.LFB67
+ 2358 001c 34000000 		.4byte	.LFE67
+ 2359 0020 00000000 		.4byte	.LFB68
+ 2360 0024 34000000 		.4byte	.LFE68
+ 2361 0028 00000000 		.4byte	.LFB69
+ 2362 002c 34000000 		.4byte	.LFE69
+ 2363 0030 00000000 		.4byte	.LFB70
+ 2364 0034 34000000 		.4byte	.LFE70
+ 2365 0038 00000000 		.4byte	.LFB71
+ 2366 003c 34000000 		.4byte	.LFE71
+ 2367 0040 00000000 		.4byte	.LFB72
+ 2368 0044 AC010000 		.4byte	.LFE72
+ 2369 0048 00000000 		.4byte	0
+ 2370 004c 00000000 		.4byte	0
+ 2371              		.section	.debug_line,"",%progbits
+ 2372              	.Ldebug_line0:
+ 2373 0000 F1020000 		.section	.debug_str,"MS",%progbits,1
+ 2373      0200B101 
+ 2373      00000201 
+ 2373      FB0E0D00 
+ 2373      01010101 
+ 2374              	.LASF31:
+ 2375 0000 636F6D70 		.ascii	"comp\000"
+ 2375      00
+ 2376              	.LASF53:
+ 2377 0005 50574D5F 		.ascii	"PWM_1_Start\000"
+ 2377      315F5374 
+ 2377      61727400 
+ 2378              	.LASF55:
+ 2379 0011 50574D5F 		.ascii	"PWM_2_Start\000"
+ 2379      325F5374 
+ 2379      61727400 
+ 2380              	.LASF34:
+ 2381 001d 73746174 		.ascii	"state\000"
+ 2381      6500
+ 2382              	.LASF2:
+ 2383 0023 73686F72 		.ascii	"short int\000"
+ 2383      7420696E 
+ 2383      7400
+ 2384              	.LASF15:
+ 2385 002d 73697A65 		.ascii	"sizetype\000"
+ 2385      74797065 
+ 2385      00
+ 2386              	.LASF38:
+ 2387 0036 6461746F 		.ascii	"dato_lit_car\000"
+ 2387      5F6C6974 
+ 2387      5F636172 
+ 2387      00
+ 2388              	.LASF57:
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 47
+
+
+ 2389 0043 50574D5F 		.ascii	"PWM_3_Start\000"
+ 2389      335F5374 
+ 2389      61727400 
+ 2390              	.LASF68:
+ 2391 004f 6D61696E 		.ascii	"main\000"
+ 2391      00
+ 2392              	.LASF21:
+ 2393 0054 726F626F 		.ascii	"robotLeft\000"
+ 2393      744C6566 
+ 2393      7400
+ 2394              	.LASF17:
+ 2395 005e 434F4E54 		.ascii	"CONTROLLER\000"
+ 2395      524F4C4C 
+ 2395      455200
+ 2396              	.LASF58:
+ 2397 0069 50574D5F 		.ascii	"PWM_3_Enable\000"
+ 2397      335F456E 
+ 2397      61626C65 
+ 2397      00
+ 2398              	.LASF41:
+ 2399 0076 50574D5F 		.ascii	"PWM_2_WriteCompare1\000"
+ 2399      325F5772 
+ 2399      69746543 
+ 2399      6F6D7061 
+ 2399      72653100 
+ 2400              	.LASF59:
+ 2401 008a 55415254 		.ascii	"UART_GetChar\000"
+ 2401      5F476574 
+ 2401      43686172 
+ 2401      00
+ 2402              	.LASF60:
+ 2403 0097 55415254 		.ascii	"UART_PutString\000"
+ 2403      5F507574 
+ 2403      53747269 
+ 2403      6E6700
+ 2404              	.LASF29:
+ 2405 00a6 76616C75 		.ascii	"value_counter\000"
+ 2405      655F636F 
+ 2405      756E7465 
+ 2405      7200
+ 2406              	.LASF28:
+ 2407 00b4 53747269 		.ascii	"StringToPrint\000"
+ 2407      6E67546F 
+ 2407      5072696E 
+ 2407      7400
+ 2408              	.LASF0:
+ 2409 00c2 7369676E 		.ascii	"signed char\000"
+ 2409      65642063 
+ 2409      68617200 
+ 2410              	.LASF63:
+ 2411 00ce 6563686F 		.ascii	"echo_Read\000"
+ 2411      5F526561 
+ 2411      6400
+ 2412              	.LASF11:
+ 2413 00d8 666C6F61 		.ascii	"float\000"
+ 2413      7400
+ 2414              	.LASF6:
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 48
+
+
+ 2415 00de 6C6F6E67 		.ascii	"long long int\000"
+ 2415      206C6F6E 
+ 2415      6720696E 
+ 2415      7400
+ 2416              	.LASF39:
+ 2417 00ec 50574D5F 		.ascii	"PWM_WriteCompare1\000"
+ 2417      57726974 
+ 2417      65436F6D 
+ 2417      70617265 
+ 2417      3100
+ 2418              	.LASF43:
+ 2419 00fe 50574D5F 		.ascii	"PWM_WriteCompare2\000"
+ 2419      57726974 
+ 2419      65436F6D 
+ 2419      70617265 
+ 2419      3200
+ 2420              	.LASF16:
+ 2421 0110 4155544F 		.ascii	"AUTONOMOUS\000"
+ 2421      4E4F4D4F 
+ 2421      555300
+ 2422              	.LASF47:
+ 2423 011b 54696D65 		.ascii	"Timer_Start\000"
+ 2423      725F5374 
+ 2423      61727400 
+ 2424              	.LASF4:
+ 2425 0127 6C6F6E67 		.ascii	"long int\000"
+ 2425      20696E74 
+ 2425      00
+ 2426              	.LASF37:
+ 2427 0130 73747269 		.ascii	"string\000"
+ 2427      6E6700
+ 2428              	.LASF35:
+ 2429 0137 64697374 		.ascii	"distancia\000"
+ 2429      616E6369 
+ 2429      6100
+ 2430              	.LASF22:
+ 2431 0141 726F626F 		.ascii	"robotRight\000"
+ 2431      74526967 
+ 2431      687400
+ 2432              	.LASF32:
+ 2433 014c 64617461 		.ascii	"dataIn\000"
+ 2433      496E00
+ 2434              	.LASF40:
+ 2435 0153 50574D5F 		.ascii	"PWM_1_WriteCompare1\000"
+ 2435      315F5772 
+ 2435      69746543 
+ 2435      6F6D7061 
+ 2435      72653100 
+ 2436              	.LASF44:
+ 2437 0167 50574D5F 		.ascii	"PWM_1_WriteCompare2\000"
+ 2437      315F5772 
+ 2437      69746543 
+ 2437      6F6D7061 
+ 2437      72653200 
+ 2438              	.LASF46:
+ 2439 017b 50574D5F 		.ascii	"PWM_3_WriteCompare2\000"
+ 2439      335F5772 
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 49
+
+
+ 2439      69746543 
+ 2439      6F6D7061 
+ 2439      72653200 
+ 2440              	.LASF14:
+ 2441 018f 6C6F6E67 		.ascii	"long double\000"
+ 2441      20646F75 
+ 2441      626C6500 
+ 2442              	.LASF54:
+ 2443 019b 50574D5F 		.ascii	"PWM_1_Enable\000"
+ 2443      315F456E 
+ 2443      61626C65 
+ 2443      00
+ 2444              	.LASF1:
+ 2445 01a8 756E7369 		.ascii	"unsigned char\000"
+ 2445      676E6564 
+ 2445      20636861 
+ 2445      7200
+ 2446              	.LASF23:
+ 2447 01b6 7370696E 		.ascii	"spinLeft\000"
+ 2447      4C656674 
+ 2447      00
+ 2448              	.LASF7:
+ 2449 01bf 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2449      206C6F6E 
+ 2449      6720756E 
+ 2449      7369676E 
+ 2449      65642069 
+ 2450              	.LASF45:
+ 2451 01d6 50574D5F 		.ascii	"PWM_2_WriteCompare2\000"
+ 2451      325F5772 
+ 2451      69746543 
+ 2451      6F6D7061 
+ 2451      72653200 
+ 2452              	.LASF50:
+ 2453 01ea 55415254 		.ascii	"UART_Enable\000"
+ 2453      5F456E61 
+ 2453      626C6500 
+ 2454              	.LASF8:
+ 2455 01f6 756E7369 		.ascii	"unsigned int\000"
+ 2455      676E6564 
+ 2455      20696E74 
+ 2455      00
+ 2456              	.LASF24:
+ 2457 0203 7370696E 		.ascii	"spinRight\000"
+ 2457      52696768 
+ 2457      7400
+ 2458              	.LASF61:
+ 2459 020d 54726967 		.ascii	"Trigger_out_Write\000"
+ 2459      6765725F 
+ 2459      6F75745F 
+ 2459      57726974 
+ 2459      6500
+ 2460              	.LASF48:
+ 2461 021f 51756164 		.ascii	"QuadDec_Start\000"
+ 2461      4465635F 
+ 2461      53746172 
+ 2461      7400
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 50
+
+
+ 2462              	.LASF3:
+ 2463 022d 73686F72 		.ascii	"short unsigned int\000"
+ 2463      7420756E 
+ 2463      7369676E 
+ 2463      65642069 
+ 2463      6E7400
+ 2464              	.LASF52:
+ 2465 0240 50574D5F 		.ascii	"PWM_Enable\000"
+ 2465      456E6162 
+ 2465      6C6500
+ 2466              	.LASF30:
+ 2467 024b 73746F70 		.ascii	"stop\000"
+ 2467      00
+ 2468              	.LASF13:
+ 2469 0250 63686172 		.ascii	"char\000"
+ 2469      00
+ 2470              	.LASF64:
+ 2471 0255 54696D65 		.ascii	"Timer_ReadCounter\000"
+ 2471      725F5265 
+ 2471      6164436F 
+ 2471      756E7465 
+ 2471      7200
+ 2472              	.LASF49:
+ 2473 0267 55415254 		.ascii	"UART_Start\000"
+ 2473      5F537461 
+ 2473      727400
+ 2474              	.LASF10:
+ 2475 0272 696E7433 		.ascii	"int32_t\000"
+ 2475      325F7400 
+ 2476              	.LASF19:
+ 2477 027a 676F526F 		.ascii	"goRobot\000"
+ 2477      626F7400 
+ 2478              	.LASF33:
+ 2479 0282 726F626F 		.ascii	"robot_state\000"
+ 2479      745F7374 
+ 2479      61746500 
+ 2480              	.LASF36:
+ 2481 028e 64617461 		.ascii	"data\000"
+ 2481      00
+ 2482              	.LASF20:
+ 2483 0293 6261636B 		.ascii	"backRobot\000"
+ 2483      526F626F 
+ 2483      7400
+ 2484              	.LASF18:
+ 2485 029d 41564F49 		.ascii	"AVOID\000"
+ 2485      4400
+ 2486              	.LASF66:
+ 2487 02a3 6D61696E 		.ascii	"main.c\000"
+ 2487      2E6300
+ 2488              	.LASF5:
+ 2489 02aa 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2489      20756E73 
+ 2489      69676E65 
+ 2489      6420696E 
+ 2489      7400
+ 2490              	.LASF12:
+ 2491 02bc 646F7562 		.ascii	"double\000"
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 51
+
+
+ 2491      6C6500
+ 2492              	.LASF25:
+ 2493 02c3 5475726E 		.ascii	"Turn\000"
+ 2493      00
+ 2494              	.LASF67:
+ 2495 02c8 433A5C75 		.ascii	"C:\\ultra\\ultra.cydsn\000"
+ 2495      6C747261 
+ 2495      5C756C74 
+ 2495      72612E63 
+ 2495      7964736E 
+ 2496              	.LASF56:
+ 2497 02dd 50574D5F 		.ascii	"PWM_2_Enable\000"
+ 2497      325F456E 
+ 2497      61626C65 
+ 2497      00
+ 2498              	.LASF9:
+ 2499 02ea 5F5F696E 		.ascii	"__int32_t\000"
+ 2499      7433325F 
+ 2499      7400
+ 2500              	.LASF26:
+ 2501 02f4 53746F70 		.ascii	"Stop\000"
+ 2501      00
+ 2502              	.LASF51:
+ 2503 02f9 50574D5F 		.ascii	"PWM_Start\000"
+ 2503      53746172 
+ 2503      7400
+ 2504              	.LASF42:
+ 2505 0303 50574D5F 		.ascii	"PWM_3_WriteCompare1\000"
+ 2505      335F5772 
+ 2505      69746543 
+ 2505      6F6D7061 
+ 2505      72653100 
+ 2506              	.LASF27:
+ 2507 0317 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2507      52784275 
+ 2507      66666572 
+ 2507      00
+ 2508              	.LASF65:
+ 2509 0324 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2509      43313120 
+ 2509      352E342E 
+ 2509      31203230 
+ 2509      31363036 
+ 2510 0357 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2510      20726576 
+ 2510      6973696F 
+ 2510      6E203233 
+ 2510      37373135 
+ 2511 038a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2511      66756E63 
+ 2511      74696F6E 
+ 2511      2D736563 
+ 2511      74696F6E 
+ 2512              	.LASF62:
+ 2513 03b2 43794465 		.ascii	"CyDelay\000"
+ 2513      6C617900 
+ 2514              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ARM GAS  C:\Users\BRAULI~1\AppData\Local\Temp\ccIX6112.s 			page 52
+
+
