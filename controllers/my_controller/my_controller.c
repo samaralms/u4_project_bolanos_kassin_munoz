@@ -90,9 +90,9 @@ void turnRight(WbDeviceTag wheel_left_1,WbDeviceTag wheel_right_1,WbDeviceTag wh
   wb_motor_set_position(wheel_right_1, INFINITY);
   wb_motor_set_velocity(wheel_right_1,  VELOCITY);
   wb_motor_set_position(wheel_left_2, INFINITY);
-  wb_motor_set_velocity(wheel_left_2,  -VELOCITY);
+  wb_motor_set_velocity(wheel_left_2,  VELOCITY);
   wb_motor_set_position(wheel_right_2, INFINITY);
-  wb_motor_set_velocity(wheel_right_2,  VELOCITY);
+  wb_motor_set_velocity(wheel_right_2,  -VELOCITY);
   
 }
 void turnLeft(WbDeviceTag wheel_left_1,WbDeviceTag wheel_right_1,WbDeviceTag wheel_left_2,WbDeviceTag wheel_right_2) {
@@ -101,9 +101,32 @@ void turnLeft(WbDeviceTag wheel_left_1,WbDeviceTag wheel_right_1,WbDeviceTag whe
   wb_motor_set_position(wheel_right_1, INFINITY);
   wb_motor_set_velocity(wheel_right_1, -VELOCITY);
   wb_motor_set_position(wheel_left_2, INFINITY);
+  wb_motor_set_velocity(wheel_left_2,  -VELOCITY);
+  wb_motor_set_position(wheel_right_2, INFINITY);
+  wb_motor_set_velocity(wheel_right_2,  VELOCITY);
+}
+
+void rotateLeft(WbDeviceTag wheel_left_1,WbDeviceTag wheel_right_1,WbDeviceTag wheel_left_2,WbDeviceTag wheel_right_2) {
+  wb_motor_set_position(wheel_left_1, INFINITY);
+  wb_motor_set_velocity(wheel_left_1,  VELOCITY);
+  wb_motor_set_position(wheel_right_1, INFINITY);
+  wb_motor_set_velocity(wheel_right_1, -VELOCITY);
+  wb_motor_set_position(wheel_left_2, INFINITY);
   wb_motor_set_velocity(wheel_left_2,   VELOCITY);
   wb_motor_set_position(wheel_right_2, INFINITY);
   wb_motor_set_velocity(wheel_right_2, -VELOCITY);
+  
+}
+
+void rotateRight(WbDeviceTag wheel_left_1,WbDeviceTag wheel_right_1,WbDeviceTag wheel_left_2,WbDeviceTag wheel_right_2) {
+  wb_motor_set_position(wheel_left_1, INFINITY);
+  wb_motor_set_velocity(wheel_left_1,  -VELOCITY);
+  wb_motor_set_position(wheel_right_1, INFINITY);
+  wb_motor_set_velocity(wheel_right_1, VELOCITY);
+  wb_motor_set_position(wheel_left_2, INFINITY);
+  wb_motor_set_velocity(wheel_left_2,  -VELOCITY);
+  wb_motor_set_position(wheel_right_2, INFINITY);
+  wb_motor_set_velocity(wheel_right_2, VELOCITY);
   
 }
 
@@ -225,6 +248,18 @@ while (wb_robot_step(TIME_STEP) != -1) {
       robot_state=MANUAL;
       stopRobot(wheel_left_1, wheel_right_1, wheel_left_2, wheel_right_2);
      } 
+     
+     if (key == 'A') {
+      robot_state=MANUAL;
+      action=key;
+      rotateLeft(wheel_left_1, wheel_right_1, wheel_left_2, wheel_right_2);
+     }
+     
+     if (key == 'S') {
+      robot_state=MANUAL;
+      action=key;
+      rotateRight(wheel_left_1, wheel_right_1, wheel_left_2, wheel_right_2);
+     }
      
     if(key == WB_KEYBOARD_LEFT && robot_state == MANUAL) {
       action=key;
